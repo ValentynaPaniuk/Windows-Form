@@ -14,7 +14,7 @@ namespace Exercise_3
 	                    метод запуску Тестування (void Run())
          */
 
-        public List<Question> list;
+        private List<Question> list;
 
 
 
@@ -29,12 +29,13 @@ namespace Exercise_3
         public void Run()
         {
             Console.WriteLine("       ========= TESTING ======== ");
-            Console.WriteLine("       Please answer the question: \n");
-            Console.WriteLine("       Enter TRUE or FALSE, please...");
+            Console.WriteLine("       Please answer the question: \n\n");
+           
             int correct_answer = 0;
             foreach (var e in list)
             {
                 bool choiсe;
+                Console.WriteLine("       Enter TRUE or FALSE, please...\n");
                 Console.WriteLine($"{e.Question_}");
               
                 choiсe = bool.Parse(Console.ReadLine());

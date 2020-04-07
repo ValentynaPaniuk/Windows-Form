@@ -27,11 +27,11 @@ namespace Exercise_3
             на правильність та формує результат(кількість правильних)*/
 
 
-            Question one       = new Question("   Quarantine will end on April 24? ");
-            Question two       = new Question("   My daughter was born on September 24 ? ");
-            Question  three    = new Question("   I was born on August 15 ? ");
+            Question one = new Question("   Quarantine will end on April 24? ");
+            Question two = new Question("   My daughter was born on September 24 ? ");
+            Question three = new Question("   I was born on August 15 ? ");
 
-           
+
             Quiz quiz = new Quiz();
 
             quiz.AddQuestion(one);
@@ -41,14 +41,43 @@ namespace Exercise_3
             quiz.Run();
 
             Console.WriteLine("\n\n====================================");
-            Console.WriteLine("    Enter NEW question: ");
-            Question four = new Question(Console.ReadLine());
-            quiz.AddQuestion(four);
-            
-            quiz.Run();
-            
 
-          
+            bool exit = false;
+
+            while (!exit)
+            {
+                Console.WriteLine("1 - Add question,\n2 - do testing\n3 - EXIT");
+                int x = int.Parse(Console.ReadLine());
+                switch (x)
+                {
+                    case 1:
+                        {
+                            Console.WriteLine("    Enter NEW question: ");
+                            Question four = new Question(Console.ReadLine());
+                            quiz.AddQuestion(four);
+                            break;
+                        }
+                    case 2:
+                        {
+                            quiz.Run();
+                            break;
+                        }
+                    case 3:
+                        {
+                            Console.WriteLine("END");
+                            exit = true;
+                            break;
+                        }
+                    default:
+                        {
+                            Console.WriteLine("Enter coorect choice");
+                            break;
+                        }
+
+
+                }
+
+            }
         }
     }
 }
