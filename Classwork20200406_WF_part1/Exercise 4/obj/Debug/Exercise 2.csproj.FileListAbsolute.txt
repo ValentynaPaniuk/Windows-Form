@@ -1,0 +1,7 @@
+D:\Шаг\WF\Classwork20200406_WF_part1\Exercise 4\obj\Debug\Exercise 2.csprojAssemblyReference.cache
+D:\Шаг\WF\Classwork20200406_WF_part1\Exercise 4\obj\Debug\Exercise 2.csproj.CoreCompileInputs.cache
+D:\Шаг\WF\Classwork20200406_WF_part1\Exercise 4\bin\Debug\Exercise 4.exe.config
+D:\Шаг\WF\Classwork20200406_WF_part1\Exercise 4\bin\Debug\Exercise 4.exe
+D:\Шаг\WF\Classwork20200406_WF_part1\Exercise 4\bin\Debug\Exercise 4.pdb
+D:\Шаг\WF\Classwork20200406_WF_part1\Exercise 4\obj\Debug\Exercise 4.exe
+D:\Шаг\WF\Classwork20200406_WF_part1\Exercise 4\obj\Debug\Exercise 4.pdb

@@ -1,0 +1,7 @@
+D:\Шаг\WF\Classwork20200406_WF_part1\bin\Debug\Classwork20200406_WF_part1.exe.config
+D:\Шаг\WF\Classwork20200406_WF_part1\bin\Debug\Classwork20200406_WF_part1.exe
+D:\Шаг\WF\Classwork20200406_WF_part1\bin\Debug\Classwork20200406_WF_part1.pdb
+D:\Шаг\WF\Classwork20200406_WF_part1\obj\Debug\Classwork20200406_WF_part1.csprojAssemblyReference.cache
+D:\Шаг\WF\Classwork20200406_WF_part1\obj\Debug\Classwork20200406_WF_part1.csproj.CoreCompileInputs.cache
+D:\Шаг\WF\Classwork20200406_WF_part1\obj\Debug\Classwork20200406_WF_part1.exe
+D:\Шаг\WF\Classwork20200406_WF_part1\obj\Debug\Classwork20200406_WF_part1.pdb
