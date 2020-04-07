@@ -1,0 +1,7 @@
+D:\Шаг\WF\Homework20200406\bin\Debug\Homework20200406.exe.config
+D:\Шаг\WF\Homework20200406\bin\Debug\Homework20200406.exe
+D:\Шаг\WF\Homework20200406\bin\Debug\Homework20200406.pdb
+D:\Шаг\WF\Homework20200406\obj\Debug\Homework20200406.csprojAssemblyReference.cache
+D:\Шаг\WF\Homework20200406\obj\Debug\Homework20200406.csproj.CoreCompileInputs.cache
+D:\Шаг\WF\Homework20200406\obj\Debug\Homework20200406.exe
+D:\Шаг\WF\Homework20200406\obj\Debug\Homework20200406.pdb

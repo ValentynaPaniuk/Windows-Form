@@ -1,0 +1,10 @@
+D:\Шаг\WF\Classwork20200407_Mouse_Label\bin\Debug\Classwork20200407_Mouse_Label.exe.config
+D:\Шаг\WF\Classwork20200407_Mouse_Label\bin\Debug\Classwork20200407_Mouse_Label.exe
+D:\Шаг\WF\Classwork20200407_Mouse_Label\bin\Debug\Classwork20200407_Mouse_Label.pdb
+D:\Шаг\WF\Classwork20200407_Mouse_Label\obj\Debug\Classwork20200407_Mouse_Label.csprojAssemblyReference.cache
+D:\Шаг\WF\Classwork20200407_Mouse_Label\obj\Debug\Classwork20200407_Mouse_Label.Properties.Resources.resources
+D:\Шаг\WF\Classwork20200407_Mouse_Label\obj\Debug\Classwork20200407_Mouse_Label.csproj.GenerateResource.cache
+D:\Шаг\WF\Classwork20200407_Mouse_Label\obj\Debug\Classwork20200407_Mouse_Label.csproj.CoreCompileInputs.cache
+D:\Шаг\WF\Classwork20200407_Mouse_Label\obj\Debug\Classwork20200407_Mouse_Label.exe
+D:\Шаг\WF\Classwork20200407_Mouse_Label\obj\Debug\Classwork20200407_Mouse_Label.pdb
+D:\Шаг\WF\Classwork20200407_Mouse_Label\obj\Debug\Classwork20200407_Mouse_Label.my_form.resources
