@@ -6,14 +6,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Exercise2
+namespace Exercise_4
 {
     class Program
     {
         static void Main(string[] args)
         {
-            /*Написати програму, яка з кожним кліком по формі буде змінювати фон форми на кольори веселки (і так циклічно)
-             */
+            /*Написати програму, яка з кожним кліком по формі буде змінювати фон форми на кольори веселки
+            (і так циклічно)
+            */
 
             Form form = new Form();
             form.Text = "Сlicks";

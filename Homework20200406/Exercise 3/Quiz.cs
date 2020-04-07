@@ -54,10 +54,8 @@ namespace Exercise_3
                 Console.WriteLine("\n");
 
             }
-            Console.WriteLine($"\nAll question = {list.Count}; true question: {correct_answer}");
+            Console.WriteLine($"\n TRUE question: {correct_answer}; All question = {list.Count};");
               
-
-
         }
 
 

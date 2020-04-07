@@ -1,6 +1,0 @@
-D:\Шаг\WF\Exercise2\bin\Debug\Exercise2.exe.config
-D:\Шаг\WF\Exercise2\bin\Debug\Exercise2.exe
-D:\Шаг\WF\Exercise2\bin\Debug\Exercise2.pdb
-D:\Шаг\WF\Exercise2\obj\Debug\Exercise2.csproj.CoreCompileInputs.cache
-D:\Шаг\WF\Exercise2\obj\Debug\Exercise2.exe
-D:\Шаг\WF\Exercise2\obj\Debug\Exercise2.pdb
