@@ -24,13 +24,13 @@ namespace Exercise_3
            На основі відповідей користувача має створитись форма, що відповідає введеним параметрам*/
 
             Form form = new Form();
-            Console.WriteLine("Enter NAme of Form:");
+            Console.Write("Enter NAme of Form: ");
             string name = Console.ReadLine();
-            Console.WriteLine("Enter Width of Form:");
+            Console.Write("Enter Width of Form: ");
             int width = int.Parse(Console.ReadLine());
-            Console.WriteLine("Enter Height of Form:");
+            Console.Write("Enter Height of Form: ");
             int height = int.Parse(Console.ReadLine());
-            Console.WriteLine("Enter Color of Form:");
+            Console.Write("Enter Color of Form: ");
             form.BackColor = Color.FromName(Console.ReadLine());
           
             form.Width = width;

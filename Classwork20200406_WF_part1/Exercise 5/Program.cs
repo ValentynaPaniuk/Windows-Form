@@ -66,7 +66,7 @@ namespace Exercise_5
         {
             counter = 0;
             ((sender as Button).Parent as Form).Text = counter.ToString();
-            MessageBox.Show($"The counter is reset");
+            MessageBox.Show($"The counter is reset ");
 
 
         }
