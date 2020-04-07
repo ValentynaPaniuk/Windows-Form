@@ -65,12 +65,13 @@
             // lbl_run
             // 
             this.lbl_run.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.lbl_run.Location = new System.Drawing.Point(399, 82);
+            this.lbl_run.Location = new System.Drawing.Point(463, 9);
             this.lbl_run.Name = "lbl_run";
             this.lbl_run.Size = new System.Drawing.Size(50, 50);
             this.lbl_run.TabIndex = 1;
             this.lbl_run.Text = "Label";
             this.lbl_run.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_run.Click += new System.EventHandler(this.lbl_run_Click);
             // 
             // timer
             // 
@@ -83,10 +84,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(525, 261);
+            this.ClientSize = new System.Drawing.Size(615, 261);
             this.Controls.Add(this.lbl_run);
             this.Controls.Add(this.btn_stop);
             this.Controls.Add(this.btn_start);
+            this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "my_form";
             this.RightToLeftLayout = true;

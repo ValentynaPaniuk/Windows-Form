@@ -33,11 +33,11 @@ namespace Classwork20200407_Mouse_Label
             if (point.X < ClientSize.Width - point.X / 4 && point.Y >= 0)
                 lbl_run.Location = new Point(point.X += 20, point.Y); // рух вправо
 
-            else if (point.X > ClientSize.Width - point.X && point.Y < ClientSize.Height - point.Y * 1.5)
+           else if (point.X > ClientSize.Width - point.X && point.Y < ClientSize.Height - point.Y * 1)
                 lbl_run.Location = new Point(point.X, point.Y += 20);    // рух вниз
 
-            else if (point.Y > ClientSize.Height)
-                lbl_run.Location = new Point(point.X -= 20, point.Y); // рух вліво
+           else if (point.X > ClientSize.Width - point.X)
+                 lbl_run.Location = new Point(point.X -= 20, point.Y); // рух вліво
 
             //else if (point.X > ClientSize.Width - point.X / 4 && point.Y>=40)
               // lbl_run.Location = new Point(point.X, point.Y -= 20);    // рух вгору
@@ -67,6 +67,11 @@ namespace Classwork20200407_Mouse_Label
              if (!isTimerEnabled)
                 timer.Enabled = false;     //timer.Stop();
             isTimerEnabled = !isTimerEnabled;
+        }
+
+        private void lbl_run_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
