@@ -28,112 +28,112 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tb_event = new System.Windows.Forms.TextBox();
-            this.tb_plaсe = new System.Windows.Forms.TextBox();
-            this.tb_priority = new System.Windows.Forms.TextBox();
-            this.btn_addEvent = new System.Windows.Forms.Button();
-            this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.btn_cleare = new System.Windows.Forms.Button();
+            this.Tb_event = new System.Windows.Forms.TextBox();
+            this.Tb_plaсe = new System.Windows.Forms.TextBox();
+            this.Tb_priority = new System.Windows.Forms.TextBox();
+            this.Btn_addEvent = new System.Windows.Forms.Button();
+            this.DateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.Btn_cleare = new System.Windows.Forms.Button();
             this.panel = new System.Windows.Forms.Panel();
-            this.bt_save = new System.Windows.Forms.Button();
-            this.listBox = new System.Windows.Forms.ListBox();
+            this.Bt_save = new System.Windows.Forms.Button();
+            this.ListBox = new System.Windows.Forms.ListBox();
             this.panel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tb_event
+            // Tb_event
             // 
-            this.tb_event.Location = new System.Drawing.Point(15, 34);
-            this.tb_event.Name = "tb_event";
-            this.tb_event.Size = new System.Drawing.Size(221, 20);
-            this.tb_event.TabIndex = 0;
-            this.tb_event.Text = "Enter event";
-            this.tb_event.Click += new System.EventHandler(this.tb_event_Click);
+            this.Tb_event.Location = new System.Drawing.Point(15, 34);
+            this.Tb_event.Name = "Tb_event";
+            this.Tb_event.Size = new System.Drawing.Size(221, 20);
+            this.Tb_event.TabIndex = 0;
+            this.Tb_event.Text = "Enter event";
+            this.Tb_event.Click += new System.EventHandler(this.tb_event_Click);
             // 
-            // tb_plaсe
+            // Tb_plaсe
             // 
-            this.tb_plaсe.Location = new System.Drawing.Point(15, 60);
-            this.tb_plaсe.Name = "tb_plaсe";
-            this.tb_plaсe.Size = new System.Drawing.Size(221, 20);
-            this.tb_plaсe.TabIndex = 1;
-            this.tb_plaсe.Text = "Enter place of Event";
-            this.tb_plaсe.Click += new System.EventHandler(this.tb_plaсe_Click);
+            this.Tb_plaсe.Location = new System.Drawing.Point(15, 60);
+            this.Tb_plaсe.Name = "Tb_plaсe";
+            this.Tb_plaсe.Size = new System.Drawing.Size(221, 20);
+            this.Tb_plaсe.TabIndex = 1;
+            this.Tb_plaсe.Text = "Enter place of Event";
+            this.Tb_plaсe.Click += new System.EventHandler(this.tb_plaсe_Click);
             // 
-            // tb_priority
+            // Tb_priority
             // 
-            this.tb_priority.Location = new System.Drawing.Point(15, 86);
-            this.tb_priority.Name = "tb_priority";
-            this.tb_priority.Size = new System.Drawing.Size(221, 20);
-            this.tb_priority.TabIndex = 2;
-            this.tb_priority.Text = "Chose priority of Event";
-            this.tb_priority.Click += new System.EventHandler(this.tb_priority_Click);
-            this.tb_priority.MultilineChanged += new System.EventHandler(this.tb_priority_Click);
+            this.Tb_priority.Location = new System.Drawing.Point(15, 86);
+            this.Tb_priority.Name = "Tb_priority";
+            this.Tb_priority.Size = new System.Drawing.Size(221, 20);
+            this.Tb_priority.TabIndex = 2;
+            this.Tb_priority.Text = "Chose priority of Event";
+            this.Tb_priority.Click += new System.EventHandler(this.tb_priority_Click);
+            this.Tb_priority.MultilineChanged += new System.EventHandler(this.tb_priority_Click);
             // 
-            // btn_addEvent
+            // Btn_addEvent
             // 
-            this.btn_addEvent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btn_addEvent.Location = new System.Drawing.Point(15, 191);
-            this.btn_addEvent.Name = "btn_addEvent";
-            this.btn_addEvent.Size = new System.Drawing.Size(104, 29);
-            this.btn_addEvent.TabIndex = 4;
-            this.btn_addEvent.Text = "Add Event";
-            this.btn_addEvent.UseVisualStyleBackColor = false;
-            this.btn_addEvent.Click += new System.EventHandler(this.btn_addEvent_Click);
+            this.Btn_addEvent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.Btn_addEvent.Location = new System.Drawing.Point(15, 191);
+            this.Btn_addEvent.Name = "Btn_addEvent";
+            this.Btn_addEvent.Size = new System.Drawing.Size(104, 29);
+            this.Btn_addEvent.TabIndex = 4;
+            this.Btn_addEvent.Text = "Add Event";
+            this.Btn_addEvent.UseVisualStyleBackColor = false;
+            this.Btn_addEvent.Click += new System.EventHandler(this.btn_addEvent_Click);
             // 
-            // dateTimePicker
+            // DateTimePicker
             // 
-            this.dateTimePicker.Location = new System.Drawing.Point(15, 112);
-            this.dateTimePicker.MinDate = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
-            this.dateTimePicker.Name = "dateTimePicker";
-            this.dateTimePicker.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker.TabIndex = 3;
-            this.dateTimePicker.Value = new System.DateTime(2020, 4, 9, 11, 52, 35, 0);
-            this.dateTimePicker.ValueChanged += new System.EventHandler(this.dateTimePicker_ValueChanged);
+            this.DateTimePicker.Location = new System.Drawing.Point(15, 112);
+            this.DateTimePicker.MinDate = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
+            this.DateTimePicker.Name = "DateTimePicker";
+            this.DateTimePicker.Size = new System.Drawing.Size(200, 20);
+            this.DateTimePicker.TabIndex = 3;
+            this.DateTimePicker.Value = new System.DateTime(2020, 4, 9, 11, 52, 35, 0);
+            this.DateTimePicker.ValueChanged += new System.EventHandler(this.dateTimePicker_ValueChanged);
             // 
-            // btn_cleare
+            // Btn_cleare
             // 
-            this.btn_cleare.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btn_cleare.Location = new System.Drawing.Point(158, 191);
-            this.btn_cleare.Name = "btn_cleare";
-            this.btn_cleare.Size = new System.Drawing.Size(104, 29);
-            this.btn_cleare.TabIndex = 5;
-            this.btn_cleare.Text = "Cleare";
-            this.btn_cleare.UseVisualStyleBackColor = false;
-            this.btn_cleare.Click += new System.EventHandler(this.btn_cleare_Click);
+            this.Btn_cleare.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.Btn_cleare.Location = new System.Drawing.Point(158, 191);
+            this.Btn_cleare.Name = "Btn_cleare";
+            this.Btn_cleare.Size = new System.Drawing.Size(104, 29);
+            this.Btn_cleare.TabIndex = 5;
+            this.Btn_cleare.Text = "Cleare";
+            this.Btn_cleare.UseVisualStyleBackColor = false;
+            this.Btn_cleare.Click += new System.EventHandler(this.btn_cleare_Click);
             // 
             // panel
             // 
             this.panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.panel.Controls.Add(this.bt_save);
-            this.panel.Controls.Add(this.listBox);
-            this.panel.Controls.Add(this.tb_event);
-            this.panel.Controls.Add(this.btn_cleare);
-            this.panel.Controls.Add(this.dateTimePicker);
-            this.panel.Controls.Add(this.btn_addEvent);
-            this.panel.Controls.Add(this.tb_plaсe);
-            this.panel.Controls.Add(this.tb_priority);
+            this.panel.Controls.Add(this.Bt_save);
+            this.panel.Controls.Add(this.ListBox);
+            this.panel.Controls.Add(this.Tb_event);
+            this.panel.Controls.Add(this.Btn_cleare);
+            this.panel.Controls.Add(this.DateTimePicker);
+            this.panel.Controls.Add(this.Btn_addEvent);
+            this.panel.Controls.Add(this.Tb_plaсe);
+            this.panel.Controls.Add(this.Tb_priority);
             this.panel.Location = new System.Drawing.Point(12, 12);
             this.panel.Name = "panel";
             this.panel.Size = new System.Drawing.Size(619, 237);
             this.panel.TabIndex = 4;
             // 
-            // bt_save
+            // Bt_save
             // 
-            this.bt_save.BackColor = System.Drawing.Color.DodgerBlue;
-            this.bt_save.Location = new System.Drawing.Point(473, 197);
-            this.bt_save.Name = "bt_save";
-            this.bt_save.Size = new System.Drawing.Size(127, 23);
-            this.bt_save.TabIndex = 6;
-            this.bt_save.Text = "Save";
-            this.bt_save.UseVisualStyleBackColor = false;
-            this.bt_save.Click += new System.EventHandler(this.bt_save_Click);
+            this.Bt_save.BackColor = System.Drawing.Color.DodgerBlue;
+            this.Bt_save.Location = new System.Drawing.Point(473, 197);
+            this.Bt_save.Name = "Bt_save";
+            this.Bt_save.Size = new System.Drawing.Size(127, 23);
+            this.Bt_save.TabIndex = 6;
+            this.Bt_save.Text = "Save";
+            this.Bt_save.UseVisualStyleBackColor = false;
+            this.Bt_save.Click += new System.EventHandler(this.bt_save_Click);
             // 
-            // listBox
+            // ListBox
             // 
-            this.listBox.FormattingEnabled = true;
-            this.listBox.Location = new System.Drawing.Point(260, 21);
-            this.listBox.Name = "listBox";
-            this.listBox.Size = new System.Drawing.Size(356, 134);
-            this.listBox.TabIndex = 0;
+            this.ListBox.FormattingEnabled = true;
+            this.ListBox.Location = new System.Drawing.Point(260, 21);
+            this.ListBox.Name = "ListBox";
+            this.ListBox.Size = new System.Drawing.Size(356, 134);
+            this.ListBox.TabIndex = 0;
             // 
             // form_planning
             // 
@@ -154,15 +154,15 @@
         #endregion
      
 
-        private System.Windows.Forms.TextBox tb_event;
-        private System.Windows.Forms.TextBox tb_plaсe;
-        private System.Windows.Forms.TextBox tb_priority;
-        private System.Windows.Forms.Button btn_addEvent;
-        private System.Windows.Forms.DateTimePicker dateTimePicker;
-        private System.Windows.Forms.Button btn_cleare;
+        private System.Windows.Forms.TextBox Tb_event;
+        private System.Windows.Forms.TextBox Tb_plaсe;
+        private System.Windows.Forms.TextBox Tb_priority;
+        private System.Windows.Forms.Button Btn_addEvent;
+        private System.Windows.Forms.DateTimePicker DateTimePicker;
+        private System.Windows.Forms.Button Btn_cleare;
         private System.Windows.Forms.Panel panel;
-        private System.Windows.Forms.ListBox listBox;
-        private System.Windows.Forms.Button bt_save;
+        private System.Windows.Forms.ListBox ListBox;
+        private System.Windows.Forms.Button Bt_save;
     }
 }
 

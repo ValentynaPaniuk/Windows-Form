@@ -21,3 +21,10 @@ C:\Users\Luda\Downloads\Windows-Form-master\Windows-Form-master\Classwork2020040
 C:\Users\Luda\Downloads\Windows-Form-master\Windows-Form-master\Classwork20200408_Event_Planning\bin\Debug\Newtonsoft.Json.dll
 C:\Users\Luda\Downloads\Windows-Form-master\Windows-Form-master\Classwork20200408_Event_Planning\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Luda\Downloads\Windows-Form-master\Windows-Form-master\Classwork20200408_Event_Planning\obj\Debug\Classwork20200408_Event_Planning.csproj.CopyComplete
+D:\Шаг\WF\Planning Event\Classwork20200408_Event_Planning\obj\Debug\Classwork20200408_Event_Planning.csprojAssemblyReference.cache
+D:\Шаг\WF\Planning Event\Classwork20200408_Event_Planning\obj\Debug\Classwork20200408_Event_Planning.form_planning.resources
+D:\Шаг\WF\Planning Event\Classwork20200408_Event_Planning\obj\Debug\Classwork20200408_Event_Planning.Properties.Resources.resources
+D:\Шаг\WF\Planning Event\Classwork20200408_Event_Planning\obj\Debug\Classwork20200408_Event_Planning.csproj.GenerateResource.cache
+D:\Шаг\WF\Planning Event\Classwork20200408_Event_Planning\obj\Debug\Classwork20200408_Event_Planning.csproj.CoreCompileInputs.cache
+D:\Шаг\WF\Planning Event\Classwork20200408_Event_Planning\obj\Debug\Classwork20200408_Event_Planning.exe
+D:\Шаг\WF\Planning Event\Classwork20200408_Event_Planning\obj\Debug\Classwork20200408_Event_Planning.pdb

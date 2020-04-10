@@ -16,7 +16,7 @@ namespace Classwork20200408_Event_Planning
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new form_planning());
+            Application.Run(new Form_planning());
         }
 
         /*Створити програму "Планування подій(справ)"(Version 1.0).

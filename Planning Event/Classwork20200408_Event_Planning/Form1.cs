@@ -16,10 +16,10 @@ using Newtonsoft.Json;
 namespace Classwork20200408_Event_Planning
 {
 
-    public partial class form_planning : Form
+    public partial class Form_planning : Form
     {
         EventList list = new EventList();
-        public form_planning()
+        public Form_planning()
         {
             InitializeComponent();
         }

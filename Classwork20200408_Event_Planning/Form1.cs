@@ -3,19 +3,22 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
 using System.Xml.Linq;
+using System.Xml.Serialization;
+using Newtonsoft.Json;
 
 namespace Classwork20200408_Event_Planning
 {
 
     public partial class form_planning : Form
     {
-        Label planing_event = new Label();
+        EventList list = new EventList();
         public form_planning()
         {
             InitializeComponent();
@@ -25,32 +28,42 @@ namespace Classwork20200408_Event_Planning
 
         private void btn_addEvent_Click(object sender, EventArgs e)
         {
-            
-            planing_event.Text = $"{dateTimePicker.Text} Priority: {tb_priority.Text} Event: {tb_event.Text} Place {tb_plaсe.Text}";
-            listBox.Items.Add(planing_event.Text);
+
+            Event myevent = new Event
+            {
+                Place = tb_plaсe.Text,
+                Title = tb_event.Text,
+                DateTime = dateTimePicker.Value,
+            };
+            if (comboBox1.SelectedItem != null)
+                myevent.Priority = comboBox1.SelectedItem.ToString();
+            else
+                myevent.Priority = "Middle";
+            list.AddEvent(myevent);
+            listBox.Items.Add(myevent);
         }
 
 
         private void tb_event_Click(object sender, EventArgs e)
         {
-            tb_event.Text = String.Empty;
+            Tb_event.Text = String.Empty;
                      
 
         }
 
         private void tb_plaсe_Click(object sender, EventArgs e)
         {
-            tb_plaсe.Text = String.Empty;
-            if (String.IsNullOrWhiteSpace(tb_event.Text))
+            Tb_plaсe.Text = String.Empty;
+            if (String.IsNullOrWhiteSpace(Tb_event.Text))
             {
-                this.tb_event.Focus();
+                this.Tb_event.Focus();
                 MessageBox.Show("!!! Enter the event in the previous box");
             }
         }
 
         private void tb_priority_Click(object sender, EventArgs e)
         {
-            tb_priority.Text = string.Empty;
+            Tb_priority.Text = string.Empty;
             AutoCompleteStringCollection source = new AutoCompleteStringCollection()
             {
                 "high",
@@ -58,10 +71,10 @@ namespace Classwork20200408_Event_Planning
                 "middle",
 
             };
-            tb_priority.Text = "middle";
-            tb_priority.AutoCompleteCustomSource = source;
-            tb_priority.AutoCompleteMode = AutoCompleteMode.Suggest;
-            tb_priority.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            Tb_priority.Text = "middle";
+            Tb_priority.AutoCompleteCustomSource = source;
+            Tb_priority.AutoCompleteMode = AutoCompleteMode.Suggest;
+            Tb_priority.AutoCompleteSource = AutoCompleteSource.CustomSource;
 
 
 
@@ -69,7 +82,7 @@ namespace Classwork20200408_Event_Planning
 
         private void dateTimePicker_ValueChanged(object sender, EventArgs e)
         {
-            if (dateTimePicker.Value < DateTime.Now)
+            if (DateTimePicker.Value < DateTime.Now)
             {
                 MessageBox.Show("!!! Choose the correct event time");
             }
@@ -77,7 +90,7 @@ namespace Classwork20200408_Event_Planning
 
         private void btn_cleare_Click(object sender, EventArgs e)
         {
-            listBox.Items.Clear();
+            ListBox.Items.Clear();
             
         }
 
@@ -89,7 +102,7 @@ namespace Classwork20200408_Event_Planning
 
         private void form_planning_Load(object sender, EventArgs e)
         {
-            tb_event.Focus();
+            Tb_event.Focus();
         }
     }
 }
