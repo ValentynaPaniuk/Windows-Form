@@ -38,13 +38,13 @@
             this.Tb_surname = new System.Windows.Forms.TextBox();
             this.Tb_name = new System.Windows.Forms.TextBox();
             this.Panel_showinfo = new System.Windows.Forms.Panel();
+            this.Btn_load_One = new System.Windows.Forms.Button();
+            this.Btn_clear = new System.Windows.Forms.Button();
             this.Btn_save_jason = new System.Windows.Forms.Button();
             this.Btn_save_by_surname = new System.Windows.Forms.Button();
             this.Btn_SaveAll = new System.Windows.Forms.Button();
             this.Btn_load = new System.Windows.Forms.Button();
             this.ListBox_add_student = new System.Windows.Forms.ListBox();
-            this.Btn_clear = new System.Windows.Forms.Button();
-            this.Btn_load_ = new System.Windows.Forms.Button();
             this.Panel_enter_date.SuspendLayout();
             this.Panel_showinfo.SuspendLayout();
             this.SuspendLayout();
@@ -71,7 +71,7 @@
             this.Btn_add_student.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Btn_add_student.Location = new System.Drawing.Point(35, 235);
             this.Btn_add_student.Name = "Btn_add_student";
-            this.Btn_add_student.Size = new System.Drawing.Size(75, 23);
+            this.Btn_add_student.Size = new System.Drawing.Size(100, 40);
             this.Btn_add_student.TabIndex = 7;
             this.Btn_add_student.Text = "Add Student";
             this.Btn_add_student.UseMnemonic = false;
@@ -147,7 +147,7 @@
             // Panel_showinfo
             // 
             this.Panel_showinfo.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.Panel_showinfo.Controls.Add(this.Btn_load_);
+            this.Panel_showinfo.Controls.Add(this.Btn_load_One);
             this.Panel_showinfo.Controls.Add(this.Btn_clear);
             this.Panel_showinfo.Controls.Add(this.Btn_save_jason);
             this.Panel_showinfo.Controls.Add(this.Btn_save_by_surname);
@@ -159,11 +159,34 @@
             this.Panel_showinfo.Size = new System.Drawing.Size(427, 322);
             this.Panel_showinfo.TabIndex = 1;
             // 
+            // Btn_load_One
+            // 
+            this.Btn_load_One.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Btn_load_One.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Btn_load_One.Location = new System.Drawing.Point(217, 263);
+            this.Btn_load_One.Name = "Btn_load_One";
+            this.Btn_load_One.Size = new System.Drawing.Size(187, 33);
+            this.Btn_load_One.TabIndex = 4;
+            this.Btn_load_One.Text = "Load Students date by surname";
+            this.Btn_load_One.UseVisualStyleBackColor = false;
+            this.Btn_load_One.Click += new System.EventHandler(this.Btn_load__Click);
+            // 
+            // Btn_clear
+            // 
+            this.Btn_clear.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Btn_clear.Location = new System.Drawing.Point(310, 165);
+            this.Btn_clear.Name = "Btn_clear";
+            this.Btn_clear.Size = new System.Drawing.Size(94, 35);
+            this.Btn_clear.TabIndex = 3;
+            this.Btn_clear.Text = "Clear";
+            this.Btn_clear.UseVisualStyleBackColor = false;
+            this.Btn_clear.Click += new System.EventHandler(this.Btn_clear_Click);
+            // 
             // Btn_save_jason
             // 
             this.Btn_save_jason.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.Btn_save_jason.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.Btn_save_jason.Location = new System.Drawing.Point(30, 263);
+            this.Btn_save_jason.Location = new System.Drawing.Point(3, 263);
             this.Btn_save_jason.Name = "Btn_save_jason";
             this.Btn_save_jason.Size = new System.Drawing.Size(196, 37);
             this.Btn_save_jason.TabIndex = 2;
@@ -175,7 +198,7 @@
             // 
             this.Btn_save_by_surname.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.Btn_save_by_surname.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.Btn_save_by_surname.Location = new System.Drawing.Point(30, 220);
+            this.Btn_save_by_surname.Location = new System.Drawing.Point(3, 220);
             this.Btn_save_by_surname.Name = "Btn_save_by_surname";
             this.Btn_save_by_surname.Size = new System.Drawing.Size(196, 37);
             this.Btn_save_by_surname.TabIndex = 2;
@@ -186,22 +209,22 @@
             // Btn_SaveAll
             // 
             this.Btn_SaveAll.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.Btn_SaveAll.Location = new System.Drawing.Point(153, 177);
+            this.Btn_SaveAll.Location = new System.Drawing.Point(3, 178);
             this.Btn_SaveAll.Name = "Btn_SaveAll";
-            this.Btn_SaveAll.Size = new System.Drawing.Size(82, 36);
+            this.Btn_SaveAll.Size = new System.Drawing.Size(196, 36);
             this.Btn_SaveAll.TabIndex = 1;
-            this.Btn_SaveAll.Text = "Save all";
+            this.Btn_SaveAll.Text = "Save all students";
             this.Btn_SaveAll.UseVisualStyleBackColor = false;
             this.Btn_SaveAll.Click += new System.EventHandler(this.Btn_SaveAll_Click);
             // 
             // Btn_load
             // 
             this.Btn_load.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.Btn_load.Location = new System.Drawing.Point(30, 177);
+            this.Btn_load.Location = new System.Drawing.Point(217, 220);
             this.Btn_load.Name = "Btn_load";
-            this.Btn_load.Size = new System.Drawing.Size(82, 37);
+            this.Btn_load.Size = new System.Drawing.Size(187, 37);
             this.Btn_load.TabIndex = 1;
-            this.Btn_load.Text = "Load from file";
+            this.Btn_load.Text = "Load All Student from file";
             this.Btn_load.UseVisualStyleBackColor = false;
             this.Btn_load.Click += new System.EventHandler(this.Btn_load_Click);
             // 
@@ -212,27 +235,6 @@
             this.ListBox_add_student.Name = "ListBox_add_student";
             this.ListBox_add_student.Size = new System.Drawing.Size(387, 134);
             this.ListBox_add_student.TabIndex = 0;
-            // 
-            // Btn_clear
-            // 
-            this.Btn_clear.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.Btn_clear.Location = new System.Drawing.Point(280, 177);
-            this.Btn_clear.Name = "Btn_clear";
-            this.Btn_clear.Size = new System.Drawing.Size(94, 35);
-            this.Btn_clear.TabIndex = 3;
-            this.Btn_clear.Text = "Clear";
-            this.Btn_clear.UseVisualStyleBackColor = false;
-            this.Btn_clear.Click += new System.EventHandler(this.Btn_clear_Click);
-            // 
-            // Btn_load_
-            // 
-            this.Btn_load_.Location = new System.Drawing.Point(290, 233);
-            this.Btn_load_.Name = "Btn_load_";
-            this.Btn_load_.Size = new System.Drawing.Size(75, 23);
-            this.Btn_load_.TabIndex = 4;
-            this.Btn_load_.Text = "Load new";
-            this.Btn_load_.UseVisualStyleBackColor = true;
-            this.Btn_load_.Click += new System.EventHandler(this.Btn_load__Click);
             // 
             // Form
             // 
@@ -270,7 +272,7 @@
         private System.Windows.Forms.Button Btn_save_by_surname;
         private System.Windows.Forms.Button Btn_save_jason;
         private System.Windows.Forms.Button Btn_clear;
-        private System.Windows.Forms.Button Btn_load_;
+        private System.Windows.Forms.Button Btn_load_One;
     }
 }
 

@@ -140,6 +140,7 @@ namespace Classwork20200409_Student
             Tb_name.Text = String.Empty;
             Tb_surname.Text = String.Empty;
             Tb_hobby.Text = String.Empty;
+            ComboBox.Text = String.Empty;
         }
 
 
