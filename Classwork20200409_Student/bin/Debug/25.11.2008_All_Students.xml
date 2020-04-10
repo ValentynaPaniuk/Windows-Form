@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<ArrayOfStudent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Student>
+    <Name>dxcsdfsdf</Name>
+    <Surname>sdfsdf</Surname>
+    <Gender>Male</Gender>
+    <Hobby>sdfsdfsdf</Hobby>
+    <Birthday>2009-03-18T00:00:00</Birthday>
+  </Student>
+  <Student>
+    <Name>sdfsdf</Name>
+    <Surname>dfsdffd`</Surname>
+    <Gender>Female</Gender>
+    <Hobby>erdwsefrwerwer</Hobby>
+    <Birthday>2008-11-25T00:00:00</Birthday>
+  </Student>
+</ArrayOfStudent>

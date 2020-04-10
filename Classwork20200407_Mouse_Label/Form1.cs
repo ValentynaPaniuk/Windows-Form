@@ -21,6 +21,7 @@ namespace Classwork20200407_Mouse_Label
         int i = 0;
         private void timer_Tick(object sender, EventArgs e)
         {
+
             lbl_run.Text = ++i + " s";
 
             Point point = lbl_run.Location;
@@ -33,22 +34,20 @@ namespace Classwork20200407_Mouse_Label
             if (point.X < ClientSize.Width - point.X / 4 && point.Y >= 0)
                 lbl_run.Location = new Point(point.X += 20, point.Y); // рух вправо
 
-           else if (point.X > ClientSize.Width - point.X && point.Y < ClientSize.Height - point.Y * 1)
+            else if (point.X > ClientSize.Width - point.X && point.Y < ClientSize.Height - point.Y * 1)
                 lbl_run.Location = new Point(point.X, point.Y += 20);    // рух вниз
 
-           else if (point.X > ClientSize.Width - point.X)
-                 lbl_run.Location = new Point(point.X -= 20, point.Y); // рух вліво
+            //else if (point.Y >= (max_heights - point.Y / 1.6))
+            else if (point.X > ClientSize.Width - point.X)
+                lbl_run.Location = new Point(point.X -= 20, point.Y); // рух вліво
 
             //else if (point.X > ClientSize.Width - point.X / 4 && point.Y>=40)
-              // lbl_run.Location = new Point(point.X, point.Y -= 20);    // рух вгору
-
-
-
+            // lbl_run.Location = new Point(point.X, point.Y -= 20);    // рух вгору
 
 
         }
 
-    private void btn_start_Click(object sender, EventArgs e)
+        private void btn_start_Click(object sender, EventArgs e)
         {
             
             this.lbl_run.Visible = true;

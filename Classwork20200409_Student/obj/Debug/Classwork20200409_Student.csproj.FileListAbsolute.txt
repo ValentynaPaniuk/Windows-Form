@@ -1,0 +1,13 @@
+D:\Шаг\WF\Classwork20200409_Student\bin\Debug\Classwork20200409_Student.exe.config
+D:\Шаг\WF\Classwork20200409_Student\bin\Debug\Classwork20200409_Student.exe
+D:\Шаг\WF\Classwork20200409_Student\bin\Debug\Classwork20200409_Student.pdb
+D:\Шаг\WF\Classwork20200409_Student\obj\Debug\Classwork20200409_Student.csprojAssemblyReference.cache
+D:\Шаг\WF\Classwork20200409_Student\obj\Debug\Classwork20200409_Student.Properties.Resources.resources
+D:\Шаг\WF\Classwork20200409_Student\obj\Debug\Classwork20200409_Student.csproj.GenerateResource.cache
+D:\Шаг\WF\Classwork20200409_Student\obj\Debug\Classwork20200409_Student.csproj.CoreCompileInputs.cache
+D:\Шаг\WF\Classwork20200409_Student\obj\Debug\Classwork20200409_Student.exe
+D:\Шаг\WF\Classwork20200409_Student\obj\Debug\Classwork20200409_Student.pdb
+D:\Шаг\WF\Classwork20200409_Student\obj\Debug\Classwork20200409_Student.form.resources
+D:\Шаг\WF\Classwork20200409_Student\bin\Debug\Newtonsoft.Json.dll
+D:\Шаг\WF\Classwork20200409_Student\bin\Debug\Newtonsoft.Json.xml
+D:\Шаг\WF\Classwork20200409_Student\obj\Debug\Classwork20200409_Student.csproj.CopyComplete
