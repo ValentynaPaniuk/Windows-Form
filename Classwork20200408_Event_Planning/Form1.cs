@@ -22,13 +22,10 @@ namespace Classwork20200408_Event_Planning
         public form_planning()
         {
             InitializeComponent();
-        
-           
         }
 
         private void btn_addEvent_Click(object sender, EventArgs e)
         {
-
             Event myevent = new Event
             {
                 Place = tb_plaсe.Text,
@@ -46,43 +43,24 @@ namespace Classwork20200408_Event_Planning
 
         private void tb_event_Click(object sender, EventArgs e)
         {
-            Tb_event.Text = String.Empty;
-                     
-
+            tb_event.Text = String.Empty;
         }
 
         private void tb_plaсe_Click(object sender, EventArgs e)
         {
-            Tb_plaсe.Text = String.Empty;
-            if (String.IsNullOrWhiteSpace(Tb_event.Text))
+            tb_plaсe.Text = String.Empty;
+            if (String.IsNullOrWhiteSpace(tb_event.Text))
             {
-                this.Tb_event.Focus();
                 MessageBox.Show("!!! Enter the event in the previous box");
+                this.tb_event.Focus();
             }
         }
 
-        private void tb_priority_Click(object sender, EventArgs e)
-        {
-            Tb_priority.Text = string.Empty;
-            AutoCompleteStringCollection source = new AutoCompleteStringCollection()
-            {
-                "high",
-                "low",
-                "middle",
 
-            };
-            Tb_priority.Text = "middle";
-            Tb_priority.AutoCompleteCustomSource = source;
-            Tb_priority.AutoCompleteMode = AutoCompleteMode.Suggest;
-            Tb_priority.AutoCompleteSource = AutoCompleteSource.CustomSource;
-
-
-
-        }
 
         private void dateTimePicker_ValueChanged(object sender, EventArgs e)
         {
-            if (DateTimePicker.Value < DateTime.Now)
+            if (dateTimePicker.Value < DateTime.Now)
             {
                 MessageBox.Show("!!! Choose the correct event time");
             }
@@ -90,19 +68,72 @@ namespace Classwork20200408_Event_Planning
 
         private void btn_cleare_Click(object sender, EventArgs e)
         {
-            ListBox.Items.Clear();
-            
+            listBox.Items.Clear();
+            list.Clear();
         }
 
         private void bt_save_Click(object sender, EventArgs e)
         {
-            
-
+            string file = dateTimePicker.Value.ToShortDateString() + "_EventPlanner" + ".xml";
+            XmlSerializer xml = new XmlSerializer(list.GetType());  // typeof(EventList)
+            using (Stream stream = new FileStream(file, FileMode.Create, FileAccess.Write))
+            {
+                xml.Serialize(stream, list);
+            }
+            MessageBox.Show("Completed!");
         }
-
+        private void bt_save_ClickByDate(object sender, EventArgs e)
+        {
+            string file = dateTimePicker.Value.ToShortDateString() + "_EventPlanner" + ".xml";
+            List<Event> temp = (from i in list.Events
+                                where i.DateTime == dateTimePicker.Value
+                                select i).ToList();
+            EventList tempList = new EventList();
+            foreach (var item in temp)
+            {
+                tempList.AddEvent(item);
+            }
+            XmlSerializer xml = new XmlSerializer(tempList.GetType());  // typeof(EventList)
+            using (Stream stream = new FileStream(file, FileMode.Create, FileAccess.Write))
+            {
+                xml.Serialize(stream, tempList);
+            }
+            MessageBox.Show("Completed!");
+        }
         private void form_planning_Load(object sender, EventArgs e)
         {
-            Tb_event.Focus();
+            tb_event.Focus();
+        }
+
+        private void bt_Load_Click(object sender, EventArgs e)
+        {
+            XmlSerializer xml = new XmlSerializer(typeof(EventList));
+            string file = dateTimePicker.Value.ToShortDateString() + "_EventPlanner" + ".xml";
+            using (Stream stream = new FileStream(file, FileMode.Open, FileAccess.Read))
+            {
+                // Десеріалізація - отримуємо ОБ'ЄКТ з файла
+                list = (EventList)xml.Deserialize(stream);
+            }
+            MessageBox.Show("Completed!");
+            ShowInListBox();
+
+        }
+        private void SaveAsJson()
+        {
+            
+        }
+        private void ShowInListBox()
+        {
+            listBox.Items.Clear();
+            foreach (var item in list.Events)
+            {
+                listBox.Items.Add(item);
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            list.SaveToJson();
         }
     }
 }

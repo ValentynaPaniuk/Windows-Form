@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<EventList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Events>
+    <Event>
+      <Place>ываыав</Place>
+      <DateTime>2020-04-09T11:52:35</DateTime>
+      <Priority>Middle</Priority>
+      <Title>ываыав</Title>
+    </Event>
+  </Events>
+</EventList>
