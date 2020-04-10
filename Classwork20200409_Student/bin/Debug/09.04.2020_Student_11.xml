@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<Student xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>11</Name>
+  <Surname>11</Surname>
+  <Gender>11</Gender>
+  <Hobby>11</Hobby>
+  <Birthday>2020-04-09T00:00:00</Birthday>
+</Student>

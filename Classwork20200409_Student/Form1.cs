@@ -64,6 +64,7 @@ namespace Classwork20200409_Student
             Tb_hobby.Text = String.Empty;
         }
 
+        //Show Age
         int year;
         private void DateTimePicker_birthday_ValueChanged(object sender, EventArgs e)
         {
@@ -82,8 +83,8 @@ namespace Classwork20200409_Student
 
         }
 
-       
 
+        //Save XML file ALL
         private void Btn_SaveAll_Click(object sender, EventArgs e)
         {
             string file = DateTimePicker_birthday.Value.ToShortDateString() + "_All_Students" + ".xml";
@@ -94,33 +95,9 @@ namespace Classwork20200409_Student
             MessageBox.Show("File.xls \"All students\" saved !");
         }
 
+       
 
-        private void Btn_load_Click(object sender, EventArgs e)
-        {
-            // string json = JsonConvert.SerializeObject(list);
-            //File.WriteAllText("1.json", json);
-
-            string file = DateTimePicker_birthday.Value.ToShortDateString() + "_All_Students" + ".xml";
-            XmlSerializer xml = new XmlSerializer(typeof(List<Student>));
-            using (Stream stream = new FileStream(file, FileMode.Open, FileAccess.Read))
-            {
-                List = (List<Student>)xml.Deserialize(stream);
-            }
-            MessageBox.Show("File has loaded fron file.XML!");
-            ShowInListBox();
-
-        }
-
-        private void ShowInListBox()
-        {
-            ListBox_add_student.Items.Clear();
-            MessageBox.Show("Clear ListBox");
-            foreach (var item in List)
-            {
-                ListBox_add_student.Items.Add(item);
-            }
-        }
-
+        //Save XML by Surname
         private void Btn_save_by_surname_Click(object sender, EventArgs e)
         {
             string file = DateTimePicker_birthday.Value.ToShortDateString() + "_Student_" + Tb_surname.Text + ".xml";
@@ -148,11 +125,78 @@ namespace Classwork20200409_Student
 
         }
 
+        //Save Jason
         private void Btn_save_jason_Click(object sender, EventArgs e)
         {
             string json = JsonConvert.SerializeObject(List);
             File.WriteAllText("1.json", json);
             MessageBox.Show("Save as file.json!");
         }
+
+        private void Btn_clear_Click(object sender, EventArgs e)
+        {
+            List.Clear();
+            ListBox_add_student.Items.Clear();
+            Tb_name.Text = String.Empty;
+            Tb_surname.Text = String.Empty;
+            Tb_hobby.Text = String.Empty;
+        }
+
+
+
+
+        //Load fron File.XML
+        private void Btn_load_Click(object sender, EventArgs e)
+        {
+            string file = DateTimePicker_birthday.Value.ToShortDateString() + "_All_Students" + ".xml";
+            XmlSerializer xml = new XmlSerializer(typeof(List<Student>));
+            using (Stream stream = new FileStream(file, FileMode.Open, FileAccess.Read))
+            {
+                List = (List<Student>)xml.Deserialize(stream);
+            }
+
+            MessageBox.Show("File has loaded fron file.XML!");
+
+            ShowInListBox();
+
+        }
+
+
+
+        private void ShowInListBox()
+        {
+            ListBox_add_student.Items.Clear();
+            foreach (var item in List)
+            {
+                ListBox_add_student.Items.Add(item);
+            }
+        }
+
+        //Load One Student from XML
+        Student One = new Student();
+        private void Btn_load__Click(object sender, EventArgs e)
+        {
+            string file = DateTimePicker_birthday.Value.ToShortDateString() + "_Student_" + Tb_surname.Text + ".xml";
+            XmlSerializer xml = new XmlSerializer(typeof(Student));
+            using (Stream stream = new FileStream(file, FileMode.Open, FileAccess.Read))
+            {
+              One = (Student)xml.Deserialize(stream);
+            }
+
+            ListBox_add_student.Items.Add(One);
+            List.Add(One);
+            ListBox_add_student.Show();
+            Tb_name.Text = One.Name;
+            Tb_surname.Text = One.Surname;
+            Tb_hobby.Text = One.Hobby;
+            ComboBox.Text = One.Gender;
+            DateTimePicker_birthday.Value = One.Birthday;
+
+            
+            MessageBox.Show("Students date has loaded fron file.XML!");
+
+                                 
+        }
+
     }
 }
