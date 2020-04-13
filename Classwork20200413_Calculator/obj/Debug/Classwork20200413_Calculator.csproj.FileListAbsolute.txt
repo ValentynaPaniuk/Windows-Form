@@ -1,0 +1,10 @@
+D:\Шаг\WF\Classwork20200413_Calculator\bin\Debug\Classwork20200413_Calculator.exe.config
+D:\Шаг\WF\Classwork20200413_Calculator\bin\Debug\Classwork20200413_Calculator.exe
+D:\Шаг\WF\Classwork20200413_Calculator\bin\Debug\Classwork20200413_Calculator.pdb
+D:\Шаг\WF\Classwork20200413_Calculator\obj\Debug\Classwork20200413_Calculator.csprojAssemblyReference.cache
+D:\Шаг\WF\Classwork20200413_Calculator\obj\Debug\Classwork20200413_Calculator.Properties.Resources.resources
+D:\Шаг\WF\Classwork20200413_Calculator\obj\Debug\Classwork20200413_Calculator.csproj.GenerateResource.cache
+D:\Шаг\WF\Classwork20200413_Calculator\obj\Debug\Classwork20200413_Calculator.csproj.CoreCompileInputs.cache
+D:\Шаг\WF\Classwork20200413_Calculator\obj\Debug\Classwork20200413_Calculator.exe
+D:\Шаг\WF\Classwork20200413_Calculator\obj\Debug\Classwork20200413_Calculator.pdb
+D:\Шаг\WF\Classwork20200413_Calculator\obj\Debug\Classwork20200413_Calculator.Form.resources
