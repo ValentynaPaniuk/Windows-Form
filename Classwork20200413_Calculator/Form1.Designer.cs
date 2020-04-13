@@ -88,7 +88,9 @@
             this.Tb_actions.Size = new System.Drawing.Size(256, 40);
             this.Tb_actions.TabIndex = 0;
             this.Tb_actions.Text = "0";
-            this.Tb_actions.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Tb_actions_KeyUp);
+            this.Tb_actions.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Tb_actions_KeyDown);
+            this.Tb_actions.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Tb_actions_KeyPress);
+            
             // 
             // Btn_addition
             // 

@@ -131,13 +131,51 @@ namespace Classwork20200413_Calculator
 
         char znak = '+';
 
-       private void Tb_actions_KeyUp(object sender, KeyEventArgs e)
+
+        //MSDN
+        private bool nonNumberEntered = false;
+
+        private void Tb_actions_KeyPress(object sender, KeyPressEventArgs e)
         {
-            e.Handled = !char.IsDigit((char)e.KeyValue);//працює
-            
+            if (nonNumberEntered == true)
+            {
+                // Stop the character from being entered into the control since it is non-numerical.
+                e.Handled = true;
+            }
         }
 
+        private void Tb_actions_KeyDown(object sender, KeyEventArgs e)
+        {
+            // Initialize the flag to false.
+            nonNumberEntered = false;
 
+
+            // Determine whether the keystroke is a number from the top of the keyboard.
+            if (e.KeyCode < Keys.D0 || e.KeyCode > Keys.D9)
+            {
+                // Determine whether the keystroke is a number from the keypad.
+                if (e.KeyCode < Keys.NumPad0 || e.KeyCode > Keys.NumPad9)
+                {
+                    // Determine whether the keystroke is a backspace.
+                    if (e.KeyCode != Keys.Back)
+                    {
+                        // A non-numerical keystroke was pressed.
+                        // Set the flag to true and evaluate in KeyPress event.
+                        nonNumberEntered = true;
+                    }
+                }
+            }
+            //If shift key was pressed, it's not a number.
+            if (Control.ModifierKeys == Keys.Shift)
+            {
+                nonNumberEntered = true;
+            }
+
+        }
+
+       
+
+       
 
     }           
 
