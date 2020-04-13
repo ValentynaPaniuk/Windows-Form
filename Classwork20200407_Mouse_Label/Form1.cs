@@ -22,27 +22,24 @@ namespace Classwork20200407_Mouse_Label
         private void timer_Tick(object sender, EventArgs e)
         {
 
-            lbl_run.Text = ++i + " s";
-
-            Point point = lbl_run.Location;
             this.Text = $"Label move coords: {lbl_run.Location}; ClientSize height: {ClientSize.Height} weight {ClientSize.Width}";
 
-            //lbl_run.Location = new Point(lbl_run.Location.X, lbl_run.Location.Y - 10);
-            //lbl_run.Location = new Point(lbl_run.Location.X+10, lbl_run.Location.Y);
+            lbl_run.Text = ++i + " s";
+            int max_withs = this.ClientSize.Width;
+            int max_heights = this.ClientSize.Height;
+            Point point = lbl_run.Location;
 
+            if (point.X < (max_withs - point.X / 9) && point.Y == 0)
+                lbl_run.Location = new Point(point.X += 10, point.Y);// рух вправо
 
-            if (point.X < ClientSize.Width - point.X / 4 && point.Y >= 0)
-                lbl_run.Location = new Point(point.X += 20, point.Y); // рух вправо
+            else if (point.X > (max_withs - point.X / 9) && point.Y < (max_heights - point.Y / 1.6))
+                lbl_run.Location = new Point(point.X, point.Y += 10); // рух вниз
 
-            else if (point.X > ClientSize.Width - point.X && point.Y < ClientSize.Height - point.Y * 1)
-                lbl_run.Location = new Point(point.X, point.Y += 20);    // рух вниз
+            else if (point.Y >= (max_heights - point.Y / 1.6))
+                lbl_run.Location = new Point(point.X -= 10, point.Y); // рух вліво
 
-            //else if (point.Y >= (max_heights - point.Y / 1.6))
-            else if (point.X > ClientSize.Width - point.X)
-                lbl_run.Location = new Point(point.X -= 20, point.Y); // рух вліво
-
-            //else if (point.X > ClientSize.Width - point.X / 4 && point.Y>=40)
-            // lbl_run.Location = new Point(point.X, point.Y -= 20);    // рух вгору
+            if (point.X <= 0)
+                lbl_run.Location = new Point(point.X, point.Y -= 10);  // рух вгору
 
 
         }

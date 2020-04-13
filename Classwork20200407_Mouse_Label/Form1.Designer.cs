@@ -40,7 +40,7 @@
             // 
             this.btn_start.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btn_start.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_start.Location = new System.Drawing.Point(12, 201);
+            this.btn_start.Location = new System.Drawing.Point(86, 331);
             this.btn_start.Name = "btn_start";
             this.btn_start.Size = new System.Drawing.Size(87, 48);
             this.btn_start.TabIndex = 0;
@@ -53,7 +53,7 @@
             // 
             this.btn_stop.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btn_stop.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_stop.Location = new System.Drawing.Point(156, 201);
+            this.btn_stop.Location = new System.Drawing.Point(222, 331);
             this.btn_stop.Name = "btn_stop";
             this.btn_stop.Size = new System.Drawing.Size(87, 48);
             this.btn_stop.TabIndex = 0;
@@ -65,9 +65,9 @@
             // lbl_run
             // 
             this.lbl_run.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.lbl_run.Location = new System.Drawing.Point(463, 9);
+            this.lbl_run.Location = new System.Drawing.Point(0, 0);
             this.lbl_run.Name = "lbl_run";
-            this.lbl_run.Size = new System.Drawing.Size(50, 50);
+            this.lbl_run.Size = new System.Drawing.Size(52, 48);
             this.lbl_run.TabIndex = 1;
             this.lbl_run.Text = "Label";
             this.lbl_run.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -84,7 +84,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(615, 261);
+            this.ClientSize = new System.Drawing.Size(543, 411);
             this.Controls.Add(this.lbl_run);
             this.Controls.Add(this.btn_stop);
             this.Controls.Add(this.btn_start);
