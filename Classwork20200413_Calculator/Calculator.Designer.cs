@@ -1,6 +1,6 @@
 ﻿namespace Classwork20200413_Calculator
 {
-    partial class Form
+    partial class Calc
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.Panel = new System.Windows.Forms.Panel();
+            this.label = new System.Windows.Forms.Label();
             this.Tb_actions = new System.Windows.Forms.TextBox();
             this.Btn_addition = new System.Windows.Forms.Button();
             this.Btn_substraction = new System.Windows.Forms.Button();
@@ -55,6 +56,7 @@
             // Panel
             // 
             this.Panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Panel.Controls.Add(this.label);
             this.Panel.Controls.Add(this.Tb_actions);
             this.Panel.Controls.Add(this.Btn_addition);
             this.Panel.Controls.Add(this.Btn_substraction);
@@ -77,20 +79,26 @@
             this.Panel.Controls.Add(this.Btn_1);
             this.Panel.Location = new System.Drawing.Point(-1, 1);
             this.Panel.Name = "Panel";
-            this.Panel.Size = new System.Drawing.Size(290, 384);
+            this.Panel.Size = new System.Drawing.Size(294, 384);
             this.Panel.TabIndex = 0;
+            // 
+            // label
+            // 
+            this.label.Location = new System.Drawing.Point(19, 8);
+            this.label.Name = "label";
+            this.label.Size = new System.Drawing.Size(248, 23);
+            this.label.TabIndex = 1;
             // 
             // Tb_actions
             // 
-            this.Tb_actions.Location = new System.Drawing.Point(16, 26);
+            this.Tb_actions.Location = new System.Drawing.Point(16, 34);
             this.Tb_actions.Multiline = true;
             this.Tb_actions.Name = "Tb_actions";
-            this.Tb_actions.Size = new System.Drawing.Size(256, 40);
+            this.Tb_actions.Size = new System.Drawing.Size(256, 32);
             this.Tb_actions.TabIndex = 0;
             this.Tb_actions.Text = "0";
             this.Tb_actions.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Tb_actions_KeyDown);
             this.Tb_actions.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Tb_actions_KeyPress);
-            
             // 
             // Btn_addition
             // 
@@ -321,14 +329,15 @@
             this.Btn_1.UseVisualStyleBackColor = false;
             this.Btn_1.Click += new System.EventHandler(this.Btn_1_Click);
             // 
-            // Form
+            // Calc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(290, 382);
+            this.ClientSize = new System.Drawing.Size(278, 382);
             this.Controls.Add(this.Panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Name = "Form";
+            this.KeyPreview = true;
+            this.Name = "Calc";
             this.Text = "Calculator";
             this.Panel.ResumeLayout(false);
             this.Panel.PerformLayout();
@@ -359,6 +368,8 @@
         private System.Windows.Forms.Button Btn_9;
         private System.Windows.Forms.Button Btn_8;
         private System.Windows.Forms.Button Btn_c;
+        private System.Windows.Forms.Label label;
+      
     }
 }
 

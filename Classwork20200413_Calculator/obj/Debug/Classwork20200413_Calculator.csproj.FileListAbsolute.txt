@@ -7,4 +7,4 @@ D:\Шаг\WF\Classwork20200413_Calculator\obj\Debug\Classwork20200413_Calculator
 D:\Шаг\WF\Classwork20200413_Calculator\obj\Debug\Classwork20200413_Calculator.csproj.CoreCompileInputs.cache
 D:\Шаг\WF\Classwork20200413_Calculator\obj\Debug\Classwork20200413_Calculator.exe
 D:\Шаг\WF\Classwork20200413_Calculator\obj\Debug\Classwork20200413_Calculator.pdb
-D:\Шаг\WF\Classwork20200413_Calculator\obj\Debug\Classwork20200413_Calculator.Form.resources
+D:\Шаг\WF\Classwork20200413_Calculator\obj\Debug\Classwork20200413_Calculator.Calc.resources

@@ -1,0 +1,10 @@
+D:\Шаг\WF\Classwork20200414_Anketa\bin\Debug\Classwork20200414_Anketa.exe.config
+D:\Шаг\WF\Classwork20200414_Anketa\bin\Debug\Classwork20200414_Anketa.exe
+D:\Шаг\WF\Classwork20200414_Anketa\bin\Debug\Classwork20200414_Anketa.pdb
+D:\Шаг\WF\Classwork20200414_Anketa\obj\Debug\Classwork20200414_Anketa.csprojAssemblyReference.cache
+D:\Шаг\WF\Classwork20200414_Anketa\obj\Debug\Classwork20200414_Anketa.Anketa.resources
+D:\Шаг\WF\Classwork20200414_Anketa\obj\Debug\Classwork20200414_Anketa.Properties.Resources.resources
+D:\Шаг\WF\Classwork20200414_Anketa\obj\Debug\Classwork20200414_Anketa.csproj.GenerateResource.cache
+D:\Шаг\WF\Classwork20200414_Anketa\obj\Debug\Classwork20200414_Anketa.csproj.CoreCompileInputs.cache
+D:\Шаг\WF\Classwork20200414_Anketa\obj\Debug\Classwork20200414_Anketa.exe
+D:\Шаг\WF\Classwork20200414_Anketa\obj\Debug\Classwork20200414_Anketa.pdb

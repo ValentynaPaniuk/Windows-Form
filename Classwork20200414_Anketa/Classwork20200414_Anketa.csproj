@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{FEB3686F-5843-47BE-8EFE-7916701A0CCB}</ProjectGuid>
+    <ProjectGuid>{CA175EEC-5F6C-4108-BC67-6747E96AB003}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Classwork20200413_Calculator</RootNamespace>
-    <AssemblyName>Classwork20200413_Calculator</AssemblyName>
+    <RootNamespace>Classwork20200414_Anketa</RootNamespace>
+    <AssemblyName>Classwork20200414_Anketa</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,16 +46,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Calculator.cs">
+    <Compile Include="Anketa.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Calculator.Designer.cs">
-      <DependentUpon>Calculator.cs</DependentUpon>
+    <Compile Include="Anketa.Designer.cs">
+      <DependentUpon>Anketa.cs</DependentUpon>
     </Compile>
+    <Compile Include="Person.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Calculator.resx">
-      <DependentUpon>Calculator.cs</DependentUpon>
+    <EmbeddedResource Include="Anketa.resx">
+      <DependentUpon>Anketa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

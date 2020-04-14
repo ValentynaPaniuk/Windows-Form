@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<ArrayOfPerson xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Person>
+    <Language>
+      <string>Python</string>
+      <string>C/C++</string>
+      <string>Java</string>
+      <string>C#</string>
+    </Language>
+    <Language_>
+      <string>English</string>
+      <string>German</string>
+      <string>Russin</string>
+      <string>Franch</string>
+    </Language_>
+    <Name>zxczczxc</Name>
+    <Gender>Man</Gender>
+    <Bitrhday>1988-12-29T23:05:30</Bitrhday>
+  </Person>
+</ArrayOfPerson>

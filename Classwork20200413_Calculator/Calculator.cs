@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace Classwork20200413_Calculator
 {
-    public partial class Form : System.Windows.Forms.Form
+    public partial class Calc : System.Windows.Forms.Form
     {
 
-        public Form()
+        public Calc()
         {
             InitializeComponent();
             Tb_actions.Focus();
@@ -21,24 +21,30 @@ namespace Classwork20200413_Calculator
 
         private void Btn_1_Click(object sender, EventArgs e)
         {
-            
-             if (Tb_actions.Text == "0" && Tb_actions.Text != null)
+               
+            if (Tb_actions.Text.Length == 1)
+            {
+                Tb_actions.Text += ",";
+            }
+            if (Tb_actions.Text.Contains(",") && (sender as Button).Text == ",")
+                return;
+            if (Tb_actions.Text == "0" && Tb_actions.Text != null)
             {
                 Tb_actions.Text = Tb_actions.Text.Remove(0, 1);
                 Tb_actions.Text += (sender as Button).Text;
             }
-            else
-            {
-                Tb_actions.Text = Tb_actions.Text + (sender as Button).Text;
-            }
+            Tb_actions.Text = Tb_actions.Text + (sender as Button).Text;
 
-                       
+           
+                      
 
         }
-        double a = 0, b = 0, c = 0;
+        double a, b, c;
+        char znak = '+';
 
         private void Btn_equel_Click(object sender, EventArgs e)
         {
+           Tb_actions.Text = " ";
             b = Convert.ToDouble(Tb_actions.Text);
             switch (znak)
             {
@@ -68,6 +74,7 @@ namespace Classwork20200413_Calculator
         private void Btn_c_Click(object sender, EventArgs e)
         {
             Tb_actions.Clear();
+            Tb_actions.Text = "0";
         }
 
         private void Btn_change_sign_Click(object sender, EventArgs e)
@@ -100,10 +107,12 @@ namespace Classwork20200413_Calculator
             znak = (sender as Button).Text[0];
             Tb_actions.Clear();
             Tb_actions.Focus();
+           
         }
 
         private void Btn_equel_KeyUp(object sender, KeyEventArgs e)
-        {
+        {         
+            
             b = Convert.ToDouble(Tb_actions.Text);
             switch (e.KeyValue)
             {
@@ -118,7 +127,7 @@ namespace Classwork20200413_Calculator
                     { c = a / b; }
                     else
                     {
-                        MessageBox.Show("it is not possible to divide by zero");
+                        MessageBox.Show("It is not possible to divide by zero");
                     }
                     break;
                 case '*':
@@ -129,58 +138,89 @@ namespace Classwork20200413_Calculator
 
         }
 
-        char znak = '+';
+       
+
+        //====================================================================================================
+       
+
+      
 
 
         //MSDN
         private bool nonNumberEntered = false;
-
+        
         private void Tb_actions_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (nonNumberEntered == true)
             {
-                // Stop the character from being entered into the control since it is non-numerical.
-                e.Handled = true;
+               e.Handled = true;
             }
         }
 
         private void Tb_actions_KeyDown(object sender, KeyEventArgs e)
         {
-            // Initialize the flag to false.
             nonNumberEntered = false;
+            Text = e.KeyCode.ToString();
+           
+            //if (e.KeyCode == Keys.Add) //+
+            //{
+                
+            //    Btn_addition_Click(Btn_addition, null);
+            //    e.Handled = true;
+            //}
+
+          
+            //if (e.KeyCode == Keys.Multiply) //*
+            //{
+
+            //    Btn_addition_Click(Btn_multiplication, null);
+            //    e.Handled = true;
+            //}
+
+            //if (e.KeyCode == Keys.Subtract)  // -
+            //{
+
+            //    Btn_addition_Click(Btn_substraction, null);
+            //    e.Handled = true;
+            //}
 
 
-            // Determine whether the keystroke is a number from the top of the keyboard.
-            if (e.KeyCode < Keys.D0 || e.KeyCode > Keys.D9)
+            //if (e.KeyCode == Keys.Divide) // /
+            //{
+
+            //    Btn_addition_Click(Btn_division, null);
+            //    e.Handled = true;
+            //}
+
+          
+
+
+            if (e.KeyCode < Keys.D0 || e.KeyCode > Keys.D9 || e.KeyCode == Keys.Enter || e.KeyCode == Keys.Add || e.KeyCode == Keys.Subtract || e.KeyCode == Keys.Multiply || e.KeyCode == Keys.Divide)
             {
-                // Determine whether the keystroke is a number from the keypad.
-                if (e.KeyCode < Keys.NumPad0 || e.KeyCode > Keys.NumPad9)
+                
+                if (e.KeyCode < Keys.NumPad0 || e.KeyCode > Keys.NumPad9 || e.KeyCode == Keys.Enter || e.KeyCode ==Keys.Add || e.KeyCode == Keys.Subtract || e.KeyCode == Keys.Multiply || e.KeyCode == Keys.Divide)
                 {
-                    // Determine whether the keystroke is a backspace.
+                    
                     if (e.KeyCode != Keys.Back)
                     {
-                        // A non-numerical keystroke was pressed.
-                        // Set the flag to true and evaluate in KeyPress event.
+                                             
                         nonNumberEntered = true;
                     }
+                    
+                    
                 }
             }
-            //If shift key was pressed, it's not a number.
-            if (Control.ModifierKeys == Keys.Shift)
+           if (Control.ModifierKeys == Keys.Shift)
             {
                 nonNumberEntered = true;
             }
 
+
+           
         }
-
-       
-
-       
-
-    }           
-
           
 
-        
+    }           
+     
     
 }
