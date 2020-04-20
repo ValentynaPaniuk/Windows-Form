@@ -71,7 +71,7 @@
             this.TextBox1.Name = "TextBox1";
             this.TextBox1.Size = new System.Drawing.Size(241, 20);
             this.TextBox1.TabIndex = 0;
-            this.TextBox1.Text = "Ok";
+            this.TextBox1.Text = "Enter name";
             this.TextBox1.TextChanged += new System.EventHandler(this.TextBox1_TextChanged);
             this.TextBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextBox1_KeyDown);
             this.TextBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBox1_KeyPress);
@@ -92,10 +92,9 @@
             this.Rb_man.Name = "Rb_man";
             this.Rb_man.Size = new System.Drawing.Size(46, 17);
             this.Rb_man.TabIndex = 2;
-            this.Rb_man.TabStop = true;
             this.Rb_man.Text = "Man";
             this.Rb_man.UseVisualStyleBackColor = true;
-            this.Rb_man.CheckedChanged += new System.EventHandler(this.Rb_man_CheckedChanged);
+            this.Rb_man.Click += new System.EventHandler(this.Rb_man_CheckedChanged);
             // 
             // Rb_woman
             // 
@@ -104,10 +103,9 @@
             this.Rb_woman.Name = "Rb_woman";
             this.Rb_woman.Size = new System.Drawing.Size(62, 17);
             this.Rb_woman.TabIndex = 3;
-            this.Rb_woman.TabStop = true;
             this.Rb_woman.Text = "Woman";
             this.Rb_woman.UseVisualStyleBackColor = true;
-            this.Rb_woman.CheckedChanged += new System.EventHandler(this.Rb_man_CheckedChanged);
+            this.Rb_woman.Click += new System.EventHandler(this.Rb_man_CheckedChanged);
             // 
             // label2
             // 
@@ -203,7 +201,6 @@
             this.CheckBox5.Text = "English";
             this.CheckBox5.ThreeState = true;
             this.CheckBox5.UseVisualStyleBackColor = true;
-         
             // 
             // CheckBox6
             // 
@@ -357,7 +354,6 @@
             this.checkBox9.Text = "Sport";
             this.checkBox9.ThreeState = true;
             this.checkBox9.UseVisualStyleBackColor = true;
-       
             // 
             // checkBox10
             // 

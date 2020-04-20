@@ -21,22 +21,48 @@ namespace Classwork20200413_Calculator
 
         private void Btn_1_Click(object sender, EventArgs e)
         {
-               
-            if (Tb_actions.Text.Length == 1)
+
+            //if (Tb_actions.Text.Length == 1 && Tb_actions.Text == "0" && (sender as Button).Text == ",")
+            //{
+            //    Tb_actions.Text += ",";
+            //}
+            //if (Tb_actions.Text.Contains(",") && (sender as Button).Text == ",")
+            //{
+
+            //    Tb_actions.Text = Tb_actions.Text.Remove(0, 1);
+            //    return;
+            //}
+            //if (Tb_actions.Text == "0" && Tb_actions.Text != null)
+            //{
+            //    Tb_actions.Text = Tb_actions.Text.Remove(0, 1);
+            //    Tb_actions.Text += (sender as Button).Text;
+            //}
+            ////Tb_actions.Text = Tb_actions.Text + (sender as Button).Text;
+
+            if (Tb_actions.Text.Length == 1 && Tb_actions.Text == "0" && (sender as Button).Text == ",")
             {
                 Tb_actions.Text += ",";
             }
+
+            ////Перевірка на кількість ком
             if (Tb_actions.Text.Contains(",") && (sender as Button).Text == ",")
                 return;
-            if (Tb_actions.Text == "0" && Tb_actions.Text != null)
+
+            if (Tb_actions.Text == "0" && Tb_actions.Text != null && Tb_actions.Text.Length == 1)
             {
+
                 Tb_actions.Text = Tb_actions.Text.Remove(0, 1);
                 Tb_actions.Text += (sender as Button).Text;
-            }
-            Tb_actions.Text = Tb_actions.Text + (sender as Button).Text;
 
-           
-                      
+            }
+            else
+            {
+                Tb_actions.Text = Tb_actions.Text + (sender as Button).Text;
+            }
+
+
+
+
 
         }
         double a, b, c;
@@ -44,7 +70,6 @@ namespace Classwork20200413_Calculator
 
         private void Btn_equel_Click(object sender, EventArgs e)
         {
-           Tb_actions.Text = " ";
             b = Convert.ToDouble(Tb_actions.Text);
             switch (znak)
             {
@@ -107,12 +132,12 @@ namespace Classwork20200413_Calculator
             znak = (sender as Button).Text[0];
             Tb_actions.Clear();
             Tb_actions.Focus();
-           
+
         }
 
         private void Btn_equel_KeyUp(object sender, KeyEventArgs e)
-        {         
-            
+        {
+
             b = Convert.ToDouble(Tb_actions.Text);
             switch (e.KeyValue)
             {
@@ -138,22 +163,22 @@ namespace Classwork20200413_Calculator
 
         }
 
-       
+
 
         //====================================================================================================
-       
 
-      
+
+
 
 
         //MSDN
         private bool nonNumberEntered = false;
-        
+
         private void Tb_actions_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (nonNumberEntered == true)
             {
-               e.Handled = true;
+                e.Handled = true;
             }
         }
 
@@ -161,15 +186,15 @@ namespace Classwork20200413_Calculator
         {
             nonNumberEntered = false;
             Text = e.KeyCode.ToString();
-           
+
             //if (e.KeyCode == Keys.Add) //+
             //{
-                
+
             //    Btn_addition_Click(Btn_addition, null);
             //    e.Handled = true;
             //}
 
-          
+
             //if (e.KeyCode == Keys.Multiply) //*
             //{
 
@@ -192,35 +217,35 @@ namespace Classwork20200413_Calculator
             //    e.Handled = true;
             //}
 
-          
+
 
 
             if (e.KeyCode < Keys.D0 || e.KeyCode > Keys.D9 || e.KeyCode == Keys.Enter || e.KeyCode == Keys.Add || e.KeyCode == Keys.Subtract || e.KeyCode == Keys.Multiply || e.KeyCode == Keys.Divide)
             {
-                
-                if (e.KeyCode < Keys.NumPad0 || e.KeyCode > Keys.NumPad9 || e.KeyCode == Keys.Enter || e.KeyCode ==Keys.Add || e.KeyCode == Keys.Subtract || e.KeyCode == Keys.Multiply || e.KeyCode == Keys.Divide)
+
+                if (e.KeyCode < Keys.NumPad0 || e.KeyCode > Keys.NumPad9 || e.KeyCode == Keys.Enter || e.KeyCode == Keys.Add || e.KeyCode == Keys.Subtract || e.KeyCode == Keys.Multiply || e.KeyCode == Keys.Divide)
                 {
-                    
+
                     if (e.KeyCode != Keys.Back)
                     {
-                                             
+
                         nonNumberEntered = true;
                     }
-                    
-                    
+
+
                 }
             }
-           if (Control.ModifierKeys == Keys.Shift)
+            if (Control.ModifierKeys == Keys.Shift)
             {
                 nonNumberEntered = true;
             }
 
 
-           
-        }
-          
 
-    }           
-     
-    
+        }
+
+
+    }
+
+
 }

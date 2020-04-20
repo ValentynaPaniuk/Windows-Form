@@ -1,0 +1,10 @@
+D:\Шаг\WF\Calculator\bin\Debug\Calculator.exe.config
+D:\Шаг\WF\Calculator\bin\Debug\Calculator.exe
+D:\Шаг\WF\Calculator\bin\Debug\Calculator.pdb
+D:\Шаг\WF\Calculator\obj\Debug\Calculator.csprojAssemblyReference.cache
+D:\Шаг\WF\Calculator\obj\Debug\Calculator.Calculator.resources
+D:\Шаг\WF\Calculator\obj\Debug\Calculator.Properties.Resources.resources
+D:\Шаг\WF\Calculator\obj\Debug\Calculator.csproj.GenerateResource.cache
+D:\Шаг\WF\Calculator\obj\Debug\Calculator.csproj.CoreCompileInputs.cache
+D:\Шаг\WF\Calculator\obj\Debug\Calculator.exe
+D:\Шаг\WF\Calculator\obj\Debug\Calculator.pdb

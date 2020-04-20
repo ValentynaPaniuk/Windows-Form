@@ -3,18 +3,15 @@
   <Person>
     <Language>
       <string>Python</string>
-      <string>C/C++</string>
-      <string>Java</string>
-      <string>C#</string>
     </Language>
     <Language_>
-      <string>English</string>
-      <string>German</string>
       <string>Russin</string>
-      <string>Franch</string>
     </Language_>
-    <Name>zxczczxc</Name>
+    <Hobby>
+      <string>Reading</string>
+    </Hobby>
+    <Name>gdf</Name>
     <Gender>Man</Gender>
-    <Bitrhday>1988-12-29T23:05:30</Bitrhday>
+    <Bitrhday>2020-04-15T12:01:27.9598829+03:00</Bitrhday>
   </Person>
 </ArrayOfPerson>

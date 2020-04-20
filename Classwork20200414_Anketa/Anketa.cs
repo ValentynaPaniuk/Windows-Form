@@ -155,6 +155,69 @@ namespace Classwork20200414_Anketa
                 ListBox1.Items.Add(item);
             }
 
+            //////////////////////////
+
+            TextBox1.Clear();
+            TextBox1.Focus();
+            DateTimePicker1.Value = DateTime.Now;
+            foreach (Control x in Controls)
+            {
+                if (x is RadioButton)
+                {
+                    RadioButton temp = x as RadioButton;
+
+                    if (temp.Checked)
+                    {
+                        temp.Checked = false;
+
+                    }
+                }
+            }
+
+
+
+            foreach (Control x in panel1.Controls)
+            {
+                if (x is CheckBox)
+                {
+                    CheckBox temp = x as CheckBox;
+                    temp.ThreeState = false;
+                    if (temp.Checked)
+                    {
+                        temp.Checked = false;
+
+                    }
+                }
+            }
+
+            foreach (Control x in panel2.Controls)
+            {
+                if (x is CheckBox)
+                {
+                    CheckBox temp = x as CheckBox;
+                    temp.ThreeState = false;
+                    if (temp.Checked)
+                    {
+                        temp.Checked = false;
+
+                    }
+                }
+            }
+
+            foreach (Control x in panel3.Controls)
+            {
+                if (x is CheckBox)
+                {
+                    CheckBox temp = x as CheckBox;
+                    temp.ThreeState = false;
+                    if (temp.Checked)
+                    {
+                        temp.Checked = false;
+
+                    }
+                }
+            }
+
 
             MessageBox.Show($"Questionnaire saved");
 
@@ -172,7 +235,7 @@ namespace Classwork20200414_Anketa
 
         private void Button2_Click(object sender, EventArgs e)
         {
-            //string file = dateTimePicker1.Value.ToShortDateString() + "_Person" + ".xml";
+            
             string file = DateTime.Now.ToShortDateString() + "_Person" + ".xml";
             XmlSerializer xml = new XmlSerializer(typeof(List<Person>));
             Stream stream = new FileStream(file, FileMode.Create, FileAccess.Write);
@@ -206,7 +269,7 @@ namespace Classwork20200414_Anketa
                 }
                 foreach (var item1 in item.Hobby)
                 {
-                    ListBox1.Items.Add(item);
+                    ListBox1.Items.Add(item1);
                 }
             }
            

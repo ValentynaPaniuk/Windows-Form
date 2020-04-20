@@ -1,0 +1,10 @@
+D:\Шаг\WF\Classwork20200415_Event_Planning\bin\Debug\Classwork20200415_Event_Planning.exe.config
+D:\Шаг\WF\Classwork20200415_Event_Planning\bin\Debug\Classwork20200415_Event_Planning.exe
+D:\Шаг\WF\Classwork20200415_Event_Planning\bin\Debug\Classwork20200415_Event_Planning.pdb
+D:\Шаг\WF\Classwork20200415_Event_Planning\obj\Debug\Classwork20200415_Event_Planning.csprojAssemblyReference.cache
+D:\Шаг\WF\Classwork20200415_Event_Planning\obj\Debug\Classwork20200415_Event_Planning.Form1.resources
+D:\Шаг\WF\Classwork20200415_Event_Planning\obj\Debug\Classwork20200415_Event_Planning.Properties.Resources.resources
+D:\Шаг\WF\Classwork20200415_Event_Planning\obj\Debug\Classwork20200415_Event_Planning.csproj.GenerateResource.cache
+D:\Шаг\WF\Classwork20200415_Event_Planning\obj\Debug\Classwork20200415_Event_Planning.csproj.CoreCompileInputs.cache
+D:\Шаг\WF\Classwork20200415_Event_Planning\obj\Debug\Classwork20200415_Event_Planning.exe
+D:\Шаг\WF\Classwork20200415_Event_Planning\obj\Debug\Classwork20200415_Event_Planning.pdb
