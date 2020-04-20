@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<ArrayOfPerson xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Person>
+    <Language>
+      <string>Python</string>
+    </Language>
+    <Language_>
+      <string>Franch</string>
+    </Language_>
+    <Hobby>
+      <string>sss</string>
+    </Hobby>
+    <Name>aaa</Name>
+    <Gender>Man</Gender>
+    <Bitrhday>2020-04-20T23:44:41.7833217+03:00</Bitrhday>
+  </Person>
+  <Person>
+    <Language>
+      <string>Python</string>
+    </Language>
+    <Language_ />
+    <Hobby>
+      <string>fff</string>
+    </Hobby>
+    <Name>ddd</Name>
+    <Gender>Woman</Gender>
+    <Bitrhday>2020-04-20T23:44:49.6019301+03:00</Bitrhday>
+  </Person>
+</ArrayOfPerson>

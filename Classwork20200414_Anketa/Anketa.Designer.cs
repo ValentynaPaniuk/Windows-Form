@@ -54,6 +54,7 @@
             this.Button3 = new System.Windows.Forms.Button();
             this.Button4 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.checkBox9 = new System.Windows.Forms.CheckBox();
             this.checkBox10 = new System.Windows.Forms.CheckBox();
@@ -223,7 +224,7 @@
             this.panel1.Controls.Add(this.CheckBox3);
             this.panel1.Location = new System.Drawing.Point(18, 87);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(332, 46);
+            this.panel1.Size = new System.Drawing.Size(409, 46);
             this.panel1.TabIndex = 7;
             // 
             // panel2
@@ -236,7 +237,7 @@
             this.panel2.Controls.Add(this.CheckBox6);
             this.panel2.Location = new System.Drawing.Point(18, 139);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(332, 52);
+            this.panel2.Size = new System.Drawing.Size(409, 52);
             this.panel2.TabIndex = 8;
             // 
             // CheckBox8
@@ -275,9 +276,9 @@
             // ListBox1
             // 
             this.ListBox1.FormattingEnabled = true;
-            this.ListBox1.Location = new System.Drawing.Point(373, 175);
+            this.ListBox1.Location = new System.Drawing.Point(448, 175);
             this.ListBox1.Name = "ListBox1";
-            this.ListBox1.Size = new System.Drawing.Size(230, 147);
+            this.ListBox1.Size = new System.Drawing.Size(155, 147);
             this.ListBox1.TabIndex = 11;
             // 
             // PictureBox1
@@ -325,6 +326,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.DarkGray;
+            this.panel3.Controls.Add(this.textBox2);
             this.panel3.Controls.Add(this.label6);
             this.panel3.Controls.Add(this.checkBox9);
             this.panel3.Controls.Add(this.checkBox10);
@@ -332,8 +334,16 @@
             this.panel3.Controls.Add(this.checkBox12);
             this.panel3.Location = new System.Drawing.Point(18, 197);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(332, 52);
+            this.panel3.Size = new System.Drawing.Size(409, 52);
             this.panel3.TabIndex = 8;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(303, 22);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.TabIndex = 7;
+            this.textBox2.Visible = false;
             // 
             // label6
             // 
@@ -365,6 +375,7 @@
             this.checkBox10.Text = "Another";
             this.checkBox10.ThreeState = true;
             this.checkBox10.UseVisualStyleBackColor = true;
+            this.checkBox10.CheckedChanged += new System.EventHandler(this.checkBox10_CheckedChanged);
             // 
             // checkBox11
             // 
@@ -456,6 +467,7 @@
         private System.Windows.Forms.CheckBox checkBox10;
         private System.Windows.Forms.CheckBox checkBox11;
         private System.Windows.Forms.CheckBox checkBox12;
+        private System.Windows.Forms.TextBox textBox2;
     }
 }
 

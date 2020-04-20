@@ -62,6 +62,7 @@ namespace Classwork20200414_Anketa
 
         private void Button1_Click(object sender, EventArgs e)
         {
+
             Person one = new Person();
             one.Name = TextBox1.Text;
                      
@@ -77,7 +78,8 @@ namespace Classwork20200414_Anketa
                 }
 
             }
-          
+
+           
             one.Bitrhday = DateTimePicker1.Value;
            
            
@@ -124,19 +126,38 @@ namespace Classwork20200414_Anketa
                 {
                     CheckBox temp = x as CheckBox;
                     temp.ThreeState = false;
-                    if (temp.Checked && temp.Text !="Another")
+                    if (temp.Checked && temp.Text != "Another")
                     {
                         one.Hobby.Add(temp.Text);
                    
                     }
                     if (temp.Checked && temp.Text == "Another")
                     {
-                        
+                        one.Hobby.Add(textBox2.Text);
                     }
+                   
+
                 }
             }
 
+            if (one.Name == "Enter name" || one.Name == null)
+            {
+                MessageBox.Show("Enter name, please");
+                TextBox1.Focus();
+                return;
+            }
+
+            if (one.Gender == null)
+            {
+                MessageBox.Show("Select gender, please");
+                return;
+            }
+            textBox2.Visible = false;
+
+
+
             people.Add(one);
+            
             ListBox1.Items.Add(one.Name);
             ListBox1.Items.Add(one.Bitrhday);
             ListBox1.Items.Add(one.Gender);
@@ -213,8 +234,11 @@ namespace Classwork20200414_Anketa
                     if (temp.Checked)
                     {
                         temp.Checked = false;
+                        textBox2.Text = String.Empty;
+                        textBox2.Visible = false;
 
                     }
+
                 }
             }
 
@@ -222,6 +246,8 @@ namespace Classwork20200414_Anketa
             MessageBox.Show($"Questionnaire saved");
 
         }
+
+
         private void Rb_man_CheckedChanged(object sender, EventArgs e)
         {
             RadioButton rb = sender as RadioButton;
@@ -261,11 +287,11 @@ namespace Classwork20200414_Anketa
                      ListBox1.Items.Add(item.Bitrhday);
                 foreach (var item1 in item.Language)
                 {
-                    ListBox1.Items.Add(item);
+                    ListBox1.Items.Add(item1);
                 }
                 foreach (var item1 in item.Language_)
                 {
-                    ListBox1.Items.Add(item);
+                    ListBox1.Items.Add(item1);
                 }
                 foreach (var item1 in item.Hobby)
                 {
@@ -365,7 +391,13 @@ namespace Classwork20200414_Anketa
 
         }
 
-       
+        private void checkBox10_CheckedChanged(object sender, EventArgs e)
+        {
+            textBox2.Visible = true;
+            textBox2.Focus();
+                  
+           
+        }
     }
        
 }
