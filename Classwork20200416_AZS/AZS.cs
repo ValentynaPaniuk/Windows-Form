@@ -186,6 +186,27 @@ namespace Classwork20200416_AZS
 
         }
 
+        private void Cb_Fuel_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (Cb_Fuel.Text == "Gazoline" && Nud_Fuel.Value == 0)
+            {
+                Price = Gazoline;
+
+            }
+            else if (Cb_Fuel.Text == "Gas" && Nud_Fuel.Value == 0)
+            {
+                Price = Gas;
+
+            }
+            else if (Cb_Fuel.Text == "Disiel" && Nud_Fuel.Value == 0)
+            {
+                Price = Disiel;
+
+            }
+            Tb_price.Text = Price.ToString();
+            Lb_Price.Text = $"Price: {Price} GRN";
+        }
+
         private void Btn_total_fuel_Click(object sender, EventArgs e)
         {
             string result = $"FUEL: {Cb_Fuel.Text} VOLUME: {Nud_Fuel.Value} lit. PRICE: {Price} GRN \nTOTAL: {Cost_of_fuel} GRN";

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AZS));
             this.panel1 = new System.Windows.Forms.Panel();
             this.Lb_total = new System.Windows.Forms.Label();
@@ -67,6 +68,9 @@
             this.Lb_Advertising = new System.Windows.Forms.Label();
             this.Lb_Account = new System.Windows.Forms.ListBox();
             this.Lb_total_Account = new System.Windows.Forms.Label();
+            this.Tb_price = new System.Windows.Forms.TextBox();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.Lb_Price = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Nud_Fuel)).BeginInit();
             this.panel2.SuspendLayout();
@@ -90,6 +94,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.Controls.Add(this.Lb_Price);
+            this.panel1.Controls.Add(this.Tb_price);
             this.panel1.Controls.Add(this.Lb_total);
             this.panel1.Controls.Add(this.Btn_total_fuel);
             this.panel1.Controls.Add(this.label1);
@@ -101,14 +107,14 @@
             this.panel1.Controls.Add(this.Lb_Fuel);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(343, 179);
+            this.panel1.Size = new System.Drawing.Size(343, 209);
             this.panel1.TabIndex = 0;
             // 
             // Lb_total
             // 
             this.Lb_total.AutoSize = true;
             this.Lb_total.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Lb_total.Location = new System.Drawing.Point(16, 175);
+            this.Lb_total.Location = new System.Drawing.Point(16, 198);
             this.Lb_total.Name = "Lb_total";
             this.Lb_total.Size = new System.Drawing.Size(0, 13);
             this.Lb_total.TabIndex = 8;
@@ -116,7 +122,7 @@
             // 
             // Btn_total_fuel
             // 
-            this.Btn_total_fuel.Location = new System.Drawing.Point(192, 136);
+            this.Btn_total_fuel.Location = new System.Drawing.Point(192, 159);
             this.Btn_total_fuel.Name = "Btn_total_fuel";
             this.Btn_total_fuel.Size = new System.Drawing.Size(96, 23);
             this.Btn_total_fuel.TabIndex = 7;
@@ -127,7 +133,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(16, 123);
+            this.label1.Location = new System.Drawing.Point(16, 146);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(134, 13);
             this.label1.TabIndex = 6;
@@ -136,7 +142,7 @@
             // Lb_volume
             // 
             this.Lb_volume.AutoSize = true;
-            this.Lb_volume.Location = new System.Drawing.Point(189, 59);
+            this.Lb_volume.Location = new System.Drawing.Point(16, 117);
             this.Lb_volume.Name = "Lb_volume";
             this.Lb_volume.Size = new System.Drawing.Size(82, 13);
             this.Lb_volume.TabIndex = 5;
@@ -159,7 +165,7 @@
             0,
             0,
             65536});
-            this.Nud_Fuel.Location = new System.Drawing.Point(192, 78);
+            this.Nud_Fuel.Location = new System.Drawing.Point(192, 110);
             this.Nud_Fuel.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -172,7 +178,7 @@
             // 
             // Tb_cost_fuel
             // 
-            this.Tb_cost_fuel.Location = new System.Drawing.Point(19, 139);
+            this.Tb_cost_fuel.Location = new System.Drawing.Point(19, 162);
             this.Tb_cost_fuel.Name = "Tb_cost_fuel";
             this.Tb_cost_fuel.Size = new System.Drawing.Size(167, 20);
             this.Tb_cost_fuel.TabIndex = 2;
@@ -188,9 +194,10 @@
             "Disiel"});
             this.Cb_Fuel.Location = new System.Drawing.Point(18, 78);
             this.Cb_Fuel.Name = "Cb_Fuel";
-            this.Cb_Fuel.Size = new System.Drawing.Size(168, 21);
+            this.Cb_Fuel.Size = new System.Drawing.Size(182, 21);
             this.Cb_Fuel.TabIndex = 1;
             this.Cb_Fuel.Text = "Type of fuel";
+            this.Cb_Fuel.SelectedIndexChanged += new System.EventHandler(this.Cb_Fuel_SelectedIndexChanged);
             this.Cb_Fuel.TextChanged += new System.EventHandler(this.Cb_Fuel_TextChanged);
             // 
             // Lb_Fuel
@@ -479,6 +486,28 @@
             this.Lb_total_Account.Text = "Total";
             this.Lb_total_Account.Visible = false;
             // 
+            // Tb_price
+            // 
+            this.Tb_price.Enabled = false;
+            this.Tb_price.Location = new System.Drawing.Point(217, 79);
+            this.Tb_price.Name = "Tb_price";
+            this.Tb_price.Size = new System.Drawing.Size(71, 20);
+            this.Tb_price.TabIndex = 9;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // Lb_Price
+            // 
+            this.Lb_Price.AutoSize = true;
+            this.Lb_Price.Location = new System.Drawing.Point(214, 62);
+            this.Lb_Price.Name = "Lb_Price";
+            this.Lb_Price.Size = new System.Drawing.Size(31, 13);
+            this.Lb_Price.TabIndex = 10;
+            this.Lb_Price.Text = "Price";
+            // 
             // AZS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -557,6 +586,9 @@
         private System.Windows.Forms.ListBox Lb_Account;
         private System.Windows.Forms.Label Lb_Advertising;
         private System.Windows.Forms.Button Bt_Clear;
+        private System.Windows.Forms.TextBox Tb_price;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.Label Lb_Price;
     }
 }
 
