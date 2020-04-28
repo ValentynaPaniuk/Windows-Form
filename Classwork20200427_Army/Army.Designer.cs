@@ -44,7 +44,8 @@
             this.Lb_Team_One = new System.Windows.Forms.Label();
             this.Lb_Team_Two = new System.Windows.Forms.Label();
             this.Bt_Clear = new System.Windows.Forms.Button();
-            this.Bt_Delete_Unit = new System.Windows.Forms.Button();
+            this.Bt_Delete_One = new System.Windows.Forms.Button();
+            this.Bt_Delete_Two = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -205,22 +206,33 @@
             this.Bt_Clear.UseVisualStyleBackColor = true;
             this.Bt_Clear.Click += new System.EventHandler(this.Bt_Clear_Click);
             // 
-            // Bt_Delete_Unit
+            // Bt_Delete_One
             // 
-            this.Bt_Delete_Unit.Location = new System.Drawing.Point(50, 209);
-            this.Bt_Delete_Unit.Name = "Bt_Delete_Unit";
-            this.Bt_Delete_Unit.Size = new System.Drawing.Size(96, 24);
-            this.Bt_Delete_Unit.TabIndex = 8;
-            this.Bt_Delete_Unit.Text = "Delete";
-            this.Bt_Delete_Unit.UseVisualStyleBackColor = true;
-            this.Bt_Delete_Unit.Click += new System.EventHandler(this.Bt_Delete_Unit_Click);
+            this.Bt_Delete_One.Location = new System.Drawing.Point(50, 209);
+            this.Bt_Delete_One.Name = "Bt_Delete_One";
+            this.Bt_Delete_One.Size = new System.Drawing.Size(96, 24);
+            this.Bt_Delete_One.TabIndex = 8;
+            this.Bt_Delete_One.Text = "Delete";
+            this.Bt_Delete_One.UseVisualStyleBackColor = true;
+            this.Bt_Delete_One.Click += new System.EventHandler(this.Bt_Delete_Unit_Click);
+            // 
+            // Bt_Delete_Two
+            // 
+            this.Bt_Delete_Two.Location = new System.Drawing.Point(625, 209);
+            this.Bt_Delete_Two.Name = "Bt_Delete_Two";
+            this.Bt_Delete_Two.Size = new System.Drawing.Size(96, 24);
+            this.Bt_Delete_Two.TabIndex = 8;
+            this.Bt_Delete_Two.Text = "Delete";
+            this.Bt_Delete_Two.UseVisualStyleBackColor = true;
+            this.Bt_Delete_Two.Click += new System.EventHandler(this.Bt_Delete_Two_Click);
             // 
             // Army
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.Bt_Delete_Unit);
+            this.Controls.Add(this.Bt_Delete_Two);
+            this.Controls.Add(this.Bt_Delete_One);
             this.Controls.Add(this.Bt_Clear);
             this.Controls.Add(this.Lb_Team_Two);
             this.Controls.Add(this.Lb_Team_One);
@@ -263,7 +275,8 @@
         private System.Windows.Forms.Label Lb_Team_One;
         private System.Windows.Forms.Label Lb_Team_Two;
         private System.Windows.Forms.Button Bt_Clear;
-        private System.Windows.Forms.Button Bt_Delete_Unit;
+        private System.Windows.Forms.Button Bt_Delete_One;
+        private System.Windows.Forms.Button Bt_Delete_Two;
     }
 }
 

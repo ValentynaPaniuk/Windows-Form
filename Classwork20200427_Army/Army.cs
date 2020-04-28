@@ -148,20 +148,35 @@ namespace Classwork20200427_Army
 
         private void Bt_Delete_Unit_Click(object sender, EventArgs e)
         {
+            if (Lb_One.SelectedItems.Count == 0)
+            {
+                MessageBox.Show("Select Unit");
+                return;
+            }
+
             if (Lb_One.SelectedIndex != 0)
             {
                 Lb_One.Items.RemoveAt(Lb_One.SelectedIndex);
 
             }
-            else if (Lb_One.SelectedIndex < 0)
+
+           
+
+        }
+
+        private void Bt_Delete_Two_Click(object sender, EventArgs e)
+        {
+            if (Lb_Two.SelectedItems.Count == 0)
             {
                 MessageBox.Show("Select Unit");
                 return;
             }
-             
-          
 
+            if (Lb_Two.SelectedIndex != 0)
+            {
+                Lb_Two.Items.RemoveAt(Lb_Two.SelectedIndex);
 
+            }
         }
     }
 }
