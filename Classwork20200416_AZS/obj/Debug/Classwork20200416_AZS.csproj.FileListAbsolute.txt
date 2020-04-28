@@ -1,0 +1,10 @@
+D:\Шаг\WF\Classwork20200416_AZS\bin\Debug\Classwork20200416_AZS.exe.config
+D:\Шаг\WF\Classwork20200416_AZS\bin\Debug\Classwork20200416_AZS.exe
+D:\Шаг\WF\Classwork20200416_AZS\bin\Debug\Classwork20200416_AZS.pdb
+D:\Шаг\WF\Classwork20200416_AZS\obj\Debug\Classwork20200416_AZS.csprojAssemblyReference.cache
+D:\Шаг\WF\Classwork20200416_AZS\obj\Debug\Classwork20200416_AZS.Properties.Resources.resources
+D:\Шаг\WF\Classwork20200416_AZS\obj\Debug\Classwork20200416_AZS.csproj.GenerateResource.cache
+D:\Шаг\WF\Classwork20200416_AZS\obj\Debug\Classwork20200416_AZS.csproj.CoreCompileInputs.cache
+D:\Шаг\WF\Classwork20200416_AZS\obj\Debug\Classwork20200416_AZS.exe
+D:\Шаг\WF\Classwork20200416_AZS\obj\Debug\Classwork20200416_AZS.pdb
+D:\Шаг\WF\Classwork20200416_AZS\obj\Debug\Classwork20200416_AZS.AZS.resources

@@ -1,0 +1,10 @@
+D:\Шаг\WF\Classwork20200427_Army\bin\Debug\Classwork20200427_Army.exe.config
+D:\Шаг\WF\Classwork20200427_Army\bin\Debug\Classwork20200427_Army.exe
+D:\Шаг\WF\Classwork20200427_Army\bin\Debug\Classwork20200427_Army.pdb
+D:\Шаг\WF\Classwork20200427_Army\obj\Debug\Classwork20200427_Army.csprojAssemblyReference.cache
+D:\Шаг\WF\Classwork20200427_Army\obj\Debug\Classwork20200427_Army.Army.resources
+D:\Шаг\WF\Classwork20200427_Army\obj\Debug\Classwork20200427_Army.Properties.Resources.resources
+D:\Шаг\WF\Classwork20200427_Army\obj\Debug\Classwork20200427_Army.csproj.GenerateResource.cache
+D:\Шаг\WF\Classwork20200427_Army\obj\Debug\Classwork20200427_Army.csproj.CoreCompileInputs.cache
+D:\Шаг\WF\Classwork20200427_Army\obj\Debug\Classwork20200427_Army.exe
+D:\Шаг\WF\Classwork20200427_Army\obj\Debug\Classwork20200427_Army.pdb
