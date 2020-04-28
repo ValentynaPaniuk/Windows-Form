@@ -1,0 +1,10 @@
+D:\Шаг\WF\Classwork20200428_City\bin\Debug\Classwork20200428_City.exe.config
+D:\Шаг\WF\Classwork20200428_City\bin\Debug\Classwork20200428_City.exe
+D:\Шаг\WF\Classwork20200428_City\bin\Debug\Classwork20200428_City.pdb
+D:\Шаг\WF\Classwork20200428_City\obj\Debug\Classwork20200428_City.csprojAssemblyReference.cache
+D:\Шаг\WF\Classwork20200428_City\obj\Debug\Classwork20200428_City.Properties.Resources.resources
+D:\Шаг\WF\Classwork20200428_City\obj\Debug\Classwork20200428_City.csproj.GenerateResource.cache
+D:\Шаг\WF\Classwork20200428_City\obj\Debug\Classwork20200428_City.csproj.CoreCompileInputs.cache
+D:\Шаг\WF\Classwork20200428_City\obj\Debug\Classwork20200428_City.exe
+D:\Шаг\WF\Classwork20200428_City\obj\Debug\Classwork20200428_City.pdb
+D:\Шаг\WF\Classwork20200428_City\obj\Debug\Classwork20200428_City.Fhoto.resources
