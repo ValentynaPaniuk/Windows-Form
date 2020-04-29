@@ -72,22 +72,19 @@ namespace Classwork20200428_City
 
             ToolStripProgressBar1.Value = 0;
 
-            
-                linkLabel1.Links.Add(new LinkLabel.Link() { LinkData = "https://uk.wikipedia.org/wiki/%D0%9A%D0%B8%D1%97%D0%B2" });
-                linkLabel1.Links.Add(new LinkLabel.Link() { LinkData = $"{ names[1].Address.ToString()}" });
-                linkLabel1.Links.Add(new LinkLabel.Link() { LinkData = $"{ names[2].Address.ToString()}" });
-                linkLabel1.Links.Add(new LinkLabel.Link() { LinkData = $"{ names[3].Address.ToString()}" });
-            
 
 
         }
 
         int counter = 0;
+
+
+        
         private void ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             linkLabel1.Visible = true;
-           
 
+            
             for (int i = 0;  i < names[0].Path.Count; i++)
             {
                 if (ComboBox1.SelectedIndex == 0)
@@ -98,7 +95,7 @@ namespace Classwork20200428_City
                     HScrollBar1.Maximum = names[0].Path.Count-1;//Задаємо максимум для полоси прокрутки
                     toolStripStatusLabel1.Text = $"{names[0].Name} {counter}";
                     ToolStripProgressBar1.Maximum = names[0].Path.Count;
-
+                   
                  
                 }
 
@@ -107,7 +104,7 @@ namespace Classwork20200428_City
                     pictureBox1.Load($"{names[1].Path[i].ToString()}");
                     linkLabel1.Text = "Lviv";
                     HScrollBar1.Maximum = names[1].Path.Count-1;
-                    toolStripStatusLabel1.Text = names[1].Name;
+                    toolStripStatusLabel1.Text = $"{names[1].Name} {counter}";
                     ToolStripProgressBar1.Maximum = names[1].Path.Count;
 
                 }
@@ -117,7 +114,7 @@ namespace Classwork20200428_City
                     pictureBox1.Load($"{names[2].Path[i].ToString()}");
                     linkLabel1.Text = "Odessa";
                     HScrollBar1.Maximum = names[2].Path.Count-1;
-                    toolStripStatusLabel1.Text = names[2].Name;
+                    toolStripStatusLabel1.Text = $"{names[2].Name} {counter}";
                     ToolStripProgressBar1.Maximum = names[2].Path.Count;
 
 
@@ -128,11 +125,11 @@ namespace Classwork20200428_City
                     pictureBox1.Load($"{names[3].Path[i].ToString()}");
                     linkLabel1.Text = "Rivne";
                     HScrollBar1.Maximum = names[3].Path.Count-1;
-                    toolStripStatusLabel1.Text = names[3].Name;
+                    toolStripStatusLabel1.Text = $"{names[3].Name} {counter}";
                     ToolStripProgressBar1.Maximum = names[3].Path.Count;
 
                 }
-
+               
             }
 
         }
@@ -173,15 +170,29 @@ namespace Classwork20200428_City
 
         private void LinkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            if (ComboBox1.SelectedIndex == 0)
-                //Process.Start(e.Link.LinkData.ToString());
-                linkLabel1.Links[0].LinkData;
-            //if (ComboBox1.SelectedIndex == 1)
-            //    Process.Start(e.Link.LinkData.ToString());
-            //if (ComboBox1.SelectedIndex == 2)
-            //    Process.Start(e.Link.LinkData.ToString());
-            //if (ComboBox1.SelectedIndex == 3)
-            //    Process.Start(e.Link.LinkData.ToString());
+
+            //linkLabel1.Links[linkLabel1.Links.IndexOf(e.Link)].LinkData
+            Process.Start(e.Link.LinkData.ToString());
+
+        }
+
+        private void Fhoto_Leave(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Fhoto_Load(object sender, EventArgs e)
+        {
+
+         //   if (ComboBox1.SelectedIndex == 0)
+               
+          //  if (ComboBox1.SelectedIndex == 1)
+                linkLabel1.Links.Add(new LinkLabel.Link() { LinkData = $"{ names[1].Address.ToString()}" });
+           // if (ComboBox1.SelectedIndex == 2)
+                linkLabel1.Links.Add(new LinkLabel.Link() { LinkData = $"{ names[2].Address.ToString()}" });
+         //   if (ComboBox1.SelectedIndex == 3)
+                linkLabel1.Links.Add(new LinkLabel.Link() { LinkData = $"{ names[3].Address.ToString()}" });
+
 
         }
     }
