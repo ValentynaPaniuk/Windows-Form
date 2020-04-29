@@ -76,61 +76,80 @@ namespace Classwork20200428_City
 
         }
 
-        int counter = 0;
 
 
-        
+
+        int counter_0 = 0;
+        int counter_1 = 0;
+        int counter_2 = 0;
+        int counter_3 = 0;
         private void ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             linkLabel1.Visible = true;
 
-            
-            for (int i = 0;  i < names[0].Path.Count; i++)
+           
+            if (ComboBox1.SelectedIndex == 0)
             {
-                if (ComboBox1.SelectedIndex == 0)
-                {
-                   
-                    pictureBox1.Load($"{names[0].Path[i].ToString()}");
-                    linkLabel1.Text = "Kyiv";
-                    HScrollBar1.Maximum = names[0].Path.Count-1;//Задаємо максимум для полоси прокрутки
-                    toolStripStatusLabel1.Text = $"{names[0].Name} {counter}";
-                    ToolStripProgressBar1.Maximum = names[0].Path.Count;
-                   
-                 
-                }
-
-                if (ComboBox1.SelectedIndex == 1)
-                {
-                    pictureBox1.Load($"{names[1].Path[i].ToString()}");
-                    linkLabel1.Text = "Lviv";
-                    HScrollBar1.Maximum = names[1].Path.Count-1;
-                    toolStripStatusLabel1.Text = $"{names[1].Name} {counter}";
-                    ToolStripProgressBar1.Maximum = names[1].Path.Count;
-
-                }
-
-                if (ComboBox1.SelectedIndex == 2)
-                {
-                    pictureBox1.Load($"{names[2].Path[i].ToString()}");
-                    linkLabel1.Text = "Odessa";
-                    HScrollBar1.Maximum = names[2].Path.Count-1;
-                    toolStripStatusLabel1.Text = $"{names[2].Name} {counter}";
-                    ToolStripProgressBar1.Maximum = names[2].Path.Count;
-
-
-                }
-
-                if (ComboBox1.SelectedIndex == 3)
-                {
-                    pictureBox1.Load($"{names[3].Path[i].ToString()}");
-                    linkLabel1.Text = "Rivne";
-                    HScrollBar1.Maximum = names[3].Path.Count-1;
-                    toolStripStatusLabel1.Text = $"{names[3].Name} {counter}";
-                    ToolStripProgressBar1.Maximum = names[3].Path.Count;
-
-                }
                
+                for (int i = 0; i < names[0].Path.Count; i++)
+                {
+                    HScrollBar1.Maximum = names[0].Path.Count - 1;//Задаємо максимум для полоси прокрутки
+                    pictureBox1.Load($"{names[0].Path[i].ToString()}");
+                }
+                counter_0++;
+                linkLabel1.Text = names[0].Name.ToString();
+                toolStripStatusLabel1.Text = $"{names[0].Name} {counter_0}";
+                ToolStripProgressBar1.Maximum = names[0].Path.Count;
+               
+            } 
+                 
+            if (ComboBox1.SelectedIndex == 1)
+            {
+               
+                for (int i = 0; i < names[1].Path.Count; i++)
+                    {
+                        HScrollBar1.Maximum = names[1].Path.Count - 1;
+                        pictureBox1.Load($"{names[1].Path[i].ToString()}");
+                    }
+                counter_1++;
+                linkLabel1.Text = names[1].Name.ToString();
+                toolStripStatusLabel1.Text = $"{names[1].Name} {counter_1}";
+                ToolStripProgressBar1.Maximum = names[1].Path.Count;
+
             }
+
+            if (ComboBox1.SelectedIndex == 2)
+            {
+               
+                for (int i = 0; i < names[2].Path.Count; i++)
+                    {
+                        HScrollBar1.Maximum = names[2].Path.Count - 1;
+                        pictureBox1.Load($"{names[2].Path[i].ToString()}");
+
+                    }
+                counter_2++;          
+                linkLabel1.Text = names[2].Name.ToString();
+                toolStripStatusLabel1.Text = $"{names[2].Name} {counter_2}";
+                ToolStripProgressBar1.Maximum = names[2].Path.Count;
+
+            }
+
+            if (ComboBox1.SelectedIndex == 3)
+            {
+              
+                for (int i = 0; i < names[3].Path.Count; i++)
+                    {
+                        HScrollBar1.Maximum = names[3].Path.Count - 1;
+                        pictureBox1.Load($"{names[3].Path[i].ToString()}");
+                    }
+                counter_3++;
+                linkLabel1.Text = names[3].Name.ToString();
+                toolStripStatusLabel1.Text = $"{names[3].Name} {counter_3}";
+                ToolStripProgressBar1.Maximum = names[3].Path.Count;
+
+            }
+               
+          
 
         }
 
