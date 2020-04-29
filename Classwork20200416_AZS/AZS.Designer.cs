@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AZS));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.Lb_Price = new System.Windows.Forms.Label();
+            this.Tb_price = new System.Windows.Forms.TextBox();
             this.Lb_total = new System.Windows.Forms.Label();
             this.Btn_total_fuel = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -68,9 +70,14 @@
             this.Lb_Advertising = new System.Windows.Forms.Label();
             this.Lb_Account = new System.Windows.Forms.ListBox();
             this.Lb_total_Account = new System.Windows.Forms.Label();
-            this.Tb_price = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.Lb_Price = new System.Windows.Forms.Label();
+            this.Tb_Tea = new System.Windows.Forms.TextBox();
+            this.Tb_Coffee = new System.Windows.Forms.TextBox();
+            this.Tb_Coffee_with_milk = new System.Windows.Forms.TextBox();
+            this.Tb_Cappuccino = new System.Windows.Forms.TextBox();
+            this.Tb_Sandwich = new System.Windows.Forms.TextBox();
+            this.Tb_HotDog = new System.Windows.Forms.TextBox();
+            this.Tb_Juice = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Nud_Fuel)).BeginInit();
             this.panel2.SuspendLayout();
@@ -109,6 +116,23 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(343, 209);
             this.panel1.TabIndex = 0;
+            // 
+            // Lb_Price
+            // 
+            this.Lb_Price.AutoSize = true;
+            this.Lb_Price.Location = new System.Drawing.Point(214, 62);
+            this.Lb_Price.Name = "Lb_Price";
+            this.Lb_Price.Size = new System.Drawing.Size(31, 13);
+            this.Lb_Price.TabIndex = 10;
+            this.Lb_Price.Text = "Price";
+            // 
+            // Tb_price
+            // 
+            this.Tb_price.Enabled = false;
+            this.Tb_price.Location = new System.Drawing.Point(217, 79);
+            this.Tb_price.Name = "Tb_price";
+            this.Tb_price.Size = new System.Drawing.Size(71, 20);
+            this.Tb_price.TabIndex = 9;
             // 
             // Lb_total
             // 
@@ -214,6 +238,13 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.Silver;
             this.panel2.Controls.Add(this.Btn_Account);
+            this.panel2.Controls.Add(this.Tb_Cappuccino);
+            this.panel2.Controls.Add(this.Tb_Juice);
+            this.panel2.Controls.Add(this.Tb_HotDog);
+            this.panel2.Controls.Add(this.Tb_Sandwich);
+            this.panel2.Controls.Add(this.Tb_Coffee_with_milk);
+            this.panel2.Controls.Add(this.Tb_Coffee);
+            this.panel2.Controls.Add(this.Tb_Tea);
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.pictureBox4);
@@ -237,12 +268,12 @@
             this.panel2.Controls.Add(this.Nup_Coffee);
             this.panel2.Location = new System.Drawing.Point(372, 12);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(378, 261);
+            this.panel2.Size = new System.Drawing.Size(426, 261);
             this.panel2.TabIndex = 0;
             // 
             // Btn_Account
             // 
-            this.Btn_Account.Location = new System.Drawing.Point(205, 207);
+            this.Btn_Account.Location = new System.Drawing.Point(235, 208);
             this.Btn_Account.Name = "Btn_Account";
             this.Btn_Account.Size = new System.Drawing.Size(131, 32);
             this.Btn_Account.TabIndex = 6;
@@ -253,7 +284,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(193, 119);
+            this.pictureBox2.Location = new System.Drawing.Point(223, 120);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(63, 61);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -263,7 +294,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(193, 5);
+            this.pictureBox1.Location = new System.Drawing.Point(223, 6);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(63, 52);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -273,7 +304,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(193, 63);
+            this.pictureBox4.Location = new System.Drawing.Point(223, 64);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(63, 50);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -323,7 +354,7 @@
             // Cb_HotDog
             // 
             this.Cb_HotDog.AutoSize = true;
-            this.Cb_HotDog.Location = new System.Drawing.Point(262, 75);
+            this.Cb_HotDog.Location = new System.Drawing.Point(292, 76);
             this.Cb_HotDog.Name = "Cb_HotDog";
             this.Cb_HotDog.Size = new System.Drawing.Size(66, 17);
             this.Cb_HotDog.TabIndex = 2;
@@ -343,7 +374,7 @@
             // Cb_Juice
             // 
             this.Cb_Juice.AutoSize = true;
-            this.Cb_Juice.Location = new System.Drawing.Point(262, 142);
+            this.Cb_Juice.Location = new System.Drawing.Point(292, 143);
             this.Cb_Juice.Name = "Cb_Juice";
             this.Cb_Juice.Size = new System.Drawing.Size(51, 17);
             this.Cb_Juice.TabIndex = 2;
@@ -353,7 +384,7 @@
             // Cb_Sandwich
             // 
             this.Cb_Sandwich.AutoSize = true;
-            this.Cb_Sandwich.Location = new System.Drawing.Point(263, 19);
+            this.Cb_Sandwich.Location = new System.Drawing.Point(293, 20);
             this.Cb_Sandwich.Name = "Cb_Sandwich";
             this.Cb_Sandwich.Size = new System.Drawing.Size(73, 17);
             this.Cb_Sandwich.TabIndex = 2;
@@ -399,21 +430,21 @@
             // 
             // Nup_Juice
             // 
-            this.Nup_Juice.Location = new System.Drawing.Point(261, 159);
+            this.Nup_Juice.Location = new System.Drawing.Point(291, 160);
             this.Nup_Juice.Name = "Nup_Juice";
             this.Nup_Juice.Size = new System.Drawing.Size(73, 20);
             this.Nup_Juice.TabIndex = 2;
             // 
             // Nup_Sandwich
             // 
-            this.Nup_Sandwich.Location = new System.Drawing.Point(262, 36);
+            this.Nup_Sandwich.Location = new System.Drawing.Point(292, 37);
             this.Nup_Sandwich.Name = "Nup_Sandwich";
             this.Nup_Sandwich.Size = new System.Drawing.Size(73, 20);
             this.Nup_Sandwich.TabIndex = 2;
             // 
             // Nup_Hotdog
             // 
-            this.Nup_Hotdog.Location = new System.Drawing.Point(262, 94);
+            this.Nup_Hotdog.Location = new System.Drawing.Point(292, 95);
             this.Nup_Hotdog.Name = "Nup_Hotdog";
             this.Nup_Hotdog.Size = new System.Drawing.Size(72, 20);
             this.Nup_Hotdog.TabIndex = 2;
@@ -447,12 +478,12 @@
             this.panel3.Controls.Add(this.Lb_Account);
             this.panel3.Location = new System.Drawing.Point(12, 283);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(738, 189);
+            this.panel3.Size = new System.Drawing.Size(786, 189);
             this.panel3.TabIndex = 1;
             // 
             // Bt_Clear
             // 
-            this.Bt_Clear.Location = new System.Drawing.Point(475, 128);
+            this.Bt_Clear.Location = new System.Drawing.Point(476, 104);
             this.Bt_Clear.Name = "Bt_Clear";
             this.Bt_Clear.Size = new System.Drawing.Size(141, 32);
             this.Bt_Clear.TabIndex = 2;
@@ -486,33 +517,72 @@
             this.Lb_total_Account.Text = "Total";
             this.Lb_total_Account.Visible = false;
             // 
-            // Tb_price
-            // 
-            this.Tb_price.Enabled = false;
-            this.Tb_price.Location = new System.Drawing.Point(217, 79);
-            this.Tb_price.Name = "Tb_price";
-            this.Tb_price.Size = new System.Drawing.Size(71, 20);
-            this.Tb_price.TabIndex = 9;
-            // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // Lb_Price
+            // Tb_Tea
             // 
-            this.Lb_Price.AutoSize = true;
-            this.Lb_Price.Location = new System.Drawing.Point(214, 62);
-            this.Lb_Price.Name = "Lb_Price";
-            this.Lb_Price.Size = new System.Drawing.Size(31, 13);
-            this.Lb_Price.TabIndex = 10;
-            this.Lb_Price.Text = "Price";
+            this.Tb_Tea.Enabled = false;
+            this.Tb_Tea.Location = new System.Drawing.Point(146, 36);
+            this.Tb_Tea.Name = "Tb_Tea";
+            this.Tb_Tea.Size = new System.Drawing.Size(45, 20);
+            this.Tb_Tea.TabIndex = 9;
+            // 
+            // Tb_Coffee
+            // 
+            this.Tb_Coffee.Enabled = false;
+            this.Tb_Coffee.Location = new System.Drawing.Point(146, 98);
+            this.Tb_Coffee.Name = "Tb_Coffee";
+            this.Tb_Coffee.Size = new System.Drawing.Size(45, 20);
+            this.Tb_Coffee.TabIndex = 9;
+            // 
+            // Tb_Coffee_with_milk
+            // 
+            this.Tb_Coffee_with_milk.Enabled = false;
+            this.Tb_Coffee_with_milk.Location = new System.Drawing.Point(146, 159);
+            this.Tb_Coffee_with_milk.Name = "Tb_Coffee_with_milk";
+            this.Tb_Coffee_with_milk.Size = new System.Drawing.Size(45, 20);
+            this.Tb_Coffee_with_milk.TabIndex = 9;
+            // 
+            // Tb_Cappuccino
+            // 
+            this.Tb_Cappuccino.Enabled = false;
+            this.Tb_Cappuccino.Location = new System.Drawing.Point(146, 228);
+            this.Tb_Cappuccino.Name = "Tb_Cappuccino";
+            this.Tb_Cappuccino.Size = new System.Drawing.Size(45, 20);
+            this.Tb_Cappuccino.TabIndex = 9;
+            // 
+            // Tb_Sandwich
+            // 
+            this.Tb_Sandwich.Enabled = false;
+            this.Tb_Sandwich.Location = new System.Drawing.Point(371, 36);
+            this.Tb_Sandwich.Name = "Tb_Sandwich";
+            this.Tb_Sandwich.Size = new System.Drawing.Size(45, 20);
+            this.Tb_Sandwich.TabIndex = 9;
+            // 
+            // Tb_HotDog
+            // 
+            this.Tb_HotDog.Enabled = false;
+            this.Tb_HotDog.Location = new System.Drawing.Point(371, 94);
+            this.Tb_HotDog.Name = "Tb_HotDog";
+            this.Tb_HotDog.Size = new System.Drawing.Size(45, 20);
+            this.Tb_HotDog.TabIndex = 9;
+            // 
+            // Tb_Juice
+            // 
+            this.Tb_Juice.Enabled = false;
+            this.Tb_Juice.Location = new System.Drawing.Point(372, 159);
+            this.Tb_Juice.Name = "Tb_Juice";
+            this.Tb_Juice.Size = new System.Drawing.Size(45, 20);
+            this.Tb_Juice.TabIndex = 9;
             // 
             // AZS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(756, 274);
+            this.ClientSize = new System.Drawing.Size(801, 280);
             this.Controls.Add(this.Lb_total_Account);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -589,6 +659,13 @@
         private System.Windows.Forms.TextBox Tb_price;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.Label Lb_Price;
+        private System.Windows.Forms.TextBox Tb_Cappuccino;
+        private System.Windows.Forms.TextBox Tb_Juice;
+        private System.Windows.Forms.TextBox Tb_HotDog;
+        private System.Windows.Forms.TextBox Tb_Sandwich;
+        private System.Windows.Forms.TextBox Tb_Coffee_with_milk;
+        private System.Windows.Forms.TextBox Tb_Coffee;
+        private System.Windows.Forms.TextBox Tb_Tea;
     }
 }
 

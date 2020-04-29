@@ -32,6 +32,13 @@ namespace Classwork20200416_AZS
             InitializeComponent();
             Cb_Fuel.Focus();
             Lb_Fuel.Text = $"Gazoline: {Gazoline}      Gas: {Gas}        Disiel: {Disiel}";
+            Tb_Tea.Text = Tea.ToString();
+            Tb_Coffee.Text = Coffee.ToString();
+            Tb_Coffee_with_milk.Text = Coffee_with_Milk.ToString();
+            Tb_Cappuccino.Text = Cappuccino.ToString();
+            Tb_HotDog.Text = Hotdog.ToString();
+            Tb_Juice.Text = Juice.ToString();
+            Tb_Sandwich.Text = Sandwich.ToString();
            
         }
 
