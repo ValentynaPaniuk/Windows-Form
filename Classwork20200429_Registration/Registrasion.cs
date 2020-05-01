@@ -28,13 +28,14 @@ namespace Classwork20200429_Registration
         bool ValidName = false;
         bool ValidSurname = false;
         bool ValidYear = false;
+
+        int counter = 1;
         List<Person> people = new List<Person>();
 
         public Registrasion()
         {
             InitializeComponent();
             toolStripStatusLabel1.Text = "Status form";
-
 
             Tb_Phone.Text = "Enter Phone number (10-12 digits)";//подсказка
             Tb_Phone.ForeColor = Color.Gray;
@@ -45,15 +46,18 @@ namespace Classwork20200429_Registration
         //Вводити лише букви
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
+            toolStripStatusLabel1.Text = $"Registrathion form: {counter}";
             if (Char.IsLetter(e.KeyChar) || (Char)Keys.Back == e.KeyChar) return;
             e.Handled = true;
         }
 
+        //Додаємо анкету до listBox і в клас Person
         private void button1_Click(object sender, EventArgs e)
         {
+           
             if (ValidName && ValidSurname && ValidYear)
             {
-                toolStripStatusLabel1.Text = "Registration was successful";
+                toolStripStatusLabel1.Text = $"Registration form {counter} was successful";
 
             }
             else
@@ -72,11 +76,7 @@ namespace Classwork20200429_Registration
 
             listBox1.Items.Add(one);
 
-            //Tb_Name.Clear();
-            //Tb_Surname.Clear();
-            //Tb_Year.Clear();
-
-            TextBox cb = sender as TextBox;
+         
             foreach (var item in groupBox1.Controls)
             {
                 if (item is TextBox)
@@ -84,10 +84,14 @@ namespace Classwork20200429_Registration
                     Cleare(item);
                 }
             }
-
-
+            Cb_guestion.Text = String.Empty;
+            Lb_Year.Text = "Year of Birthday";
+            counter++;
+            Registrasion.ActiveForm.Width = 831;
+           
         }
 
+        //Чистимо textbox
         private void Cleare(Object tb)
         {
             (tb as TextBox).Text = String.Empty;
@@ -95,9 +99,10 @@ namespace Classwork20200429_Registration
         }
 
 
+        //Зірочка до полів, що є обов'язковими
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
+           
             if (Tb_Name.Text == String.Empty)
                 label1.Visible = true;
 
@@ -147,7 +152,7 @@ namespace Classwork20200429_Registration
         //Вводити лише числа
         private void Tb_Year_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (Char.IsDigit(e.KeyChar) || (Char)Keys.Back == e.KeyChar) return;
+           if (Char.IsDigit(e.KeyChar) || (Char)Keys.Back == e.KeyChar) return;
             e.Handled = true;
         }
 
@@ -156,16 +161,26 @@ namespace Classwork20200429_Registration
         {
             if (DateTime.Now.Year - Convert.ToInt32(Tb_Year.Text) <= 12 || Convert.ToInt32(Tb_Year.Text) <= 1920)
                 errorProvider1.SetError(Tb_Year, "Check that you have entered the year correctly");
+            
 
         }
 
+        //Змінюємо підказку в полі номер
         private void Tb_Phone_Click(object sender, EventArgs e)
         {
             Tb_Phone.Text = null;
             Tb_Phone.ForeColor = Color.Black;
         }
 
-        
+        private void Tb_Phone_Validating(object sender, CancelEventArgs e)
+        {
+            if (Tb_Phone.Text.Length > 12 || Tb_Phone.Text == String.Empty)
+                errorProvider1.SetError(Tb_Phone, "Check that you have entered the Phone correctly");
+            else
+         
+                errorProvider1.Clear();
+         
+        }
     }
 
 }

@@ -162,9 +162,10 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox1.Location = new System.Drawing.Point(17, 21);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(86, 84);
+            this.pictureBox1.Size = new System.Drawing.Size(98, 120);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
@@ -228,7 +229,7 @@
             this.toolStripStatusLabel1});
             this.statusStrip1.Location = new System.Drawing.Point(0, 307);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(805, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(483, 22);
             this.statusStrip1.TabIndex = 5;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -274,7 +275,7 @@
             this.Tb_Phone.TabIndex = 0;
             this.Tb_Phone.Click += new System.EventHandler(this.Tb_Phone_Click);
             this.Tb_Phone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Tb_Year_KeyPress);
-            this.Tb_Phone.Validating += new System.ComponentModel.CancelEventHandler(this.Tb_Year_Validating);
+            this.Tb_Phone.Validating += new System.ComponentModel.CancelEventHandler(this.Tb_Phone_Validating);
             // 
             // Lb_Phone
             // 
@@ -301,7 +302,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(805, 329);
+            this.ClientSize = new System.Drawing.Size(483, 329);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.statusStrip1);
