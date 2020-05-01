@@ -72,12 +72,18 @@ namespace Classwork20200428_City
 
             ToolStripProgressBar1.Value = 0;
 
+            if (ComboBox1.SelectedIndex == 0)
+                linkLabel1.Links.Add(new LinkLabel.Link() { LinkData = $"{ names[0].Address.ToString()}" });
+            if (ComboBox1.SelectedIndex == 1)
+                linkLabel1.Links.Add(new LinkLabel.Link() { LinkData = $"{ names[1].Address.ToString()}" });
+            if (ComboBox1.SelectedIndex == 2)
+                linkLabel1.Links.Add(new LinkLabel.Link() { LinkData = $"{ names[2].Address.ToString()}" });
+            if (ComboBox1.SelectedIndex == 3)
+                linkLabel1.Links.Add(new LinkLabel.Link() { LinkData = $"{ names[3].Address.ToString()}" });
+
 
 
         }
-
-
-
 
         int counter_0 = 0;
         int counter_1 = 0;
@@ -86,11 +92,9 @@ namespace Classwork20200428_City
         private void ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             linkLabel1.Visible = true;
-
-           
+          
             if (ComboBox1.SelectedIndex == 0)
             {
-               
                 for (int i = 0; i < names[0].Path.Count; i++)
                 {
                     HScrollBar1.Maximum = names[0].Path.Count - 1;//Задаємо максимум для полоси прокрутки
@@ -105,12 +109,11 @@ namespace Classwork20200428_City
                  
             if (ComboBox1.SelectedIndex == 1)
             {
-               
-                for (int i = 0; i < names[1].Path.Count; i++)
-                    {
-                        HScrollBar1.Maximum = names[1].Path.Count - 1;
-                        pictureBox1.Load($"{names[1].Path[i].ToString()}");
-                    }
+               for (int i = 0; i < names[1].Path.Count; i++)
+                {
+                   HScrollBar1.Maximum = names[1].Path.Count - 1;
+                   pictureBox1.Load($"{names[1].Path[i].ToString()}");
+                }
                 counter_1++;
                 linkLabel1.Text = names[1].Name.ToString();
                 toolStripStatusLabel1.Text = $"{names[1].Name} {counter_1}";
@@ -122,11 +125,11 @@ namespace Classwork20200428_City
             {
                
                 for (int i = 0; i < names[2].Path.Count; i++)
-                    {
-                        HScrollBar1.Maximum = names[2].Path.Count - 1;
-                        pictureBox1.Load($"{names[2].Path[i].ToString()}");
+                {
+                    HScrollBar1.Maximum = names[2].Path.Count - 1;
+                    pictureBox1.Load($"{names[2].Path[i].ToString()}");
 
-                    }
+                }
                 counter_2++;          
                 linkLabel1.Text = names[2].Name.ToString();
                 toolStripStatusLabel1.Text = $"{names[2].Name} {counter_2}";
@@ -138,10 +141,10 @@ namespace Classwork20200428_City
             {
               
                 for (int i = 0; i < names[3].Path.Count; i++)
-                    {
-                        HScrollBar1.Maximum = names[3].Path.Count - 1;
-                        pictureBox1.Load($"{names[3].Path[i].ToString()}");
-                    }
+                {
+                   HScrollBar1.Maximum = names[3].Path.Count - 1;
+                   pictureBox1.Load($"{names[3].Path[i].ToString()}");
+                }
                 counter_3++;
                 linkLabel1.Text = names[3].Name.ToString();
                 toolStripStatusLabel1.Text = $"{names[3].Name} {counter_3}";
@@ -167,52 +170,30 @@ namespace Classwork20200428_City
             {
                 pictureBox1.Load($"{names[1].Path[j].ToString()}");
                 ToolStripProgressBar1.Value = j + 1;
-
             }
 
             if (ComboBox1.SelectedIndex == 2)
             {
                 pictureBox1.Load($"{names[2].Path[j].ToString()}");
                 ToolStripProgressBar1.Value = j + 1;
-
             }
 
             if (ComboBox1.SelectedIndex == 3)
             {
                 pictureBox1.Load($"{names[3].Path[j].ToString()}");
                 ToolStripProgressBar1.Value = j + 1;
-
             }
-
 
         }
 
         private void LinkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
 
-            //linkLabel1.Links[linkLabel1.Links.IndexOf(e.Link)].LinkData
-            Process.Start(e.Link.LinkData.ToString());
+            linkLabel1.Links[linkLabel1.Links.IndexOf(e.Link)].LinkData
+            //Process.Start(e.Link.LinkData.ToString());
 
         }
 
-        private void Fhoto_Leave(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Fhoto_Load(object sender, EventArgs e)
-        {
-
-         //   if (ComboBox1.SelectedIndex == 0)
-               
-          //  if (ComboBox1.SelectedIndex == 1)
-                linkLabel1.Links.Add(new LinkLabel.Link() { LinkData = $"{ names[1].Address.ToString()}" });
-           // if (ComboBox1.SelectedIndex == 2)
-                linkLabel1.Links.Add(new LinkLabel.Link() { LinkData = $"{ names[2].Address.ToString()}" });
-         //   if (ComboBox1.SelectedIndex == 3)
-                linkLabel1.Links.Add(new LinkLabel.Link() { LinkData = $"{ names[3].Address.ToString()}" });
-
-
-        }
+             
     }
 }

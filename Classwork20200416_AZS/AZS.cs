@@ -64,20 +64,8 @@ namespace Classwork20200416_AZS
             }
 
 
-            if (Cb_Fuel.Text == "Gazoline" && Nud_Fuel.Value != 0)
-            {
-                Price = Gazoline;
-
-            }
-            else if (Cb_Fuel.Text == "Gas" && Nud_Fuel.Value != 0)
-            {
-                Price = Gas;
-
-            }
-            else if (Cb_Fuel.Text == "Disiel" && Nud_Fuel.Value == 0)
-            {
-                Price = Disiel;
-            }
+          
+            Choose_fuel();
 
             Cost_of_fuel = Price * Nud_Fuel.Value;
             Tb_cost_fuel.Text = Cost_of_fuel.ToString();
@@ -86,7 +74,7 @@ namespace Classwork20200416_AZS
         //Не дозволяє вводити цифри
         private void Tb_cost_fuel_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (Char.IsDigit(e.KeyChar)) return;
+            if (Char.IsDigit(e.KeyChar) || (Char)Keys.Back == e.KeyChar) return;
             else
                 e.Handled = true;
            
@@ -102,9 +90,6 @@ namespace Classwork20200416_AZS
             Lb_Account.Items.Add(Lb_total_Account.Text);
             Lb_total_Account.Text = String.Empty;
           
-
-            CheckBox cb = sender as CheckBox;
-            NumericUpDown nup = sender as NumericUpDown;
 
             if (Cb_Tea.Checked && Nup_Tea.Value == 0 || Cb_Coffee.Checked && Nup_Coffee.Value == 0 || Cb_Cappuccino.Checked && Nup_Cappuccino.Value == 0 || Cb_CoffeeMilk.Checked && Nup_CoffeWithMilk.Value == 0 || Cb_Sandwich.Checked && Nup_Sandwich.Value == 0  || Cb_HotDog.Checked && Nup_Hotdog.Value == 0 || Cb_Juice.Checked && Nup_Juice.Value == 0)
             {
@@ -175,41 +160,42 @@ namespace Classwork20200416_AZS
             Tb_cost_fuel.Text = String.Empty;
             Nud_Fuel.Value = 0;
 
-            Cb_Tea.Checked = false;
-            Cb_Coffee.Checked = false;
-            Cb_Cappuccino.Checked = false;
-            Cb_CoffeeMilk.Checked = false;
-            Cb_HotDog.Checked = false;
-            Cb_Sandwich.Checked = false;
-            Cb_Juice.Checked = false;
+            Lb_Advertising.Text = null;
 
-            Nup_Tea.Value = 0;
-            Nup_Cappuccino.Value = 0;
-            Nup_Coffee.Value = 0;
-            Nup_CoffeWithMilk.Value = 0;
-            Nup_Hotdog.Value = 0;
-            Nup_Sandwich.Value = 0;
-            Nup_Juice.Value = 0;
 
+            foreach (var item in panel2.Controls)
+            {
+                if (item is CheckBox)
+                {
+                    Cleare_CB(item);
+                }
+            }
+
+            foreach (var item in panel2.Controls)
+            {
+                if (item is NumericUpDown)
+                {
+                    Cleare_NUD(item);
+                }
+            }
+
+        }
+
+        private void Cleare_CB(Object Cb)
+        {
+            (Cb as CheckBox).Checked = false;
+          
+        }
+
+        private void Cleare_NUD(Object Nud)
+        {
+            (Nud as NumericUpDown).Value = 0;
         }
 
         private void Cb_Fuel_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (Cb_Fuel.Text == "Gazoline" && Nud_Fuel.Value == 0)
-            {
-                Price = Gazoline;
-
-            }
-            else if (Cb_Fuel.Text == "Gas" && Nud_Fuel.Value == 0)
-            {
-                Price = Gas;
-
-            }
-            else if (Cb_Fuel.Text == "Disiel" && Nud_Fuel.Value == 0)
-            {
-                Price = Disiel;
-
-            }
+            
+            Choose_fuel();
             Tb_price.Text = Price.ToString();
             Lb_Price.Text = $"Price: {Price} GRN";
         }
@@ -236,7 +222,15 @@ namespace Classwork20200416_AZS
                 return;
             }
 
-            if (Cb_Fuel.Text == "Gazoline" && Nud_Fuel.Value == 0)
+            Choose_fuel();
+
+            Nud_Fuel.Value = Convert.ToDecimal(Tb_cost_fuel.Text) / Price;
+         
+        }
+
+        private void Choose_fuel()
+        {
+              if (Cb_Fuel.Text == "Gazoline" && Nud_Fuel.Value == 0)
             {
                 Price = Gazoline;
 
@@ -251,12 +245,7 @@ namespace Classwork20200416_AZS
                 Price = Disiel;
 
             }
-
-            Nud_Fuel.Value = Convert.ToDecimal(Tb_cost_fuel.Text) / Price;
-         
         }
-
-              
 
       
     }

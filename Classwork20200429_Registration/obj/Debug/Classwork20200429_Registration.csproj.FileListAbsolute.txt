@@ -1,0 +1,10 @@
+D:\Шаг\WF\Classwork20200429_Registration\bin\Debug\Classwork20200429_Registration.exe.config
+D:\Шаг\WF\Classwork20200429_Registration\bin\Debug\Classwork20200429_Registration.exe
+D:\Шаг\WF\Classwork20200429_Registration\bin\Debug\Classwork20200429_Registration.pdb
+D:\Шаг\WF\Classwork20200429_Registration\obj\Debug\Classwork20200429_Registration.csprojAssemblyReference.cache
+D:\Шаг\WF\Classwork20200429_Registration\obj\Debug\Classwork20200429_Registration.Registrasion.resources
+D:\Шаг\WF\Classwork20200429_Registration\obj\Debug\Classwork20200429_Registration.Properties.Resources.resources
+D:\Шаг\WF\Classwork20200429_Registration\obj\Debug\Classwork20200429_Registration.csproj.GenerateResource.cache
+D:\Шаг\WF\Classwork20200429_Registration\obj\Debug\Classwork20200429_Registration.csproj.CoreCompileInputs.cache
+D:\Шаг\WF\Classwork20200429_Registration\obj\Debug\Classwork20200429_Registration.exe
+D:\Шаг\WF\Classwork20200429_Registration\obj\Debug\Classwork20200429_Registration.pdb

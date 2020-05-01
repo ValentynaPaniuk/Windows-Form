@@ -44,6 +44,13 @@
             this.Lb_Fuel = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.Btn_Account = new System.Windows.Forms.Button();
+            this.Tb_Cappuccino = new System.Windows.Forms.TextBox();
+            this.Tb_Juice = new System.Windows.Forms.TextBox();
+            this.Tb_HotDog = new System.Windows.Forms.TextBox();
+            this.Tb_Sandwich = new System.Windows.Forms.TextBox();
+            this.Tb_Coffee_with_milk = new System.Windows.Forms.TextBox();
+            this.Tb_Coffee = new System.Windows.Forms.TextBox();
+            this.Tb_Tea = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -71,13 +78,6 @@
             this.Lb_Account = new System.Windows.Forms.ListBox();
             this.Lb_total_Account = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.Tb_Tea = new System.Windows.Forms.TextBox();
-            this.Tb_Coffee = new System.Windows.Forms.TextBox();
-            this.Tb_Coffee_with_milk = new System.Windows.Forms.TextBox();
-            this.Tb_Cappuccino = new System.Windows.Forms.TextBox();
-            this.Tb_Sandwich = new System.Windows.Forms.TextBox();
-            this.Tb_HotDog = new System.Windows.Forms.TextBox();
-            this.Tb_Juice = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Nud_Fuel)).BeginInit();
             this.panel2.SuspendLayout();
@@ -280,6 +280,62 @@
             this.Btn_Account.Text = "Account";
             this.Btn_Account.UseVisualStyleBackColor = true;
             this.Btn_Account.Click += new System.EventHandler(this.Btn_Account_Click);
+            // 
+            // Tb_Cappuccino
+            // 
+            this.Tb_Cappuccino.Enabled = false;
+            this.Tb_Cappuccino.Location = new System.Drawing.Point(146, 228);
+            this.Tb_Cappuccino.Name = "Tb_Cappuccino";
+            this.Tb_Cappuccino.Size = new System.Drawing.Size(45, 20);
+            this.Tb_Cappuccino.TabIndex = 9;
+            // 
+            // Tb_Juice
+            // 
+            this.Tb_Juice.Enabled = false;
+            this.Tb_Juice.Location = new System.Drawing.Point(372, 159);
+            this.Tb_Juice.Name = "Tb_Juice";
+            this.Tb_Juice.Size = new System.Drawing.Size(45, 20);
+            this.Tb_Juice.TabIndex = 9;
+            // 
+            // Tb_HotDog
+            // 
+            this.Tb_HotDog.Enabled = false;
+            this.Tb_HotDog.Location = new System.Drawing.Point(371, 94);
+            this.Tb_HotDog.Name = "Tb_HotDog";
+            this.Tb_HotDog.Size = new System.Drawing.Size(45, 20);
+            this.Tb_HotDog.TabIndex = 9;
+            // 
+            // Tb_Sandwich
+            // 
+            this.Tb_Sandwich.Enabled = false;
+            this.Tb_Sandwich.Location = new System.Drawing.Point(371, 36);
+            this.Tb_Sandwich.Name = "Tb_Sandwich";
+            this.Tb_Sandwich.Size = new System.Drawing.Size(45, 20);
+            this.Tb_Sandwich.TabIndex = 9;
+            // 
+            // Tb_Coffee_with_milk
+            // 
+            this.Tb_Coffee_with_milk.Enabled = false;
+            this.Tb_Coffee_with_milk.Location = new System.Drawing.Point(146, 159);
+            this.Tb_Coffee_with_milk.Name = "Tb_Coffee_with_milk";
+            this.Tb_Coffee_with_milk.Size = new System.Drawing.Size(45, 20);
+            this.Tb_Coffee_with_milk.TabIndex = 9;
+            // 
+            // Tb_Coffee
+            // 
+            this.Tb_Coffee.Enabled = false;
+            this.Tb_Coffee.Location = new System.Drawing.Point(146, 98);
+            this.Tb_Coffee.Name = "Tb_Coffee";
+            this.Tb_Coffee.Size = new System.Drawing.Size(45, 20);
+            this.Tb_Coffee.TabIndex = 9;
+            // 
+            // Tb_Tea
+            // 
+            this.Tb_Tea.Enabled = false;
+            this.Tb_Tea.Location = new System.Drawing.Point(146, 36);
+            this.Tb_Tea.Name = "Tb_Tea";
+            this.Tb_Tea.Size = new System.Drawing.Size(45, 20);
+            this.Tb_Tea.TabIndex = 9;
             // 
             // pictureBox2
             // 
@@ -522,67 +578,11 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // Tb_Tea
-            // 
-            this.Tb_Tea.Enabled = false;
-            this.Tb_Tea.Location = new System.Drawing.Point(146, 36);
-            this.Tb_Tea.Name = "Tb_Tea";
-            this.Tb_Tea.Size = new System.Drawing.Size(45, 20);
-            this.Tb_Tea.TabIndex = 9;
-            // 
-            // Tb_Coffee
-            // 
-            this.Tb_Coffee.Enabled = false;
-            this.Tb_Coffee.Location = new System.Drawing.Point(146, 98);
-            this.Tb_Coffee.Name = "Tb_Coffee";
-            this.Tb_Coffee.Size = new System.Drawing.Size(45, 20);
-            this.Tb_Coffee.TabIndex = 9;
-            // 
-            // Tb_Coffee_with_milk
-            // 
-            this.Tb_Coffee_with_milk.Enabled = false;
-            this.Tb_Coffee_with_milk.Location = new System.Drawing.Point(146, 159);
-            this.Tb_Coffee_with_milk.Name = "Tb_Coffee_with_milk";
-            this.Tb_Coffee_with_milk.Size = new System.Drawing.Size(45, 20);
-            this.Tb_Coffee_with_milk.TabIndex = 9;
-            // 
-            // Tb_Cappuccino
-            // 
-            this.Tb_Cappuccino.Enabled = false;
-            this.Tb_Cappuccino.Location = new System.Drawing.Point(146, 228);
-            this.Tb_Cappuccino.Name = "Tb_Cappuccino";
-            this.Tb_Cappuccino.Size = new System.Drawing.Size(45, 20);
-            this.Tb_Cappuccino.TabIndex = 9;
-            // 
-            // Tb_Sandwich
-            // 
-            this.Tb_Sandwich.Enabled = false;
-            this.Tb_Sandwich.Location = new System.Drawing.Point(371, 36);
-            this.Tb_Sandwich.Name = "Tb_Sandwich";
-            this.Tb_Sandwich.Size = new System.Drawing.Size(45, 20);
-            this.Tb_Sandwich.TabIndex = 9;
-            // 
-            // Tb_HotDog
-            // 
-            this.Tb_HotDog.Enabled = false;
-            this.Tb_HotDog.Location = new System.Drawing.Point(371, 94);
-            this.Tb_HotDog.Name = "Tb_HotDog";
-            this.Tb_HotDog.Size = new System.Drawing.Size(45, 20);
-            this.Tb_HotDog.TabIndex = 9;
-            // 
-            // Tb_Juice
-            // 
-            this.Tb_Juice.Enabled = false;
-            this.Tb_Juice.Location = new System.Drawing.Point(372, 159);
-            this.Tb_Juice.Name = "Tb_Juice";
-            this.Tb_Juice.Size = new System.Drawing.Size(45, 20);
-            this.Tb_Juice.TabIndex = 9;
-            // 
             // AZS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(801, 280);
+            this.ClientSize = new System.Drawing.Size(801, 277);
             this.Controls.Add(this.Lb_total_Account);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
