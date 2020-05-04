@@ -53,12 +53,12 @@ namespace Classwork20200430_Notepad
                 if (Path.GetExtension(openFileDialog1.FileName) == ".rtf") // Відділяємо .rtf розширення в файлі
                 {
                     richTextBox1.SaveFile(saveFileDialog1.FileName); //збереження файлу з форматуванням
-                    MessageBox.Show("File is saved");
+                    //MessageBox.Show("File is saved");
                 }
                 else
                 {
                     richTextBox1.SaveFile(saveFileDialog1.FileName /*, RichTextBoxStreamType.PlainText*/); //відкриття файлу без форматування
-                    MessageBox.Show("File is saved");
+                   // MessageBox.Show("File is saved");
                 }
             }
             toolStripStatusLabel1.Text = $"Save file {saveFileDialog1.FileName}";
@@ -95,7 +95,7 @@ namespace Classwork20200430_Notepad
                     else
                         richTextBox1.LoadFile(openFileDialog1.FileName, RichTextBoxStreamType.PlainText); //відкриття файлу без форматування
                 }
-            MessageBox.Show("File is Open");
+           // MessageBox.Show("File is Open");
      
         }
         //Close form
@@ -122,7 +122,7 @@ namespace Classwork20200430_Notepad
         private void FontToolStripMenuItem_Click(object sender, EventArgs e)
         {
             toolStripStatusLabel1.Text = $"Change Font";
-            fontDialog1.ShowDialog();
+           
             if (fontDialog1.ShowDialog() == DialogResult.Cancel)
                 return;
             // установка шрифта
@@ -144,7 +144,7 @@ namespace Classwork20200430_Notepad
         private void ColorToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // установка кольору шрифта
-            colorDialog1.ShowDialog();
+           // colorDialog1.ShowDialog();
             toolStripStatusLabel1.Text = $"Change Color";
 
             if (colorDialog1.ShowDialog() == DialogResult.Cancel)
@@ -335,52 +335,57 @@ namespace Classwork20200430_Notepad
         private void cutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             toolStripStatusLabel1.Text = $"CUT selected text";
-            try
-            {
-                if (richTextBox1.SelectedText.Length != 0)
-                {
-                    Clipboard.SetData(DataFormats.Rtf, richTextBox1.Rtf);
-                    //Clipboard.SetText(richTextBox1.SelectedText);
-                    richTextBox1.SelectedText = String.Empty;
 
-                }
-                else
-                {
-                    MessageBox.Show("No item is selected to cut");
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Can't cut the selected item", ex.ToString());
-            }
+            richTextBox1.Cut();
+
+            //try
+            //{
+            //    if (richTextBox1.SelectedText.Length != 0)
+            //    {
+            //        Clipboard.SetData(DataFormats.Rtf, richTextBox1.Rtf);
+            //       // Clipboard.SetText(richTextBox1.SelectedText);
+            //        richTextBox1.SelectedText = String.Empty;
+
+            //    }
+            //    else
+            //    {
+            //        MessageBox.Show("No item is selected to cut");
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show("Can't cut the selected item", ex.ToString());
+            //}
         }
         //Paste
         private void pasteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             toolStripStatusLabel1.Text = $"PASTE selected text";
-            try
-            {
-                if (Clipboard.ContainsText(TextDataFormat.Rtf))
-                {
-                    richTextBox1.SelectedRtf = Clipboard.GetData(DataFormats.Rtf).ToString();
-                    MessageBox.Show($"1{richTextBox1.SelectedRtf}");
-                }
-                else if (Clipboard.ContainsText(TextDataFormat.Text))
-                {
-                    richTextBox1.SelectedText = Clipboard.GetData(DataFormats.Text).ToString();
-                    MessageBox.Show($"2{richTextBox1.SelectedText}");
-                }
 
-                else
-                {
-                    MessageBox.Show("Clipboard is not contained with the valid text format");
-                }
+            richTextBox1.Paste();
+            //try
+            //{
+            //    if (Clipboard.ContainsText(TextDataFormat.Rtf))
+            //    {
+            //        richTextBox1.SelectedRtf = Clipboard.GetData(DataFormats.Rtf).ToString();
+                    
+            //    }
+            //    else if (Clipboard.ContainsText(TextDataFormat.Text))
+            //    {
+            //        richTextBox1.SelectedText = Clipboard.GetData(DataFormats.Text).ToString();
+            //       // MessageBox.Show($"2{richTextBox1.SelectedText}");
+            //    }
 
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Can't paste the item", ex.ToString());
-            }
+            //    else
+            //    {
+            //        MessageBox.Show("Clipboard is not contained with the valid text format");
+            //    }
+
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show("Can't paste the item", ex.ToString());
+            //}
 
 
         }
@@ -388,22 +393,23 @@ namespace Classwork20200430_Notepad
         private void copyToolStripMenuItem_Click(object sender, EventArgs e)
         {
             toolStripStatusLabel1.Text = $"COPY selected text";
-            try
-            {
-                if (richTextBox1.SelectedText.Length != 0)
-                {
-                    Clipboard.SetData(DataFormats.Rtf, richTextBox1.Rtf);
-                    MessageBox.Show("Copy");
-                }
-                else
-                {
-                    MessageBox.Show("No item is selected to cut");
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Can't cut the selected item", ex.ToString());
-            }
+            richTextBox1.Copy();
+            //try
+            //{
+            //    if (richTextBox1.SelectedText.Length != 0)
+            //    {
+            //        Clipboard.SetData(DataFormats.Rtf, richTextBox1.Rtf);
+            //        MessageBox.Show("Copy");
+            //    }
+            //    else
+            //    {
+            //        MessageBox.Show("No item is selected to cut");
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show("Can't cut the selected item", ex.ToString());
+            //}
         }
     }
 }
