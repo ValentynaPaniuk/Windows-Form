@@ -71,6 +71,12 @@ namespace Classwork20200430_Notepad
         //Open file
         private void OpenToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            //Перевірка чи зберігати попередній файл
+            var result = MessageBox.Show("Do you want to save changes to this file?","Save changes", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            { return; }
+           
+
             openFileDialog1.Title = "Open file";       
             openFileDialog1.Filter = "All files|*.*|Text files(*.txt)|*.txt|Files RTF|*.rtf|Document Office Open XML(*.docx)|*.docx|Text OpenDocument(*.odt)|*.odt"; // фільтр для файлів: Назва фільтру|маска фільтру
             openFileDialog1.FileName = "Type name here"; //Властивіть Filename
