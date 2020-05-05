@@ -44,7 +44,7 @@ namespace Classwork20200428_City
             Kyiv.Path.Add("../../img/Kyiv1.jpg");
             Kyiv.Path.Add("../../img/Kyiv2.jpg");
 
-            City Lviv = new City() { Name = "Lviv", Address = "https://uk.wikipedia.org/wiki/%D0%9B%D1%8C%D0%B2%D1%96%D0%B2" };
+            City Lviv = new City() { Name = "Lviv", Address = "https://en.wikipedia.org/wiki/Lviv" };
             Lviv.Path.Add("../../img/Lviv.jpg");
             Lviv.Path.Add("../../img/Lviv1.jpg");
             Lviv.Path.Add("../../img/Lviv2.jpg");
@@ -54,7 +54,7 @@ namespace Classwork20200428_City
             Odessa.Path.Add("../../img/Odessa1.jpg");
             Odessa.Path.Add("../../img/Odessa2.jpg");
 
-            City Rivne = new City() { Name = "Rivne", Address = "https://uk.wikipedia.org/wiki/%D0%A0%D1%96%D0%B2%D0%BD%D0%B5" };
+            City Rivne = new City() { Name = "Rivne", Address = "https://en.wikipedia.org/wiki/Rivne" };
             Rivne.Path.Add("../../img/Rivne.jpg");
             Rivne.Path.Add("../../img/Rivne1.jpg");
             Rivne.Path.Add("../../img/Rivne2.jpg");
@@ -72,16 +72,7 @@ namespace Classwork20200428_City
 
             ToolStripProgressBar1.Value = 0;
 
-            if (ComboBox1.SelectedIndex == 0)
-                linkLabel1.Links.Add(new LinkLabel.Link() { LinkData = $"{ names[0].Address.ToString()}" });
-            if (ComboBox1.SelectedIndex == 1)
-                linkLabel1.Links.Add(new LinkLabel.Link() { LinkData = $"{ names[1].Address.ToString()}" });
-            if (ComboBox1.SelectedIndex == 2)
-                linkLabel1.Links.Add(new LinkLabel.Link() { LinkData = $"{ names[2].Address.ToString()}" });
-            if (ComboBox1.SelectedIndex == 3)
-                linkLabel1.Links.Add(new LinkLabel.Link() { LinkData = $"{ names[3].Address.ToString()}" });
-
-
+        
 
         }
 
@@ -92,7 +83,7 @@ namespace Classwork20200428_City
         private void ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             linkLabel1.Visible = true;
-          
+            linkLabel1.Links.Add(new LinkLabel.Link() { LinkData = names[ComboBox1.SelectedIndex].Address });
             if (ComboBox1.SelectedIndex == 0)
             {
                 for (int i = 0; i < names[0].Path.Count; i++)
@@ -105,6 +96,7 @@ namespace Classwork20200428_City
                 toolStripStatusLabel1.Text = $"{names[0].Name} {counter_0}";
                 ToolStripProgressBar1.Maximum = names[0].Path.Count;
                
+   
             } 
                  
             if (ComboBox1.SelectedIndex == 1)
@@ -118,6 +110,8 @@ namespace Classwork20200428_City
                 linkLabel1.Text = names[1].Name.ToString();
                 toolStripStatusLabel1.Text = $"{names[1].Name} {counter_1}";
                 ToolStripProgressBar1.Maximum = names[1].Path.Count;
+               
+              
 
             }
 
@@ -134,6 +128,8 @@ namespace Classwork20200428_City
                 linkLabel1.Text = names[2].Name.ToString();
                 toolStripStatusLabel1.Text = $"{names[2].Name} {counter_2}";
                 ToolStripProgressBar1.Maximum = names[2].Path.Count;
+                
+               
 
             }
 
@@ -149,10 +145,12 @@ namespace Classwork20200428_City
                 linkLabel1.Text = names[3].Name.ToString();
                 toolStripStatusLabel1.Text = $"{names[3].Name} {counter_3}";
                 ToolStripProgressBar1.Maximum = names[3].Path.Count;
-
+              
+         
             }
-               
-          
+
+           
+           
 
         }
 
@@ -189,8 +187,7 @@ namespace Classwork20200428_City
         private void LinkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
 
-            linkLabel1.Links[linkLabel1.Links.IndexOf(e.Link)].LinkData
-            //Process.Start(e.Link.LinkData.ToString());
+            Process.Start(e.Link.LinkData.ToString());
 
         }
 

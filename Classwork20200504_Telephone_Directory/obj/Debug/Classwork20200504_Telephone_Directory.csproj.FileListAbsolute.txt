@@ -1,0 +1,11 @@
+D:\Шаг\WF\Classwork20200504_Telephone_Directory\obj\Debug\Classwork20200504_Telephone_Directory.csprojAssemblyReference.cache
+D:\Шаг\WF\Classwork20200504_Telephone_Directory\obj\Debug\Classwork20200504_Telephone_Directory.Child.resources
+D:\Шаг\WF\Classwork20200504_Telephone_Directory\obj\Debug\Classwork20200504_Telephone_Directory.Parent.resources
+D:\Шаг\WF\Classwork20200504_Telephone_Directory\obj\Debug\Classwork20200504_Telephone_Directory.Properties.Resources.resources
+D:\Шаг\WF\Classwork20200504_Telephone_Directory\obj\Debug\Classwork20200504_Telephone_Directory.csproj.GenerateResource.cache
+D:\Шаг\WF\Classwork20200504_Telephone_Directory\obj\Debug\Classwork20200504_Telephone_Directory.csproj.CoreCompileInputs.cache
+D:\Шаг\WF\Classwork20200504_Telephone_Directory\bin\Debug\Classwork20200504_Telephone_Directory.exe.config
+D:\Шаг\WF\Classwork20200504_Telephone_Directory\bin\Debug\Classwork20200504_Telephone_Directory.exe
+D:\Шаг\WF\Classwork20200504_Telephone_Directory\bin\Debug\Classwork20200504_Telephone_Directory.pdb
+D:\Шаг\WF\Classwork20200504_Telephone_Directory\obj\Debug\Classwork20200504_Telephone_Directory.exe
+D:\Шаг\WF\Classwork20200504_Telephone_Directory\obj\Debug\Classwork20200504_Telephone_Directory.pdb

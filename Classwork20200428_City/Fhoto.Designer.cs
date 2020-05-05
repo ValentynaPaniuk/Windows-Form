@@ -131,8 +131,6 @@
             this.Controls.Add(this.ComboBox1);
             this.Name = "Fhoto";
             this.Text = "About City";
-            this.Load += new System.EventHandler(this.Fhoto_Load);
-            this.Leave += new System.EventHandler(this.Fhoto_Leave);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.StatusStrip1.ResumeLayout(false);
             this.StatusStrip1.PerformLayout();
