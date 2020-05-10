@@ -20,11 +20,11 @@ namespace Classwork20200504_Telephone_Directory
         }
         public Contact(string name, int phone, string path)
         {
-            Name = name; Phone = phone;
+            Name = name; Phone = phone; Path = path;
         }
         public override string ToString()
         {
-            return Name + "  -> " + Phone;
+            return Name + "  -> " + Phone + " - > "+ Path;
         }
 
     }

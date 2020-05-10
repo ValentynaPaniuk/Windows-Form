@@ -21,11 +21,8 @@ namespace Classwork20200504_Telephone_Directory
         private void Btn_Clear_Click(object sender, EventArgs e)
         {
             Lb_AllContacts.Items.Clear();
-            if (pictureBox1.Image != null)
-            {
-                pictureBox1.Image.Dispose();
-                pictureBox1.Image = null;
-            }
+             pictureBox1.Image = null;
+            
 
         }
         //Delete contact
@@ -37,11 +34,8 @@ namespace Classwork20200504_Telephone_Directory
                 MessageBox.Show("You have not selected a contact"); return;
             }
             Lb_AllContacts.Items.RemoveAt(Lb_AllContacts.SelectedIndex);
-            if (pictureBox1.Image != null)
-            {
-                pictureBox1.Image.Dispose();
-                pictureBox1.Image = null;
-            }
+            pictureBox1.Image = null;
+            
         }
         //Add contact      
         Contact contact;
@@ -79,9 +73,12 @@ namespace Classwork20200504_Telephone_Directory
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int n = Lb_AllContacts.SelectedIndex;//запоминаем выделенный элемент
-            contact = (Contact)Lb_AllContacts.Items[n];//Забираем ссылку на выделенный элемент
-            pictureBox1.Load(contact.Path);
+            if (Lb_AllContacts.SelectedIndex != -1)
+            {
+                contact = (Contact)Lb_AllContacts.Items[Lb_AllContacts.SelectedIndex];//Забираем ссылку на выделенный элемент
+                pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+                this.pictureBox1.Load(contact.Path);
+            }
         }
     }
 }
