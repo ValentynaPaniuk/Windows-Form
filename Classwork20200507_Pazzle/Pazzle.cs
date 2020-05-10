@@ -106,6 +106,9 @@ namespace Classwork20200507_Pazly
             Pb_21.Image = Image.FromFile(@"..\..\img\21.jpg");
             Pb_22.Image = Image.FromFile(@"..\..\img\22.jpg");
 
+            counter = 0;
+            toolStripStatusLabel1.Text = $"Moves made: {counter}";
+
         }
     }
 }

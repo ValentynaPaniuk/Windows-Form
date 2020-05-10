@@ -43,7 +43,6 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.label1 = new System.Windows.Forms.Label();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.cleareToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1.SuspendLayout();
@@ -67,7 +66,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51.91489F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48.08511F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 128F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 130F));
             this.tableLayoutPanel1.Controls.Add(this.Pb_00, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.Pb_01, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.Pb_02, 2, 0);
@@ -93,7 +92,7 @@
             this.Pb_00.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Pb_00.Location = new System.Drawing.Point(3, 3);
             this.Pb_00.Name = "Pb_00";
-            this.Pb_00.Size = new System.Drawing.Size(121, 64);
+            this.Pb_00.Size = new System.Drawing.Size(120, 64);
             this.Pb_00.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Pb_00.TabIndex = 1;
             this.Pb_00.TabStop = false;
@@ -106,9 +105,9 @@
             // 
             this.Pb_01.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.Pb_01.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Pb_01.Location = new System.Drawing.Point(130, 3);
+            this.Pb_01.Location = new System.Drawing.Point(129, 3);
             this.Pb_01.Name = "Pb_01";
-            this.Pb_01.Size = new System.Drawing.Size(112, 64);
+            this.Pb_01.Size = new System.Drawing.Size(111, 64);
             this.Pb_01.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Pb_01.TabIndex = 2;
             this.Pb_01.TabStop = false;
@@ -121,9 +120,9 @@
             // 
             this.Pb_02.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.Pb_02.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Pb_02.Location = new System.Drawing.Point(248, 3);
+            this.Pb_02.Location = new System.Drawing.Point(246, 3);
             this.Pb_02.Name = "Pb_02";
-            this.Pb_02.Size = new System.Drawing.Size(123, 64);
+            this.Pb_02.Size = new System.Drawing.Size(125, 64);
             this.Pb_02.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Pb_02.TabIndex = 3;
             this.Pb_02.TabStop = false;
@@ -138,7 +137,7 @@
             this.Pb_10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Pb_10.Location = new System.Drawing.Point(3, 73);
             this.Pb_10.Name = "Pb_10";
-            this.Pb_10.Size = new System.Drawing.Size(121, 64);
+            this.Pb_10.Size = new System.Drawing.Size(120, 64);
             this.Pb_10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Pb_10.TabIndex = 3;
             this.Pb_10.TabStop = false;
@@ -151,9 +150,9 @@
             // 
             this.Pb_11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.Pb_11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Pb_11.Location = new System.Drawing.Point(130, 73);
+            this.Pb_11.Location = new System.Drawing.Point(129, 73);
             this.Pb_11.Name = "Pb_11";
-            this.Pb_11.Size = new System.Drawing.Size(112, 64);
+            this.Pb_11.Size = new System.Drawing.Size(111, 64);
             this.Pb_11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Pb_11.TabIndex = 3;
             this.Pb_11.TabStop = false;
@@ -165,9 +164,9 @@
             // 
             this.Pb_12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.Pb_12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Pb_12.Location = new System.Drawing.Point(248, 73);
+            this.Pb_12.Location = new System.Drawing.Point(246, 73);
             this.Pb_12.Name = "Pb_12";
-            this.Pb_12.Size = new System.Drawing.Size(123, 64);
+            this.Pb_12.Size = new System.Drawing.Size(125, 64);
             this.Pb_12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Pb_12.TabIndex = 3;
             this.Pb_12.TabStop = false;
@@ -181,7 +180,7 @@
             this.Pb_20.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Pb_20.Location = new System.Drawing.Point(3, 143);
             this.Pb_20.Name = "Pb_20";
-            this.Pb_20.Size = new System.Drawing.Size(121, 72);
+            this.Pb_20.Size = new System.Drawing.Size(120, 72);
             this.Pb_20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Pb_20.TabIndex = 3;
             this.Pb_20.TabStop = false;
@@ -193,9 +192,9 @@
             // 
             this.Pb_21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.Pb_21.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Pb_21.Location = new System.Drawing.Point(130, 143);
+            this.Pb_21.Location = new System.Drawing.Point(129, 143);
             this.Pb_21.Name = "Pb_21";
-            this.Pb_21.Size = new System.Drawing.Size(112, 72);
+            this.Pb_21.Size = new System.Drawing.Size(111, 72);
             this.Pb_21.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Pb_21.TabIndex = 3;
             this.Pb_21.TabStop = false;
@@ -207,9 +206,9 @@
             // 
             this.Pb_22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.Pb_22.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Pb_22.Location = new System.Drawing.Point(248, 143);
+            this.Pb_22.Location = new System.Drawing.Point(246, 143);
             this.Pb_22.Name = "Pb_22";
-            this.Pb_22.Size = new System.Drawing.Size(123, 72);
+            this.Pb_22.Size = new System.Drawing.Size(125, 72);
             this.Pb_22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Pb_22.TabIndex = 3;
             this.Pb_22.TabStop = false;
@@ -249,18 +248,10 @@
             // 
             // toolStripStatusLabel1
             // 
+            this.toolStripStatusLabel1.AutoSize = false;
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(118, 17);
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(160, 17);
             this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
-            // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("Mistral", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(463, 200);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(120, 40);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "00:00:00";
             // 
             // toolStripDropDownButton1
             // 
@@ -287,7 +278,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(700, 336);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
@@ -330,7 +320,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
         private System.Windows.Forms.ToolStripMenuItem cleareToolStripMenuItem;
     }
