@@ -1,0 +1,10 @@
+D:\Шаг\WF\Classwork20200508_ListView\bin\Debug\Classwork20200508_ListView.exe.config
+D:\Шаг\WF\Classwork20200508_ListView\bin\Debug\Classwork20200508_ListView.exe
+D:\Шаг\WF\Classwork20200508_ListView\bin\Debug\Classwork20200508_ListView.pdb
+D:\Шаг\WF\Classwork20200508_ListView\obj\Debug\Classwork20200508_ListView.csprojAssemblyReference.cache
+D:\Шаг\WF\Classwork20200508_ListView\obj\Debug\Classwork20200508_ListView.Properties.Resources.resources
+D:\Шаг\WF\Classwork20200508_ListView\obj\Debug\Classwork20200508_ListView.csproj.GenerateResource.cache
+D:\Шаг\WF\Classwork20200508_ListView\obj\Debug\Classwork20200508_ListView.csproj.CoreCompileInputs.cache
+D:\Шаг\WF\Classwork20200508_ListView\obj\Debug\Classwork20200508_ListView.exe
+D:\Шаг\WF\Classwork20200508_ListView\obj\Debug\Classwork20200508_ListView.pdb
+D:\Шаг\WF\Classwork20200508_ListView\obj\Debug\Classwork20200508_ListView.FileSystem.resources

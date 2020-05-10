@@ -16,14 +16,18 @@ namespace Classwork20200430_Notepad
     {
         public static readonly int COUNT_PUNCTS =8;
 
+       
+
         Document child;
         public Notepad()
         {
             InitializeComponent();
-          
-            
-            //Розмір шрифту по замовчуванню
+
+            newToolStripMenuItem_Click(null, null);
+           
+            //Додаємо розмір шрифту в комбокс 1
             for (int i = 8; i < 72; i += 2) { toolStripComboBox1.Items.Add(i); }
+            //Розмір шрифту по замовчуванню
             toolStripComboBox1.Text = Font.Size.ToString();
 
 
@@ -38,7 +42,6 @@ namespace Classwork20200430_Notepad
         //Save file
         private void SaveToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-
             saveFileDialog1.Filter = "Text files(*.txt)|*.txt|Files RTF|*.rtf|Document Office Open XML(*.docx)|*.docx|Text OpenDocument(*.odt)|*.odt|All files|*.*";
             saveFileDialog1.InitialDirectory = @"C:\Users\ADMIN\Desktop\Folder";//Початкова папка
             saveFileDialog1.FileName = openFileDialog1.FileName;
@@ -63,7 +66,7 @@ namespace Classwork20200430_Notepad
                 else
                 {
                     child.Richtextbox.SaveFile(saveFileDialog1.FileName /*, RichTextBoxStreamType.PlainText*/); //відкриття файлу без форматування
-                   // MessageBox.Show("File is saved");
+                                                                                                                // MessageBox.Show("File is saved");
                 }
             }
             toolStripStatusLabel1.Text = $"Save file {saveFileDialog1.FileName}";
@@ -71,16 +74,19 @@ namespace Classwork20200430_Notepad
             if (dialogResult == DialogResult.Cancel)
                 return;
 
-
         }
+       
+       
+
         //Open file
         private void OpenToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //Перевірка чи зберігати попередній файл
-            var result = MessageBox.Show("Do you want to save changes to this file?", "Save changes", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (result == DialogResult.Yes)
-            { return; }
-
+              var result = MessageBox.Show("Do you want to save changes to this file?", "Save changes", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+              if (result == DialogResult.Yes)
+                   return;
+               else
+                   child.Richtextbox.Text = String.Empty;
+            
 
             openFileDialog1.Title = "Open file";
             openFileDialog1.Filter = "All files|*.*|Text files(*.txt)|*.txt|Files RTF|*.rtf|Document Office Open XML(*.docx)|*.docx|Text OpenDocument(*.odt)|*.odt"; // фільтр для файлів: Назва фільтру|маска фільтру
@@ -88,8 +94,8 @@ namespace Classwork20200430_Notepad
             openFileDialog1.InitialDirectory = @"C:\Users\ADMIN\Desktop\Folder";//Початкова папка
 
             var dialogResult = openFileDialog1.ShowDialog();
-            toolStripStatusLabel1.Text = $"Open file {openFileDialog1.FileName}";
-
+            toolStripStatusLabel1.Text = $"Open file {child.Richtextbox.Text}";
+          
             if (dialogResult == DialogResult.OK)
             {
                 // var result = File.ReadAllText(openFileDialog1.FileName);// Зчитує текст файлу без форматування і записує в result
@@ -106,6 +112,7 @@ namespace Classwork20200430_Notepad
                 }
 
             }
+
         }
         //Close form
         private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -322,9 +329,7 @@ namespace Classwork20200430_Notepad
             
             try
             {
-               
-
-                if (child.Richtextbox.SelectionLength != 0)//якщо є виділений текст
+               if (child.Richtextbox.SelectionLength != 0)//якщо є виділений текст
                 {
                     child.Richtextbox.SelectionFont = new Font(toolStripComboBox2.Text, toolStripComboBox2.Font.Size);
                  
@@ -340,11 +345,8 @@ namespace Classwork20200430_Notepad
         //Formatting by list (список)
         private void toolStripButton14_Click(object sender, EventArgs e)
         {
-
             toolStripStatusLabel1.Text = $"Create List";
-
             child.Richtextbox.SelectionBullet = !child.Richtextbox.SelectionBullet;
-
         }
         //Cleare all
         private void cleareAllToolStripMenuItem_Click(object sender, EventArgs e)
@@ -356,7 +358,6 @@ namespace Classwork20200430_Notepad
         private void cutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             toolStripStatusLabel1.Text = $"CUT selected text";
-
             child.Richtextbox.Cut();
 
             //try
@@ -382,7 +383,6 @@ namespace Classwork20200430_Notepad
         private void pasteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             toolStripStatusLabel1.Text = $"PASTE selected text";
-
             child.Richtextbox.Paste();
             //try
             //{
@@ -459,30 +459,18 @@ namespace Classwork20200430_Notepad
         //Help
         private void helpToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("!!!!!!!!!!!!!!!!!!");
+            MessageBox.Show("All Rights reserved by the author\nValentyna Paniuk\nValentyna.Paniuk@gmail.com", "Help", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         #endregion
 
-
+        //Створення нового дочірного вікна Document
         int id = 0;
         private void newToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
-            //if (Main_richTextBox1.Text != String.Empty)
-            //{
-            //    var result = MessageBox.Show("Do you want to save changes to this file?", "Save changes", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            //    if (result == DialogResult.Yes)
-            //        return;
-            //}
-
-            //Main_richTextBox1.Text = "ФФФФФ";
-            //Main_richTextBox1.Clear();
-
             child = new Document();
-         
             child.Text += $" {++id}";
             child.MdiParent = this;
-
             child.Show();
             
 
@@ -511,6 +499,7 @@ namespace Classwork20200430_Notepad
             toolStripStatusLabel1.Text = child.Text;
         }
 
+        //відкрита властивість для windowToolStripMenuItem
         public ToolStripMenuItem WindowPunct
         {
             get
@@ -550,7 +539,6 @@ namespace Classwork20200430_Notepad
             this.child = child; //Запам'ятовуємо посилання активної форми
             
         }
-
 
        
 
