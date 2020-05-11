@@ -35,6 +35,9 @@
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.checkedStyleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Large = new System.Windows.Forms.ImageList(this.components);
             this.Small = new System.Windows.Forms.ImageList(this.components);
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -47,13 +50,12 @@
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.Large = new System.Windows.Forms.ImageList(this.components);
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.checkedStyleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label1 = new System.Windows.Forms.Label();
+            this.TbPath = new System.Windows.Forms.TextBox();
+            this.contextMenuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.statusStrip1.SuspendLayout();
-            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // table
@@ -97,6 +99,30 @@
             // columnHeader4
             // 
             this.columnHeader4.Text = "Type";
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.checkedStyleToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 48);
+            // 
+            // checkedStyleToolStripMenuItem
+            // 
+            this.checkedStyleToolStripMenuItem.Checked = true;
+            this.checkedStyleToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkedStyleToolStripMenuItem.Name = "checkedStyleToolStripMenuItem";
+            this.checkedStyleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.checkedStyleToolStripMenuItem.Text = "Checked Style";
+            this.checkedStyleToolStripMenuItem.Click += new System.EventHandler(this.checkedStyleToolStripMenuItem_Click);
+            // 
+            // Large
+            // 
+            this.Large.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("Large.ImageStream")));
+            this.Large.TransparentColor = System.Drawing.Color.Transparent;
+            this.Large.Images.SetKeyName(0, "File-RTF-icon.png");
+            this.Large.Images.SetKeyName(1, "Files-Txt-icon.png");
+            this.Large.Images.SetKeyName(2, "Folder-icon.png");
             // 
             // Small
             // 
@@ -210,47 +236,40 @@
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(118, 17);
             this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
             // 
-            // Large
+            // label1
             // 
-            this.Large.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("Large.ImageStream")));
-            this.Large.TransparentColor = System.Drawing.Color.Transparent;
-            this.Large.Images.SetKeyName(0, "File-RTF-icon.png");
-            this.Large.Images.SetKeyName(1, "Files-Txt-icon.png");
-            this.Large.Images.SetKeyName(2, "Folder-icon.png");
+            this.label1.Location = new System.Drawing.Point(143, 210);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 23);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Path";
             // 
-            // contextMenuStrip1
+            // TbPath
             // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.checkedStyleToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(149, 26);
-            // 
-            // checkedStyleToolStripMenuItem
-            // 
-            this.checkedStyleToolStripMenuItem.Checked = true;
-            this.checkedStyleToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkedStyleToolStripMenuItem.Name = "checkedStyleToolStripMenuItem";
-            this.checkedStyleToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
-            this.checkedStyleToolStripMenuItem.Text = "Checked Style";
-            this.checkedStyleToolStripMenuItem.Click += new System.EventHandler(this.checkedStyleToolStripMenuItem_Click);
+            this.TbPath.Location = new System.Drawing.Point(184, 213);
+            this.TbPath.Name = "TbPath";
+            this.TbPath.Size = new System.Drawing.Size(406, 20);
+            this.TbPath.TabIndex = 5;
             // 
             // FileSystem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(659, 266);
+            this.Controls.Add(this.TbPath);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.table);
             this.Name = "FileSystem";
             this.Text = "File System";
+            this.contextMenuStrip1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
-            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -277,6 +296,8 @@
         private System.Windows.Forms.ImageList Large;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem checkedStyleToolStripMenuItem;
+        private System.Windows.Forms.TextBox TbPath;
+        private System.Windows.Forms.Label label1;
     }
 }
 

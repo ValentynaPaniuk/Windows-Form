@@ -1,0 +1,10 @@
+D:\Шаг\WF\Classwork20200511_TreeView\obj\Debug\Classwork20200511_TreeView.csprojAssemblyReference.cache
+D:\Шаг\WF\Classwork20200511_TreeView\obj\Debug\Classwork20200511_TreeView.Form1.resources
+D:\Шаг\WF\Classwork20200511_TreeView\obj\Debug\Classwork20200511_TreeView.Properties.Resources.resources
+D:\Шаг\WF\Classwork20200511_TreeView\obj\Debug\Classwork20200511_TreeView.csproj.GenerateResource.cache
+D:\Шаг\WF\Classwork20200511_TreeView\obj\Debug\Classwork20200511_TreeView.csproj.CoreCompileInputs.cache
+D:\Шаг\WF\Classwork20200511_TreeView\bin\Debug\Classwork20200511_TreeView.exe.config
+D:\Шаг\WF\Classwork20200511_TreeView\bin\Debug\Classwork20200511_TreeView.exe
+D:\Шаг\WF\Classwork20200511_TreeView\bin\Debug\Classwork20200511_TreeView.pdb
+D:\Шаг\WF\Classwork20200511_TreeView\obj\Debug\Classwork20200511_TreeView.exe
+D:\Шаг\WF\Classwork20200511_TreeView\obj\Debug\Classwork20200511_TreeView.pdb
