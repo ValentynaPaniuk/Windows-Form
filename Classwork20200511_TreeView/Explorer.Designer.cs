@@ -1,6 +1,6 @@
 ﻿namespace Classwork20200511_TreeView
 {
-    partial class Form1
+    partial class Explorer
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("", 0);
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Explorer));
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.browseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -92,9 +92,8 @@
             this.listToolStripMenuItem1,
             this.tileToolStripMenuItem1});
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            this.viewToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.viewToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
             this.viewToolStripMenuItem.Text = "View";
-            this.viewToolStripMenuItem.Click += new System.EventHandler(this.radioButton5_CheckedChanged);
             // 
             // largeIconToolStripMenuItem1
             // 
@@ -108,31 +107,35 @@
             this.smallIconToolStripMenuItem1.Name = "smallIconToolStripMenuItem1";
             this.smallIconToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.smallIconToolStripMenuItem1.Text = "SmallIcon";
+            this.smallIconToolStripMenuItem1.Click += new System.EventHandler(this.largeIconToolStripMenuItem1_Click);
             // 
             // detailsToolStripMenuItem1
             // 
+            this.detailsToolStripMenuItem1.Checked = true;
+            this.detailsToolStripMenuItem1.CheckState = System.Windows.Forms.CheckState.Checked;
             this.detailsToolStripMenuItem1.Name = "detailsToolStripMenuItem1";
             this.detailsToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.detailsToolStripMenuItem1.Text = "Details";
+            this.detailsToolStripMenuItem1.Click += new System.EventHandler(this.largeIconToolStripMenuItem1_Click);
             // 
             // listToolStripMenuItem1
             // 
             this.listToolStripMenuItem1.Name = "listToolStripMenuItem1";
             this.listToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.listToolStripMenuItem1.Text = "List";
+            this.listToolStripMenuItem1.Click += new System.EventHandler(this.largeIconToolStripMenuItem1_Click);
             // 
             // tileToolStripMenuItem1
             // 
             this.tileToolStripMenuItem1.Name = "tileToolStripMenuItem1";
             this.tileToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.tileToolStripMenuItem1.Text = "Tile";
+            this.tileToolStripMenuItem1.Click += new System.EventHandler(this.largeIconToolStripMenuItem1_Click);
             // 
             // styleToolStripMenuItem
             // 
-            this.styleToolStripMenuItem.Checked = true;
-            this.styleToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.styleToolStripMenuItem.Name = "styleToolStripMenuItem";
-            this.styleToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
+            this.styleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.styleToolStripMenuItem.Text = "Style";
             this.styleToolStripMenuItem.Click += new System.EventHandler(this.styleToolStripMenuItem_Click_1);
             // 
@@ -161,9 +164,10 @@
             this.listView1.SmallImageList = this.imageSmall;
             this.listView1.TabIndex = 2;
             this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.SmallIcon;
+            this.listView1.View = System.Windows.Forms.View.Details;
             this.listView1.ColumnClick += new System.Windows.Forms.ColumnClickEventHandler(this.listView1_ColumnClick);
             this.listView1.ItemSelectionChanged += new System.Windows.Forms.ListViewItemSelectionChangedEventHandler(this.listView1_ItemSelectionChanged);
+            this.listView1.Click += new System.EventHandler(this.largeIconToolStripMenuItem1_Click);
             this.listView1.DoubleClick += new System.EventHandler(this.listView1_DoubleClick);
             this.listView1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.listView1_KeyDown);
             // 
@@ -211,8 +215,9 @@
             // 
             // toolStripStatusLabel1
             // 
+            this.toolStripStatusLabel1.AutoSize = false;
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(118, 17);
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(160, 17);
             this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
             // 
             // TbPath
@@ -221,6 +226,7 @@
             this.TbPath.Name = "TbPath";
             this.TbPath.Size = new System.Drawing.Size(520, 20);
             this.TbPath.TabIndex = 4;
+            this.TbPath.Click += new System.EventHandler(this.largeIconToolStripMenuItem1_Click);
             // 
             // Lb_Path
             // 
@@ -252,7 +258,6 @@
             this.radioButton5.Name = "radioButton5";
             this.radioButton5.Size = new System.Drawing.Size(42, 17);
             this.radioButton5.TabIndex = 3;
-            this.radioButton5.TabStop = true;
             this.radioButton5.Text = "Tile";
             this.radioButton5.UseVisualStyleBackColor = true;
             this.radioButton5.CheckedChanged += new System.EventHandler(this.radioButton5_CheckedChanged);
@@ -264,7 +269,6 @@
             this.radioButton4.Name = "radioButton4";
             this.radioButton4.Size = new System.Drawing.Size(41, 17);
             this.radioButton4.TabIndex = 3;
-            this.radioButton4.TabStop = true;
             this.radioButton4.Text = "List";
             this.radioButton4.UseVisualStyleBackColor = true;
             this.radioButton4.CheckedChanged += new System.EventHandler(this.radioButton5_CheckedChanged);
@@ -276,7 +280,6 @@
             this.radioButton3.Name = "radioButton3";
             this.radioButton3.Size = new System.Drawing.Size(71, 17);
             this.radioButton3.TabIndex = 3;
-            this.radioButton3.TabStop = true;
             this.radioButton3.Text = "SmallIcon";
             this.radioButton3.UseVisualStyleBackColor = true;
             this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton5_CheckedChanged);
@@ -284,6 +287,7 @@
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
+            this.radioButton2.Checked = true;
             this.radioButton2.Location = new System.Drawing.Point(136, 14);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(57, 17);
@@ -300,7 +304,6 @@
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(73, 17);
             this.radioButton1.TabIndex = 3;
-            this.radioButton1.TabStop = true;
             this.radioButton1.Text = "LargeIcon";
             this.radioButton1.UseVisualStyleBackColor = true;
             this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton5_CheckedChanged);
@@ -319,7 +322,7 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // Form1
+            // Explorer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -331,7 +334,7 @@
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.treeView1);
-            this.Name = "Form1";
+            this.Name = "Explorer";
             this.Text = "Form1";
             this.contextMenuStrip1.ResumeLayout(false);
             this.statusStrip1.ResumeLayout(false);

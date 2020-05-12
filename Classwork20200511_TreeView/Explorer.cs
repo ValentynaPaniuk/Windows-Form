@@ -12,34 +12,35 @@ using System.Windows.Forms;
 
 namespace Classwork20200511_TreeView
 {
-    public partial class Form1 : Form
+    public partial class Explorer : Form
     {
       
-        public Form1()
+        public Explorer()
         {
             InitializeComponent();
-          
+            toolStripStatusLabel1.Text = "";
 
         }
 
         private void browseToolStripMenuItem_Click(object sender, EventArgs e)
         {
             PopulateTreeView();
-            browseToolStripMenuItem.Checked = !browseToolStripMenuItem.Checked;
-
+         
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             PopulateTreeView();
-            browseToolStripMenuItem.Checked = !browseToolStripMenuItem.Checked;
+   
         }
 
         private void PopulateTreeView()
         {
+
             folderBrowserDialog1.ShowDialog();
             TreeNode rootNode;
-
+            browseToolStripMenuItem.Checked = !browseToolStripMenuItem.Checked;
+        
             DirectoryInfo info = new DirectoryInfo(folderBrowserDialog1.SelectedPath);
             if (info.Exists)
             {
@@ -105,21 +106,16 @@ namespace Classwork20200511_TreeView
         string path = "";
         string backupDir  = @"C:\Users\ADMIN\Desktop\Folder1";
         string fName;
+
         private void listView1_KeyDown(object sender, KeyEventArgs e)
         {
-           
-
-
             string[] files = Directory.GetFileSystemEntries(folderBrowserDialog1.SelectedPath);
         
             if (e.KeyCode == Keys.Back)
-            {
-               
+            {               
                 listView1.Items.Add(path);
                 File.Create(path);
-
                 int j = 0;
-
                 foreach (ListViewItem item in listView1.Items)
                 {
                     item.SubItems.Add(Path.GetExtension(files[j]));//Type
@@ -127,9 +123,6 @@ namespace Classwork20200511_TreeView
                    // item.SubItems.Add(File.Open(files[j], FileMode.Open).Length.ToString());//Size
                 }
                 
-
-
-
                 //Копіюється файл в потрібну папку
                 foreach (string f in Directory.GetFiles(backupDir))
                 {
@@ -162,8 +155,7 @@ namespace Classwork20200511_TreeView
                        index = listView1.SelectedIndices[0];
                        path = listView1.SelectedItems[0].Text.ToString(); //ім'я файлу
                        listView1.Items.RemoveAt(index);
-                      
-                                               
+                    
                         //Копіюємо в іншу папку і видаляємо з цієї
                         foreach (string f in files)
                         {
@@ -176,13 +168,13 @@ namespace Classwork20200511_TreeView
                                 File.Delete(f);
                             }
                         }
-                       
+                    
 
                     }
 
                 }
 
-                Refresh();
+               Refresh();
 
             }
             catch
@@ -210,8 +202,7 @@ namespace Classwork20200511_TreeView
             int j = 0;
             foreach (ListViewItem item in listView1.Items)
             {
-
-              
+             
                 item.SubItems.Add(Path.GetExtension(files[j]));//Type
                 item.SubItems.Add(File.GetCreationTime(files[j++]).ToShortDateString().ToString());//Date
                // item.SubItems.Add(File.Open(files[j], FileMode.Open).Length.ToString());//Size
@@ -223,7 +214,7 @@ namespace Classwork20200511_TreeView
         //Add text to Label and Path to textbox
         private void listView1_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
         {
-            toolStripStatusLabel1.Text = $"Name: {e.Item.SubItems[0].Text},Type: {e.Item.SubItems[1].Text}, Date: {e.Item.SubItems[2].Text}";
+            toolStripStatusLabel1.Text = $"Name: {e.Item.SubItems[0].Text}    Type: {e.Item.SubItems[1].Text}     Date: {e.Item.SubItems[2].Text}";
             TbPath.Text = folderBrowserDialog1.SelectedPath;
         }
         //View
@@ -243,8 +234,16 @@ namespace Classwork20200511_TreeView
                         break;
                     }
                 }
+                //Переключаємо значення контекстного меню
+                foreach (ToolStripMenuItem item in viewToolStripMenuItem.DropDownItems)
+                {
+                    if (item.Text == listView1.View.ToString())
+                        item.Checked = true;
+                    else
+                        item.Checked = false;
+                }
 
-                
+
 
             }
             catch
@@ -265,22 +264,40 @@ namespace Classwork20200511_TreeView
         private void styleToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             if (!radioButton5.Checked)
+            {
                 styleToolStripMenuItem.Checked = !styleToolStripMenuItem.Checked;
-            listView1.CheckBoxes = styleToolStripMenuItem.Checked;
+                listView1.CheckBoxes = styleToolStripMenuItem.Checked;
+            }
         }
 
         private void largeIconToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            (sender as ToolStripMenuItem).Checked = !(sender as ToolStripMenuItem).Checked;
-            if ((sender as ToolStripMenuItem).Checked)
-            {
-                // перетворюємо текст кнопки до значення enum View
-                View view = (View)Enum.Parse(typeof(View), (sender as ToolStripMenuItem).Text);
+        //    (sender as ToolStripMenuItem).Checked = !(sender as ToolStripMenuItem).Checked;
+          
+        //        if ((sender as ToolStripMenuItem).Checked)
+        //        {
+        //            // перетворюємо текст кнопки до значення enum View
+        //            View view = (View)Enum.Parse(typeof(View), (sender as ToolStripMenuItem).Text);
+        //            //Змінюємо вигляд перегляду
+        //            listView1.View = view;
 
-                listView1.View = view;
-                errorProvider1.SetError((Control)sender, null);
-               
-            }
+        //        if (tileToolStripMenuItem1.Checked)
+        //        {
+        //            listView1.CheckBoxes = false;
+        //        }
+        //            foreach (RadioButton item in groupBox1.Controls)
+        //            {
+        //                if (item.Text == listView1.View.ToString())
+        //                    item.Checked = true;
+        //                else
+        //                    item.Checked = false;
+        //            }
+
+        //        }
+           
+                    
         }
+           
     }
+    
 }
