@@ -123,7 +123,7 @@ namespace Classwork20200511_TreeView
                 File.Create(path);
                 foreach (ListViewItem item in listView1.Items)
                 {
-                    
+
                     item.SubItems.Add(Path.GetExtension(path));//Type
                     item.SubItems.Add(File.GetCreationTime(path).ToShortDateString().ToString());//Date
                     item.SubItems.Add(path.Length.ToString());//Size
