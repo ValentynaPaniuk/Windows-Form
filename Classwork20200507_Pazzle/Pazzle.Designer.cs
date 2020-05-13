@@ -46,6 +46,8 @@
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.cleareToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSplitButton1 = new System.Windows.Forms.ToolStripSplitButton();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Pb_00)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pb_01)).BeginInit();
@@ -67,7 +69,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51.91489F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48.08511F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 132F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 133F));
             this.tableLayoutPanel1.Controls.Add(this.Pb_00, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.Pb_01, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.Pb_02, 2, 0);
@@ -97,7 +99,7 @@
             this.Pb_00.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Pb_00.TabIndex = 1;
             this.Pb_00.TabStop = false;
-            this.Pb_00.Tag = "@\"..\\..\\img\\01.jpg\"";
+            this.Pb_00.Tag = "0";
             this.Pb_00.DragDrop += new System.Windows.Forms.DragEventHandler(this.Pb_00_DragDrop);
             this.Pb_00.DragEnter += new System.Windows.Forms.DragEventHandler(this.Pb_00_DragEnter);
             this.Pb_00.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Pb_00_MouseDown);
@@ -108,11 +110,11 @@
             this.Pb_01.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Pb_01.Location = new System.Drawing.Point(128, 3);
             this.Pb_01.Name = "Pb_01";
-            this.Pb_01.Size = new System.Drawing.Size(110, 64);
+            this.Pb_01.Size = new System.Drawing.Size(109, 64);
             this.Pb_01.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Pb_01.TabIndex = 2;
             this.Pb_01.TabStop = false;
-            this.Pb_01.Tag = "@\"..\\..\\img\\01.jpg\"";
+            this.Pb_01.Tag = "1";
             this.Pb_01.DragDrop += new System.Windows.Forms.DragEventHandler(this.Pb_00_DragDrop);
             this.Pb_01.DragEnter += new System.Windows.Forms.DragEventHandler(this.Pb_00_DragEnter);
             this.Pb_01.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Pb_00_MouseDown);
@@ -121,13 +123,13 @@
             // 
             this.Pb_02.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.Pb_02.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Pb_02.Location = new System.Drawing.Point(244, 3);
+            this.Pb_02.Location = new System.Drawing.Point(243, 3);
             this.Pb_02.Name = "Pb_02";
-            this.Pb_02.Size = new System.Drawing.Size(127, 64);
+            this.Pb_02.Size = new System.Drawing.Size(128, 64);
             this.Pb_02.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Pb_02.TabIndex = 3;
             this.Pb_02.TabStop = false;
-            this.Pb_02.Tag = "@\"..\\..\\img\\02.jpg\"";
+            this.Pb_02.Tag = "2";
             this.Pb_02.DragDrop += new System.Windows.Forms.DragEventHandler(this.Pb_00_DragDrop);
             this.Pb_02.DragEnter += new System.Windows.Forms.DragEventHandler(this.Pb_00_DragEnter);
             this.Pb_02.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Pb_00_MouseDown);
@@ -142,7 +144,7 @@
             this.Pb_10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Pb_10.TabIndex = 3;
             this.Pb_10.TabStop = false;
-            this.Pb_10.Tag = "@\"..\\..\\img\\10.jpg\"";
+            this.Pb_10.Tag = "3";
             this.Pb_10.DragDrop += new System.Windows.Forms.DragEventHandler(this.Pb_00_DragDrop);
             this.Pb_10.DragEnter += new System.Windows.Forms.DragEventHandler(this.Pb_00_DragEnter);
             this.Pb_10.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Pb_00_MouseDown);
@@ -153,11 +155,11 @@
             this.Pb_11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Pb_11.Location = new System.Drawing.Point(128, 73);
             this.Pb_11.Name = "Pb_11";
-            this.Pb_11.Size = new System.Drawing.Size(110, 64);
+            this.Pb_11.Size = new System.Drawing.Size(109, 64);
             this.Pb_11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Pb_11.TabIndex = 3;
             this.Pb_11.TabStop = false;
-            this.Pb_11.Tag = "@\"..\\..\\img\\11.jpg\"";
+            this.Pb_11.Tag = "4";
             this.Pb_11.DragDrop += new System.Windows.Forms.DragEventHandler(this.Pb_00_DragDrop);
             this.Pb_11.DragEnter += new System.Windows.Forms.DragEventHandler(this.Pb_00_DragEnter);
             this.Pb_11.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Pb_00_MouseDown);
@@ -166,13 +168,13 @@
             // 
             this.Pb_12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.Pb_12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Pb_12.Location = new System.Drawing.Point(244, 73);
+            this.Pb_12.Location = new System.Drawing.Point(243, 73);
             this.Pb_12.Name = "Pb_12";
-            this.Pb_12.Size = new System.Drawing.Size(127, 64);
+            this.Pb_12.Size = new System.Drawing.Size(128, 64);
             this.Pb_12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Pb_12.TabIndex = 3;
             this.Pb_12.TabStop = false;
-            this.Pb_12.Tag = "@\"..\\..\\img\\12.jpg\"";
+            this.Pb_12.Tag = "5";
             this.Pb_12.DragDrop += new System.Windows.Forms.DragEventHandler(this.Pb_00_DragDrop);
             this.Pb_12.DragEnter += new System.Windows.Forms.DragEventHandler(this.Pb_00_DragEnter);
             this.Pb_12.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Pb_00_MouseDown);
@@ -187,7 +189,7 @@
             this.Pb_20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Pb_20.TabIndex = 3;
             this.Pb_20.TabStop = false;
-            this.Pb_20.Tag = "@\"..\\..\\img\\20.jpg\"";
+            this.Pb_20.Tag = "6";
             this.Pb_20.DragDrop += new System.Windows.Forms.DragEventHandler(this.Pb_00_DragDrop);
             this.Pb_20.DragEnter += new System.Windows.Forms.DragEventHandler(this.Pb_00_DragEnter);
             this.Pb_20.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Pb_00_MouseDown);
@@ -198,11 +200,11 @@
             this.Pb_21.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Pb_21.Location = new System.Drawing.Point(128, 143);
             this.Pb_21.Name = "Pb_21";
-            this.Pb_21.Size = new System.Drawing.Size(110, 72);
+            this.Pb_21.Size = new System.Drawing.Size(109, 72);
             this.Pb_21.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Pb_21.TabIndex = 3;
             this.Pb_21.TabStop = false;
-            this.Pb_21.Tag = "@\"..\\..\\img\\21.jpg\"";
+            this.Pb_21.Tag = "7";
             this.Pb_21.DragDrop += new System.Windows.Forms.DragEventHandler(this.Pb_00_DragDrop);
             this.Pb_21.DragEnter += new System.Windows.Forms.DragEventHandler(this.Pb_00_DragEnter);
             this.Pb_21.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Pb_00_MouseDown);
@@ -211,20 +213,20 @@
             // 
             this.Pb_22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.Pb_22.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Pb_22.Location = new System.Drawing.Point(244, 143);
+            this.Pb_22.Location = new System.Drawing.Point(243, 143);
             this.Pb_22.Name = "Pb_22";
-            this.Pb_22.Size = new System.Drawing.Size(127, 72);
+            this.Pb_22.Size = new System.Drawing.Size(128, 72);
             this.Pb_22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Pb_22.TabIndex = 3;
             this.Pb_22.TabStop = false;
-            this.Pb_22.Tag = "@\"..\\..\\img\\22.jpg\"";
+            this.Pb_22.Tag = "8";
             this.Pb_22.DragDrop += new System.Windows.Forms.DragEventHandler(this.Pb_00_DragDrop);
             this.Pb_22.DragEnter += new System.Windows.Forms.DragEventHandler(this.Pb_00_DragEnter);
             this.Pb_22.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Pb_00_MouseDown);
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(203, 258);
+            this.pictureBox1.Location = new System.Drawing.Point(457, 233);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(24, 24);
             this.pictureBox1.TabIndex = 1;
@@ -234,7 +236,8 @@
             // pictureBox2
             // 
             this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox2.Location = new System.Drawing.Point(392, 25);
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(411, 28);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(265, 155);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -245,11 +248,11 @@
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1,
-            this.toolStripDropDownButton1,
-            this.toolStripSplitButton1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 314);
+            this.toolStripSplitButton1,
+            this.toolStripDropDownButton1});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 281);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(700, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(398, 22);
             this.statusStrip1.TabIndex = 3;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -285,8 +288,27 @@
             this.toolStripSplitButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripSplitButton1.Name = "toolStripSplitButton1";
             this.toolStripSplitButton1.Size = new System.Drawing.Size(32, 20);
-            this.toolStripSplitButton1.Text = "toolStripSplitButton1";
+            this.toolStripSplitButton1.Text = "Add Pictures";
             this.toolStripSplitButton1.ButtonClick += new System.EventHandler(this.toolStripSplitButton1_ButtonClick);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(311, 255);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "End";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Mistral", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(408, 199);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(263, 31);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "label1";
             // 
             // Pazzle
             // 
@@ -294,7 +316,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.ClientSize = new System.Drawing.Size(700, 336);
+            this.ClientSize = new System.Drawing.Size(398, 303);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
@@ -340,6 +364,8 @@
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
         private System.Windows.Forms.ToolStripMenuItem cleareToolStripMenuItem;
         private System.Windows.Forms.ToolStripSplitButton toolStripSplitButton1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label1;
     }
 }
 
