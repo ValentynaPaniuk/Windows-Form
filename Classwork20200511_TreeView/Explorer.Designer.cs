@@ -61,6 +61,7 @@
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.button1 = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.contextMenuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -98,14 +99,14 @@
             // largeIconToolStripMenuItem1
             // 
             this.largeIconToolStripMenuItem1.Name = "largeIconToolStripMenuItem1";
-            this.largeIconToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.largeIconToolStripMenuItem1.Size = new System.Drawing.Size(126, 22);
             this.largeIconToolStripMenuItem1.Text = "LargeIcon";
             this.largeIconToolStripMenuItem1.Click += new System.EventHandler(this.largeIconToolStripMenuItem1_Click);
             // 
             // smallIconToolStripMenuItem1
             // 
             this.smallIconToolStripMenuItem1.Name = "smallIconToolStripMenuItem1";
-            this.smallIconToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.smallIconToolStripMenuItem1.Size = new System.Drawing.Size(126, 22);
             this.smallIconToolStripMenuItem1.Text = "SmallIcon";
             this.smallIconToolStripMenuItem1.Click += new System.EventHandler(this.largeIconToolStripMenuItem1_Click);
             // 
@@ -114,21 +115,21 @@
             this.detailsToolStripMenuItem1.Checked = true;
             this.detailsToolStripMenuItem1.CheckState = System.Windows.Forms.CheckState.Checked;
             this.detailsToolStripMenuItem1.Name = "detailsToolStripMenuItem1";
-            this.detailsToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.detailsToolStripMenuItem1.Size = new System.Drawing.Size(126, 22);
             this.detailsToolStripMenuItem1.Text = "Details";
             this.detailsToolStripMenuItem1.Click += new System.EventHandler(this.largeIconToolStripMenuItem1_Click);
             // 
             // listToolStripMenuItem1
             // 
             this.listToolStripMenuItem1.Name = "listToolStripMenuItem1";
-            this.listToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.listToolStripMenuItem1.Size = new System.Drawing.Size(126, 22);
             this.listToolStripMenuItem1.Text = "List";
             this.listToolStripMenuItem1.Click += new System.EventHandler(this.largeIconToolStripMenuItem1_Click);
             // 
             // tileToolStripMenuItem1
             // 
             this.tileToolStripMenuItem1.Name = "tileToolStripMenuItem1";
-            this.tileToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.tileToolStripMenuItem1.Size = new System.Drawing.Size(126, 22);
             this.tileToolStripMenuItem1.Text = "Tile";
             this.tileToolStripMenuItem1.Click += new System.EventHandler(this.largeIconToolStripMenuItem1_Click);
             // 
@@ -144,7 +145,7 @@
             this.treeView1.ContextMenuStrip = this.contextMenuStrip1;
             this.treeView1.Location = new System.Drawing.Point(12, 12);
             this.treeView1.Name = "treeView1";
-            this.treeView1.Size = new System.Drawing.Size(166, 211);
+            this.treeView1.Size = new System.Drawing.Size(177, 211);
             this.treeView1.TabIndex = 1;
             this.treeView1.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.treeView1_NodeMouseClick);
             // 
@@ -216,7 +217,7 @@
             // 
             this.toolStripStatusLabel1.AutoSize = false;
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(160, 17);
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(400, 17);
             this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
             // 
             // TbPath
@@ -313,13 +314,18 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(47, 234);
+            this.button1.Location = new System.Drawing.Point(59, 229);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 7;
             this.button1.Text = "Open";
+            this.toolTip1.SetToolTip(this.button1, "Right-click on the directory tree -> Browse");
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // toolTip1
+            // 
+            this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             // 
             // Explorer
             // 
@@ -378,6 +384,7 @@
         private System.Windows.Forms.ToolStripMenuItem detailsToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem largeIconToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem styleToolStripMenuItem;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
 

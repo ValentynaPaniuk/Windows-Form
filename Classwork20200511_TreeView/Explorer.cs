@@ -14,14 +14,14 @@ namespace Classwork20200511_TreeView
 {
     public partial class Explorer : Form
     {
-      
+
         //Конструктор
         public Explorer()
         {
             InitializeComponent();
             toolStripStatusLabel1.Text = "";
         }
-        
+
         private void browseToolStripMenuItem_Click(object sender, EventArgs e)
         {
             PopulateTreeView();
@@ -30,7 +30,7 @@ namespace Classwork20200511_TreeView
         private void button1_Click(object sender, EventArgs e)
         {
             PopulateTreeView();
-   
+
         }
 
         private void PopulateTreeView()
@@ -39,7 +39,7 @@ namespace Classwork20200511_TreeView
             folderBrowserDialog1.ShowDialog();
             TreeNode rootNode;
             browseToolStripMenuItem.Checked = !browseToolStripMenuItem.Checked;
-        
+
             DirectoryInfo info = new DirectoryInfo(folderBrowserDialog1.SelectedPath); //Створюємо каталог, яким будемо керувати
             if (info.Exists) //якщо існує такий каталог
             {
@@ -53,7 +53,7 @@ namespace Classwork20200511_TreeView
         private void GetDirectories(DirectoryInfo[] subDirs, TreeNode nodeToAddTo)
         {
             TreeNode aNode;
-            DirectoryInfo[] subSubDirs; 
+            DirectoryInfo[] subSubDirs;
             foreach (DirectoryInfo subDir in subDirs)
             {
                 aNode = new TreeNode(subDir.Name, 0, 0);
@@ -75,18 +75,20 @@ namespace Classwork20200511_TreeView
             DirectoryInfo nodeDirInfo = (DirectoryInfo)newSelected.Tag;
             ListViewItem.ListViewSubItem[] subItems;
             ListViewItem item = null;
-
+            int countDir = 0;
             foreach (DirectoryInfo dir in nodeDirInfo.GetDirectories())
             {
                 item = new ListViewItem(dir.Name, 0);
-                int totalSize =(int) dir.EnumerateFiles().Sum(file => file.Length);
+                int totalSize = (int)dir.EnumerateFiles().Sum(file => file.Length);
                 subItems = new ListViewItem.ListViewSubItem[]
-                    {new ListViewItem.ListViewSubItem(item, "Directory"),
-                     new ListViewItem.ListViewSubItem(item,  dir.LastAccessTime.ToShortDateString()),
-                     new ListViewItem.ListViewSubItem(item, totalSize.ToString() + " Kb")};
+                    {new ListViewItem.ListViewSubItem(item, "Directory"),//Directory
+                     new ListViewItem.ListViewSubItem(item,  dir.LastAccessTime.ToShortDateString()), //Date
+                     new ListViewItem.ListViewSubItem(item, totalSize.ToString() + " Kb")}; //Size
                 item.SubItems.AddRange(subItems);
                 listView1.Items.Add(item);
+                countDir++;
             }
+            int countFile = 0;
             foreach (FileInfo file in nodeDirInfo.GetFiles())
             {
                 item = new ListViewItem(file.Name, 1);
@@ -98,9 +100,12 @@ namespace Classwork20200511_TreeView
 
                 item.SubItems.AddRange(subItems);
                 listView1.Items.Add(item);
+                countFile++;
             }
 
             listView1.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
+            toolStripStatusLabel1.Text = $"Files: {countFile} Directory {countDir}";
+           
         }
 
         //delete and back
@@ -111,20 +116,20 @@ namespace Classwork20200511_TreeView
         private void listView1_KeyDown(object sender, KeyEventArgs e)
         {
             string[] files = Directory.GetFileSystemEntries(folderBrowserDialog1.SelectedPath);
-        
+
             if (e.KeyCode == Keys.Back)
-            {               
+            {
                 listView1.Items.Add(path);
                 File.Create(path);
                 foreach (ListViewItem item in listView1.Items)
                 {
+                    
                     item.SubItems.Add(Path.GetExtension(path));//Type
                     item.SubItems.Add(File.GetCreationTime(path).ToShortDateString().ToString());//Date
                     item.SubItems.Add(path.Length.ToString());//Size
-                    
+
                 }
 
-          
 
                 //Копіюється файл в потрібну папку
                 foreach (string f in Directory.GetFiles(backupDir))
@@ -149,16 +154,16 @@ namespace Classwork20200511_TreeView
             //коли натискаємо Delete
             try
             {
-               int index;
-               if (e.KeyCode == Keys.Delete)
-                 {
+                int index;
+                if (e.KeyCode == Keys.Delete)
+                {
 
-                   while (listView1.SelectedIndices.Count != 0)
-                   {
-                       index = listView1.SelectedIndices[0];//запам'ятовуємо індекс виділеного item
-                       path = listView1.SelectedItems[0].Text.ToString(); //ім'я файлу
-                       listView1.Items.RemoveAt(index); //видаляємо файл з listView
-                    
+                    while (listView1.SelectedIndices.Count != 0)
+                    {
+                        index = listView1.SelectedIndices[0];//запам'ятовуємо індекс виділеного item
+                        path = listView1.SelectedItems[0].Text.ToString(); //ім'я файлу
+                        listView1.Items.RemoveAt(index); //видаляємо файл з listView
+
                         //Копіюємо в іншу папку і видаляємо з цієї
                         foreach (string f in files)
                         {
@@ -171,16 +176,13 @@ namespace Classwork20200511_TreeView
                                 File.Delete(f);
                             }
                         }
-                    
+
 
                     }
 
-
-
-
                 }
 
-               Refresh();
+                Refresh();
 
             }
             catch
@@ -194,31 +196,44 @@ namespace Classwork20200511_TreeView
         private void listView1_DoubleClick(object sender, EventArgs e)
         {
             folderBrowserDialog1.SelectedPath = folderBrowserDialog1.SelectedPath + $"\\{listView1.SelectedItems[0].Text}";
-            string[] files = Directory.GetFileSystemEntries(folderBrowserDialog1.SelectedPath); //витягуємо шляхи до всіх файлів у каталозі
+            string[] files = Directory.GetFileSystemEntries(folderBrowserDialog1.SelectedPath); //витягуємо шляхи до всіх файлів і папок у каталозі
             listView1.Items.Clear();
             for (int i = 0; i < files.Length; i++)
             {
-                listView1.Items.Add(new ListViewItem(Path.GetFileNameWithoutExtension(files[i])));//додаємо назви файлів до listView
+                listView1.Items.Add(new ListViewItem(Path.GetFileNameWithoutExtension(files[i])));//додаємо назви файлів і папок до listView
             }
 
             int j = 0;
+            int count = 0;
             foreach (ListViewItem item in listView1.Items)
             {
-                item.SubItems.Add(Path.GetExtension(files[j]));//Type
-                item.SubItems.Add(File.GetCreationTime(files[j++]).ToShortDateString().ToString());//Date
-               // item.SubItems.Add(files[j++].Length.ToString());//Size
-
+                if (File.Exists(files[j]))
+                {
+                    item.ImageIndex = count;//Image for file
+                    item.SubItems.Add(Path.GetExtension(files[j]));//Type
+                    item.SubItems.Add(File.GetCreationTime(files[j]).ToShortDateString().ToString());//Date
+                    item.SubItems.Add(File.Open(files[j++], FileMode.Open).Length.ToString());//Size
+                }
+                else
+                {
+                    item.ImageIndex = count++;//Image for directory
+                    item.SubItems.Add("Directory");//Type
+                    item.SubItems.Add(Directory.GetLastAccessTime(files[j++]).ToString());//Date
+                
+                }
             }
+            TbPath.Text = folderBrowserDialog1.SelectedPath;
 
         }
+        
 
         //Add text to Label and Path to textbox
         private void listView1_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
         {
-            toolStripStatusLabel1.Text = $"Name: {e.Item.SubItems[0].Text}    Type: {e.Item.SubItems[1].Text}     Date: {e.Item.SubItems[2].Text}";
+            toolStripStatusLabel1.Text = $"{e.Item.SubItems[1].Text}  {e.Item.SubItems[0].Text}  {e.Item.SubItems[2].Text}";
             TbPath.Text = folderBrowserDialog1.SelectedPath;
         }
-        
+
         //View by Radiobutton
         private void radioButton5_CheckedChanged(object sender, EventArgs e)
         {
@@ -256,7 +271,7 @@ namespace Classwork20200511_TreeView
 
 
         }
-     
+
         //View by ContextMenuStrip
         private void largeIconToolStripMenuItem1_Click(object sender, EventArgs e)
         {
@@ -285,7 +300,7 @@ namespace Classwork20200511_TreeView
 
 
         }
-      
+
         //З'являється галочка в контекстне меню Style, яке включає або виключає checkBox
         private void styleToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -295,15 +310,14 @@ namespace Classwork20200511_TreeView
                 listView1.CheckBoxes = styleToolStripMenuItem.Checked;
             }
         }
-    
+
         //Sorting by ColumnsClick
         private void listView1_ColumnClick(object sender, ColumnClickEventArgs e)
         {
             this.listView1.ListViewItemSorter = new ListViewItemComparer(e.Column);
         }
 
-
-
+      
     }
 
 }
