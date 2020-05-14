@@ -19,8 +19,7 @@ namespace Classwork20200414_Anketa
         {
             
                     InitializeComponent();
-        
-
+    
         }
 
         private void TextBox1_TextChanged(object sender, EventArgs e)

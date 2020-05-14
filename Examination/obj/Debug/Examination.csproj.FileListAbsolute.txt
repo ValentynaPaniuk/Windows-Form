@@ -1,0 +1,11 @@
+D:\Шаг\WF\Examination\obj\Debug\Examination.csprojAssemblyReference.cache
+D:\Шаг\WF\Examination\obj\Debug\Examination.Properties.Resources.resources
+D:\Шаг\WF\Examination\obj\Debug\Examination.csproj.GenerateResource.cache
+D:\Шаг\WF\Examination\obj\Debug\Examination.csproj.CoreCompileInputs.cache
+D:\Шаг\WF\Examination\bin\Debug\Examination.exe.config
+D:\Шаг\WF\Examination\bin\Debug\Examination.exe
+D:\Шаг\WF\Examination\bin\Debug\Examination.pdb
+D:\Шаг\WF\Examination\obj\Debug\Examination.Testing.resources
+D:\Шаг\WF\Examination\obj\Debug\Examination.exe
+D:\Шаг\WF\Examination\obj\Debug\Examination.pdb
+D:\Шаг\WF\Examination\obj\Debug\Examination.Test.resources

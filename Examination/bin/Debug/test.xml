@@ -1,0 +1,79 @@
+﻿<?xml version="1.0"?>
+<ArrayOfQuestions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Questions>
+    <answers>
+      <Answer>
+        <answer>Мова програмування</answer>
+        <check>true</check>
+      </Answer>
+      <Answer>
+        <answer>Середовище розробки</answer>
+        <check>false</check>
+      </Answer>
+      <Answer>
+        <answer>Той самий С++, тільки по іншому названий</answer>
+        <check>false</check>
+      </Answer>
+    </answers>
+    <Question>Що таке С#?</Question>
+  </Questions>
+  <Questions>
+    <answers>
+      <Answer>
+        <answer>ctrl+c</answer>
+        <check>false</check>
+      </Answer>
+      <Answer>
+        <answer>ctrl+v</answer>
+        <check>false</check>
+      </Answer>
+      <Answer>
+        <answer>alt+f4</answer>
+        <check>true</check>
+      </Answer>
+    </answers>
+    <Question>Яким сполученняи клавіш можна закрити програму?</Question>
+  </Questions>
+  <Questions>
+    <answers>
+      <Answer>
+        <answer>Generic Collection</answer>
+        <check>true</check>
+      </Answer>
+      <Answer>
+        <answer>Список будь-яких об'єктів</answer>
+        <check>false</check>
+      </Answer>
+    </answers>
+    <Question>Що таке List?</Question>
+  </Questions>
+  <Questions>
+    <answers>
+      <Answer>
+        <answer>string</answer>
+        <check>false</check>
+      </Answer>
+      <Answer>
+        <answer>array</answer>
+        <check>false</check>
+      </Answer>
+      <Answer>
+        <answer>int</answer>
+        <check>true</check>
+      </Answer>
+      <Answer>
+        <answer>float</answer>
+        <check>true</check>
+      </Answer>
+      <Answer>
+        <answer>struct</answer>
+        <check>true</check>
+      </Answer>
+      <Answer>
+        <answer>class</answer>
+        <check>false</check>
+      </Answer>
+    </answers>
+    <Question>Які з наведени нижче типів є value-type?</Question>
+  </Questions>
+</ArrayOfQuestions>
